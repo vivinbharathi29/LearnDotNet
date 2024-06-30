@@ -1,0 +1,150 @@
+﻿
+#tblAMOList table{
+	width: 100% !important; /*make sure reports with multiple columns and vertical text don't overlap*/
+}
+#tblAMOList th{
+	font-size: 12px !important;
+}
+#tblAMOList th:not([colspan]) {
+    text-align:center !important;
+}
+select.ui-datepicker-month {
+    width:70px !important;
+} 
+select.ui-datepicker-year{
+    width:70px !important;
+} 
+
+h2, h3{
+    font-family: 'Verdana', sans-serif !important;
+}
+.page-title{
+    font-weight: bolder;
+    font-size: medium;
+    font-family: 'Verdana', sans-serif;
+}
+.section-title{
+    font-weight: bolder;
+    font-size: medium;
+    font-family: 'Verdana', sans-serif;
+}
+
+#oTable {
+   border: 1px solid #7d7a7a;
+   border-collapse: collapse;
+}
+
+.PD10{
+    padding-top: 10px !important;
+}
+
+/* SELECT MENU   
+----------------------------------------------------------*/
+div#menu-bar
+{
+    clear: both !important;
+    padding: 0 !important;
+    width: 97.2% !important;
+    height: 1px !important;
+}
+
+div#menu-bar.gray
+{
+    border-top: 1px solid #1f1f1f !important;
+}
+ul#selectmenu
+{
+    width: 100%;
+    margin:0;
+    padding: 0; 
+    font-size: 11px;
+    list-style: none;
+    margin-left: 3px; /*margin between first menu item and left browser edge*/
+    margin-top: 5px !important;
+    background: transparent;
+    voice-family: "\"}\"";
+    voice-family: inherit;
+    font-weight: normal !important;
+}
+
+ul#selectmenu li
+{
+    display: inline;
+    margin: 0 2px 0 0;
+    padding: 0;
+}
+
+ul#selectmenu li a
+{
+    float: left;
+    display: block;
+    color: white !important;
+    margin: 0 3px 0 0; /*Margin between each menu item*/
+    padding: 10px 30px;
+    letter-spacing: 1px;
+    border-top: 2px solid #e6e6e6;
+    border-left: 2px solid #e6e6e6;
+    border-right: 2px solid #e6e6e6;
+    text-decoration: none !important;   
+    border-top-right-radius: 8px;
+    -webkit-top-right-radius: 8px;
+    -moz-top-right-radius: 8px;
+    cursor: pointer;
+}
+
+ul#selectmenu li a.white
+{
+    background-color: #FFFFFF !important; /*Default menu color*/
+    color: #000000 !important;
+}
+
+ul#selectmenu li a.white:hover
+{
+    background-color: #FFFFFF; /*Default menu color*/
+    color: #000000 !important;
+    text-decoration: underline !important;
+}
+
+ul#selectmenu li a.current
+{
+    background-color: #FFFFFF; /*Default menu color*/
+    font-weight: 900 !important;
+    color: #000000 !important;
+}
+
+/*TABLE   
+----------------------------------------------------------*/
+.tblrow-pulsar
+{
+	font-weight: bolder !important;
+	background-color: #0096d6 !important;
+    /*background-color: #737373 !important;*/
+    color: #FFFFFF !important;
+    text-decoration: none !important;
+}
+
+
+/*CROSS BROWSER VERTICAL TEXT 
+Replace IRS' white-space: nowrap;writing-mode:tb-rl;filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=2)  
+----------------------------------------------------------*/
+.rotate-text{
+    height: 175px;
+}
+
+.rotate-text p{ 
+    background-color:#0096d6;
+    white-space: nowrap !important;
+    position: relative !important;
+    display: inline-block !important; 
+    margin:0;
+    padding:0px;
+    vertical-align:bottom;
+
+    -moz-transform: rotate(-90.0deg);
+    -o-transform: rotate(-90.0deg);
+    -webkit-transform: rotate(-90.0deg);
+    transform: rotate(-90.0deg);
+    transform-origin: center center;
+}
+
+

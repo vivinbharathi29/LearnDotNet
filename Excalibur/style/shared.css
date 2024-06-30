@@ -1,0 +1,129 @@
+﻿@import url('ignite_metro/infragistics_pulsar.css'); /* Apply IPulsar Dialog Styles to IE8 Compatible JQuery UI CSS*/
+
+/* JQUERY MODAL DIALOG MODS */
+.ui-widget-overlay
+{
+    padding:0;
+    margin:0;
+    top:0;
+    left:0;
+    width: auto;
+    height: 100%;   
+    background:#222 !important;
+    opacity:.1;
+    filter:Alpha(Opacity=10);
+}
+.ui-icon
+{
+    cursor: pointer !important;
+}
+
+select.ui-datepicker-month {
+    width:70px !important;
+} 
+select.ui-datepicker-year{
+    width:70px !important;
+} 
+/*MISC */
+.font-red
+{
+    font-weight: bold !important;
+    color: #CC0000 !important;
+    font-size: xx-small !important;
+}
+.hide 
+{
+    display: none !important;
+}
+.show 
+{
+    display: inline !important;
+}
+.disabled 
+{
+    opacity: 0.7;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+    filter: alpha(opacity=70);
+    -moz-opacity:0.7;
+    -khtml-opacity: 0.7;
+}
+#spnErrorMessage
+{
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+}
+
+.modal
+{
+    margin-top: -450px;
+    margin-left: -450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.left{
+    text-align:left !important;
+}
+.center{
+    text-align:center !important;
+}
+.td-title-details
+{
+    font-size: 10px !important; 
+    white-space: nowrap !important;
+    vertical-align: text-top !important;
+    background-color: cornsilk !important;
+    width: 13% !important;
+}
+.td-title-systemteam
+{
+    font-size: 10px !important; 
+    white-space: nowrap !important;
+    vertical-align: text-top !important;
+    background-color: cornsilk !important;
+    width: 14% !important;
+}
+.td-systemteam
+{
+    font-size: 10px !important; 
+    text-align: center !important; 
+    width: 20% !important; 
+    white-space: nowrap !important;
+}
+
+.hide-close-icon .ui-dialog-titlebar-close {
+    display: none 
+}
+
+.show-close-icon .ui-dialog-titlebar-close {
+    display: inline; 
+}
+
+#modal_dialog {
+    overflow:hidden !important;
+}
+
+.modal_button{
+    background-color: #0096d6 !important;
+    border: none;
+    color: white;
+    padding: 5px 15px !important;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 11px;
+}
+
+
+.cell, .smallest{
+    font-size: xx-small !important;
+    font-family: Verdana !important;
+}
+.smaller{
+    font-size: x-small !important;
+    font-family: Verdana !important;
+}
+.small{
+    font-size: small !important;
+    font-family: Verdana !important;
+}

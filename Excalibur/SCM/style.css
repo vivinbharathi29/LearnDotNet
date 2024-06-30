@@ -1,0 +1,58 @@
+.O
+{
+    COLOR: gray;
+    TEXT-DECORATION: line-through
+}
+
+.H
+{
+ background-color:mistyrose;
+}
+
+.A
+{
+ background-color:cornsilk;
+}    
+
+
+.txtbox
+{
+    FONT-SIZE: xx-small;
+    FONT-FAMILY: Verdana
+}
+.tblResults
+{
+    BORDER-TOP: black 2px solid;
+    WIDTH: 100%;
+    BORDER-BOTTOM: black 2px solid;
+    BORDER-COLLAPSE: collapse
+}
+.tblResults TH
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: xx-small;
+    COLOR: black;
+    BORDER-BOTTOM: dimgray 2px solid;
+    FONT-FAMILY: Tahoma;
+    BACKGROUND-COLOR: cornsilk;
+    TEXT-ALIGN: left
+}
+.tblResults TD
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: xx-small;
+    BORDER-BOTTOM: dimgray 1px solid;
+    FONT-FAMILY: Verdana
+}
+.tblResults #FEATURE
+{
+    FONT-WEIGHT: bold;
+    BORDER-BOTTOM: dimgray 1px solid;
+    BACKGROUND-COLOR: lightsteelblue
+}
+TH
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: xx-small;
+    FONT-FAMILY: Tahoma
+}

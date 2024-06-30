@@ -1,0 +1,358 @@
+﻿.ui-icon-carat-1-n{background-position:0 0}
+.ui-icon-carat-1-ne{background-position:-16px 0}
+.ui-icon-carat-1-e{background-position:-32px 0}
+.ui-icon-carat-1-se{background-position:-48px 0}
+.ui-icon-carat-1-s{background-position:-64px 0}
+.ui-icon-carat-1-sw{background-position:-80px 0}
+.ui-icon-carat-1-w{background-position:-96px 0}
+.ui-icon-carat-1-nw{background-position:-112px 0}
+.ui-icon-carat-2-n-s{background-position:-128px 0}
+.ui-icon-carat-2-e-w{background-position:-144px 0}
+.ui-icon-triangle-1-n{background-position:0 -16px}
+.ui-icon-triangle-1-ne{background-position:-16px -16px}
+.ui-icon-triangle-1-e{background-position:-32px -16px}
+.ui-icon-triangle-1-se{background-position:-48px -16px}
+.ui-icon-triangle-1-s{background-position:-64px -16px}
+.ui-icon-triangle-1-sw{background-position:-80px -16px}
+.ui-icon-triangle-1-w{background-position:-96px -16px}
+.ui-icon-triangle-1-nw{background-position:-112px -16px}
+.ui-icon-triangle-2-n-s{background-position:-128px -16px}
+.ui-icon-triangle-2-e-w{background-position:-144px -16px}
+.ui-icon-arrow-1-n{background-position:0 -32px}
+.ui-icon-arrow-1-ne{background-position:-16px -32px}
+.ui-icon-arrow-1-e{background-position:-32px -32px}
+.ui-icon-arrow-1-se{background-position:-48px -32px}
+.ui-icon-arrow-1-s{background-position:-64px -32px}
+.ui-icon-arrow-1-sw{background-position:-80px -32px}
+.ui-icon-arrow-1-w{background-position:-96px -32px}
+.ui-icon-arrow-1-nw{background-position:-112px -32px}
+.ui-icon-arrow-2-n-s{background-position:-128px -32px}
+.ui-icon-arrow-2-ne-sw{background-position:-144px -32px}
+.ui-icon-arrow-2-e-w{background-position:-160px -32px}
+.ui-icon-arrow-2-se-nw{background-position:-176px -32px}
+.ui-icon-arrowstop-1-n{background-position:-192px -32px}
+.ui-icon-arrowstop-1-e{background-position:-208px -32px}
+.ui-icon-arrowstop-1-s{background-position:-224px -32px}
+.ui-icon-arrowstop-1-w{background-position:-240px -32px}
+.ui-icon-arrowthick-1-n{background-position:0 -48px}
+.ui-icon-arrowthick-1-ne{background-position:-16px -48px}
+.ui-icon-arrowthick-1-e{background-position:-32px -48px}
+.ui-icon-arrowthick-1-se{background-position:-48px -48px}
+.ui-icon-arrowthick-1-s{background-position:-64px -48px}
+.ui-icon-arrowthick-1-sw{background-position:-80px -48px}
+.ui-icon-arrowthick-1-w{background-position:-96px -48px}
+.ui-icon-arrowthick-1-nw{background-position:-112px -48px}
+.ui-icon-arrowthick-2-n-s{background-position:-128px -48px}
+.ui-icon-arrowthick-2-ne-sw{background-position:-144px -48px}
+.ui-icon-arrowthick-2-e-w{background-position:-160px -48px}
+.ui-icon-arrowthick-2-se-nw{background-position:-176px -48px}
+.ui-icon-arrowthickstop-1-n{background-position:-192px -48px}
+.ui-icon-arrowthickstop-1-e{background-position:-208px -48px}
+.ui-icon-arrowthickstop-1-s{background-position:-224px -48px}
+.ui-icon-arrowthickstop-1-w{background-position:-240px -48px}
+.ui-icon-arrowreturnthick-1-w{background-position:0 -64px}
+.ui-icon-arrowreturnthick-1-n{background-position:-16px -64px}
+.ui-icon-arrowreturnthick-1-e{background-position:-32px -64px}
+.ui-icon-arrowreturnthick-1-s{background-position:-48px -64px}
+.ui-icon-arrowreturn-1-w{background-position:-64px -64px}
+.ui-icon-arrowreturn-1-n{background-position:-80px -64px}
+.ui-icon-arrowreturn-1-e{background-position:-96px -64px}
+.ui-icon-arrowreturn-1-s{background-position:-112px -64px}
+.ui-icon-arrowrefresh-1-w{background-position:-128px -64px}
+.ui-icon-arrowrefresh-1-n{background-position:-144px -64px}
+.ui-icon-arrowrefresh-1-e{background-position:-160px -64px}
+.ui-icon-arrowrefresh-1-s{background-position:-176px -64px}
+.ui-icon-arrow-4{background-position:0 -80px}
+.ui-icon-arrow-4-diag{background-position:-16px -80px}
+.ui-icon-extlink{background-position:-32px -80px}
+.ui-icon-newwin{background-position:-48px -80px}
+.ui-icon-refresh{background-position:-64px -80px}
+.ui-icon-shuffle{background-position:-80px -80px}
+.ui-icon-transfer-e-w{background-position:-96px -80px}
+.ui-icon-transferthick-e-w{background-position:-112px -80px}
+.ui-icon-folder-collapsed{background-position:0 -96px}
+.ui-icon-folder-open{background-position:-16px -96px}
+.ui-icon-document{background-position:-32px -96px}
+.ui-icon-document-b{background-position:-48px -96px}
+.ui-icon-note{background-position:-64px -96px}
+.ui-icon-mail-closed{background-position:-80px -96px}
+.ui-icon-mail-open{background-position:-96px -96px}
+.ui-icon-suitcase{background-position:-112px -96px}
+.ui-icon-comment{background-position:-128px -96px}
+.ui-icon-person{background-position:-144px -96px}
+.ui-icon-print{background-position:-160px -96px}
+.ui-icon-trash{background-position:-176px -96px}
+.ui-icon-locked{background-position:-192px -96px}
+.ui-icon-unlocked{background-position:-208px -96px}
+.ui-icon-bookmark{background-position:-224px -96px}
+.ui-icon-tag{background-position:-240px -96px}
+.ui-icon-home{background-position:0 -112px}
+.ui-icon-flag{background-position:-16px -112px}
+.ui-icon-calendar{background-position:-32px -112px}
+.ui-icon-cart{background-position:-48px -112px}
+.ui-icon-pencil{background-position:-64px -112px}
+.ui-icon-clock{background-position:-80px -112px}
+.ui-icon-disk{background-position:-96px -112px}
+.ui-icon-calculator{background-position:-112px -112px}
+.ui-icon-zoomin{background-position:-128px -112px}
+.ui-icon-zoomout{background-position:-144px -112px}
+.ui-icon-search{background-position:-160px -112px}
+.ui-icon-wrench{background-position:-176px -112px}
+.ui-icon-gear{background-position:-192px -112px}
+.ui-icon-heart{background-position:-208px -112px}
+.ui-icon-star{background-position:-224px -112px}
+.ui-icon-link{background-position:-240px -112px}
+.ui-icon-cancel{background-position:0 -128px}
+.ui-icon-plus{background-position:-16px -128px}
+.ui-icon-plusthick{background-position:-32px -128px}
+.ui-icon-minus{background-position:-48px -128px}
+.ui-icon-minusthick{background-position:-64px -128px}
+.ui-icon-close{background-position:-80px -128px}
+.ui-icon-closethick{background-position:-96px -128px}
+.ui-icon-key{background-position:-112px -128px}
+.ui-icon-lightbulb{background-position:-128px -128px}
+.ui-icon-scissors{background-position:-144px -128px}
+.ui-icon-clipboard{background-position:-160px -128px}
+.ui-icon-copy{background-position:-176px -128px}
+.ui-icon-contact{background-position:-192px -128px}
+.ui-icon-image{background-position:-208px -128px}
+.ui-icon-video{background-position:-224px -128px}
+.ui-icon-script{background-position:-240px -128px}
+.ui-icon-alert{background-position:0 -144px}
+.ui-icon-info{background:url(images/icon_sprite.png) 0 0 no-repeat!important}
+.ui-icon-notice{background-position:-32px -144px}
+.ui-icon-help{background-position:-48px -144px}
+.ui-icon-check{background-position:-64px -144px}
+.ui-icon-bullet{background-position:-80px -144px}
+.ui-icon-radio-off{background-position:-96px -144px}
+.ui-icon-radio-on{background-position:-112px -144px}
+.ui-icon-pin-w{background-position:-128px -144px}
+.ui-icon-pin-s{background-position:-144px -144px}
+.ui-icon-play{background-position:0 -160px}
+.ui-icon-pause{background-position:-16px -160px}
+.ui-icon-seek-next{background-position:-32px -160px}
+.ui-icon-seek-prev{background-position:-48px -160px}
+.ui-icon-seek-end{background-position:-64px -160px}
+.ui-icon-seek-start{background-position:-80px -160px}
+.ui-icon-seek-first{background-position:-80px -160px}
+.ui-icon-stop{background-position:-96px -160px}
+.ui-icon-eject{background-position:-112px -160px}
+.ui-icon-volume-off{background-position:-128px -160px}
+.ui-icon-volume-on{background-position:-144px -160px}
+.ui-icon-power{background-position:0 -176px}
+.ui-icon-signal-diag{background-position:-16px -176px}
+.ui-icon-signal{background-position:-32px -176px}
+.ui-icon-battery-0{background-position:-48px -176px}
+.ui-icon-battery-1{background-position:-64px -176px}
+.ui-icon-battery-2{background-position:-80px -176px}
+.ui-icon-battery-3{background-position:-96px -176px}
+.ui-icon-circle-plus{background-position:0 -192px}
+.ui-icon-circle-minus{background-position:-16px -192px}
+.ui-icon-circle-close{background-position:-32px -192px}
+.ui-icon-circle-triangle-e{background-position:-48px -192px}
+.ui-icon-circle-triangle-s{background-position:-64px -192px}
+.ui-icon-circle-triangle-w{background-position:-80px -192px}
+.ui-icon-circle-triangle-n{background-position:-96px -192px}
+.ui-icon-circle-arrow-e{background-position:-112px -192px}
+.ui-icon-circle-arrow-s{background-position:-128px -192px}
+.ui-icon-circle-arrow-w{background-position:-144px -192px}
+.ui-icon-circle-arrow-n{background-position:-160px -192px}
+.ui-icon-circle-zoomin{background-position:-176px -192px}
+.ui-icon-circle-zoomout{background-position:-192px -192px}
+.ui-icon-circle-check{background-position:-208px -192px}
+.ui-icon-circlesmall-plus{background-position:0 -208px}
+.ui-icon-circlesmall-minus{background-position:-16px -208px}
+.ui-icon-circlesmall-close{background-position:-32px -208px}
+.ui-icon-squaresmall-plus{background-position:-48px -208px}
+.ui-icon-squaresmall-minus{background-position:-64px -208px}
+.ui-icon-squaresmall-close{background-position:-80px -208px}
+.ui-icon-grip-dotted-vertical{background-position:0 -224px}
+.ui-icon-grip-dotted-horizontal{background-position:-16px -224px}
+.ui-icon-grip-solid-vertical{background-position:-32px -224px}
+.ui-icon-grip-solid-horizontal{background-position:-48px -224px}
+.ui-icon-gripsmall-diagonal-se{background-position:-64px -224px}
+.ui-icon-grip-diagonal-se{background-position:-80px -224px}
+
+
+.ui-dialog{position:absolute;padding:0;width:300px;overflow:hidden;background:white;-moz-box-shadow:0 5px 8px transparent;-webkit-box-shadow:0 5px 8px transparent;-o-box-shadow:0 5px 8px transparent;box-shadow:0 5px 8px transparent}
+.ui-dialog .ui-dialog-titlebar{padding:7px 13px;position:relative;border-width:0 0 1px 0;border-color:#d2d2d2;background-color:#0096d6;background-image:none;background-repeat:repeat-x;background-position:0 0;-moz-border-radius:0;-webkit-border-radius:0;-o-border-radius:0;-ms-border-radius:0;-khtml-border-radius:0;border-radius:0}
+.ui-dialog .ui-dialog-title{float:left;margin:auto;color:white;text-shadow:0 transparent;font-weight:normal;line-height:"";font-size:1.1em}
+.ui-dialog .ui-dialog-titlebar-close{position:absolute;right:6px;top:50%;width:16px;margin:-9px 0 0 0;height:16px;padding:1px}
+.ui-dialog .ui-dialog-titlebar-close span{display:block;background-image:url(images/ui-icons_FFFFFF_256x240.png);background-position:-80px -128px;background-repeat:no-repeat} /*images/ui-icons_000000_256x240.png*/
+.ui-dialog-titlebar .ui-state-hover{-moz-border-radius:0;-webkit-border-radius:0;-o-border-radius:0;-ms-border-radius:0;-khtml-border-radius:0;border-radius:0;border:0 none;background:transparent}
+.ui-dialog .ui-dialog-titlebar-close.ui-state-hover span{background-position:-96px -128px}
+.ui-dialog .ui-dialog-titlebar-close:hover,.ui-dialog .ui-dialog-titlebar-close:focus{padding:1px}
+.ui-dialog .ui-dialog-content{position:relative;border:0;padding:.5em 1em;background:0;overflow:auto;zoom:1}
+.ui-dialog .ui-dialog-buttonpane{text-align:left;border-width:1px 0 0 0;background-image:none;margin:.5em 0 0 0;padding:.3em 1em .5em .4em}
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset{float:right}
+.ui-dialog .ui-dialog-buttonpane button{float:right;margin:.5em .4em .5em 0;cursor:pointer;line-height:1.4em;width:auto;overflow:visible}
+.ui-dialog .ui-resizable-se{width:14px;height:14px;right:3px;bottom:3px}
+.ui-draggable .ui-dialog-titlebar{cursor:move}
+
+
+
+.ui-iggrid .ui-iggrid-content{border-color:#b1b1b1}
+.ui-iggrid .ui-iggrid-footer{padding:0 .4em;}
+.ui-iggrid-scrolldiv{background-color:#f3f3f3;border-bottom:1px solid #dcdcdc!important}
+.ui-iggrid .ui-iggrid-scrolldiv:first-child{border-top:1px solid #dcdcdc!important}
+/*.ui-iggrid th,.ui-iggrid th.ui-state-default{border-color:transparent transparent #0096d6 #e3e3e3}*/
+/* grid header lines*/
+.ui-iggrid th,.ui-iggrid th.ui-state-default{border-color:transparent transparent #767676 #e3e3e3}
+
+/*.ui-iggrid th a,.ui-iggrid th.ui-state-default a,.ui-iggrid th.ui-state-hover a,.ui-iggrid th.ui-state-active a{color:#5f97af}*/
+.ui-iggrid th a,.ui-iggrid th.ui-state-default a,.ui-iggrid th.ui-state-hover a,.ui-iggrid th.ui-state-active a{color:#FFFFFF}
+
+.ui-iggrid th.ui-state-hover a{color:#4b4b4b}
+.ui-iggrid th.ui-state-active a{color:white}
+.ui-iggrid th.ui-state-focus a{color:#4b4b4b}
+.ui-iggrid th.ui-state-hover{background-color:#e2e2e2!important;background-image:none;background-repeat:repeat-x;border:1px solid #2788b1}
+.ui-iggrid th.ui-state-active{background-color:#0096d6!important;background-image:none;background-repeat:repeat-x;border:1px solid #2788b1}
+.ui-iggrid th.ui-state-focus{background-color:white!important;background-image:none;background-repeat:repeat-x;border:1px solid #2788b1}
+/*.ui-iggrid .ui-iggrid-footer,.ui-iggrid .ui-iggrid-toolbar{background-color:#f4f4f4;background-image:none;background-repeat:repeat-x;font-weight:normal;text-align:left;color:#333;text-shadow:0 0;border:0 none;border-top:0;display:block}*/
+/* grid footer and toolbar to match alternating row color */
+.ui-iggrid .ui-iggrid-footer,.ui-iggrid .ui-iggrid-toolbar{background-color:#E5E8E8;background-image:none;background-repeat:repeat-x;font-weight:normal;text-align:left;color:#333;text-shadow:0 0;border:0 none;border-top:0;display:block}
+
+.ui-iggrid .ui-iggrid-footer .ui-state-default,.ui-iggrid .ui-iggrid-toolbar .ui-state-default,.ui-iggrid .ui-iggrid-addrow td,.ui-iggrid .ui-iggrid-addrow th{background-color:#f9f9f9;background-image:none;background-repeat:repeat-x;border:1px solid #bebebe;color:#4b4b4b;text-shadow:0 transparent;text-decoration:none}
+.ui-iggrid .ui-iggrid-footer .ui-state-default a,.ui-iggrid .ui-iggrid-toolbar .ui-state-default a,.ui-iggrid .ui-iggrid-addrow td a{color:#333;text-decoration:none}
+.ui-iggrid tbody .ui-icon,.ui-iggrid .ui-iggrid-addrow td .ui-icon{background-image:url(images/ui-icons_222222_256x240.png)}
+.ui-iggrid th .ui-icon,.ui-iggrid .ui-iggrid-deletebutton .ui-icon,.ui-iggrid .ui-igedit-button .ui-icon{background-image:url(images/ui-icons_858585_256x240.png)}
+.ui-iggrid .ui-iggrid-addrow td.ui-state-hover{border:1px solid #b1b1b1}
+.ui-iggrid tbody td,.ui-iggrid tbody th.ui-iggrid-rowselector-class,.ui-iggrid thead .ui-iggrid-editingcell{border-width:1px;border-style:solid;border-color:#e3e3e3 white white #e3e3e3}
+.ui-iggrid .ui-iggrid-editingcell .ui-iggrid-editor .ui-igedit-field{-moz-box-shadow:0 3px 2px transparent inset;-webkit-box-shadow:0 3px 2px transparent inset;-o-box-shadow:0 3px 2px transparent inset;box-shadow:0 3px 2px transparent inset}
+/*.ui-iggrid .ui-ig-altrecord{background-color:#f9f9f9}*/
+/* alternating row background color */
+.ui-iggrid .ui-ig-altrecord{background-color:#E5E8E8}
+
+.ui-iggrid .ui-ig-altrecord td,.ui-iggrid .ui-ig-altrecord th.ui-iggrid-rowselector-class,.ui-iggrid tbody .ui-ig-altrecord td.ui-state-default{border-color:#e3e3e3 white white #e3e3e3}
+.ui-iggrid td.ui-state-highlight{background:0;background-color:#9ecbd6;color:#333;font-weight:normal;border-color:#b3e2f6}
+/*.ui-iggrid td.ui-state-hover,.ui-iggrid .ui-ig-altrecord td.ui-state-hover,.ui-iggrid .ui-ig-altrecord td.ui-state-default.ui-state-hover,.ui-iggrid th.ui-iggrid-rowselector-class.ui-state-hover,.ui-iggrid .ui-ig-altrecord th.ui-iggrid-rowselector-class.ui-state-hover,.ui-iggrid .ui-ig-altrecord th.ui-iggrid-rowselector-class.ui-state-default.ui-state-hover{color:#333;border-color:#b7b7b7 transparent;background-color:#eaeaea;background-image:none;background-repeat:repeat-x;background-position:left bottom}*/
+/*colors to use for hovering over rows in grid */
+.ui-iggrid td.ui-state-hover,.ui-iggrid .ui-ig-altrecord td.ui-state-hover,.ui-iggrid .ui-ig-altrecord td.ui-state-default.ui-state-hover,.ui-iggrid th.ui-iggrid-rowselector-class.ui-state-hover,.ui-iggrid .ui-ig-altrecord th.ui-iggrid-rowselector-class.ui-state-hover,.ui-iggrid .ui-ig-altrecord th.ui-iggrid-rowselector-class.ui-state-default.ui-state-hover{color:#333;border-color:#b7b7b7 transparent;background-color:#B9B8BB;background-image:none;background-repeat:repeat-x;background-position:left bottom}
+
+.ui-iggrid td.ui-state-hover a,.ui-iggrid .ui-ig-altrecord td.ui-state-hover a{color:#333}
+.ui-iggrid td.ui-state-hover a:hover,.ui-iggrid .ui-ig-altrecord td.ui-state-hover a:hover{color:#37addf}
+.ui-iggrid tbody td:first-child,.ui-iggrid tbody .ui-ig-altrecord td:first-child,.ui-iggrid tbody th.ui-iggrid-rowselector-class:first-child,.ui-iggrid th.ui-iggrid-rowselector-class.ui-state-hover,.ui-iggrid .ui-ig-altrecord th.ui-iggrid-rowselector-class.ui-state-hover,.ui-iggrid .ui-ig-altrecord th.ui-iggrid-rowselector-class.ui-state-default.ui-state-hover{border-left-color:transparent}
+.ui-iggrid td.ui-state-focus,.ui-iggrid th.ui-iggrid-rowselector-class.ui-state-focus{border-color:#185170!important;background:white none}
+.ui-ig-altrecord td.ui-state-focus,.ui-ig-altrecord th.ui-iggrid-rowselector-class.ui-state-focus{border-color:#185170!important;background:#ebebeb none}
+.ui-iggrid tr.ui-state-focus{background:white none}
+.ui-iggrid .ui-ig-altrecord.ui-state-focus{background:#ebebeb none}
+.ui-iggrid tr.ui-state-focus td,.ui-iggrid tr.ui-state-focus th{border-top-color:#0096d6!important;border-bottom-color:#e3e3e3!important}
+.ui-iggrid .ui-ig-altrecord.ui-state-focus td,.ui-iggrid .ui-ig-altrecord.ui-state-focus th{border-top-color:#0096d6!important;border-bottom-color:#e3e3e3!important}
+/*.ui-iggrid td.ui-state-active,.ui-iggrid .ui-ig-altrecord td.ui-state-active,.ui-iggrid th.ui-iggrid-rowselector-class.ui-state-active,.ui-iggrid .ui-ig-altrecord th.ui-iggrid-rowselector-class.ui-state-active,.ui-iggrid tbody .ui-iggrid-mergedcell.ui-state-active,.ui-iggrid tbody .ui-ig-altrecord .ui-iggrid-mergedcell.ui-state-active,.ui-iggrid tbody .ui-iggrid-mergedcellstop.ui-state-active,.ui-iggrid tbody .ui-ig-altrecord .ui-iggrid-mergedcellstop.ui-state-active{background:0;background-color:#0096d6;background-image:-webkit-gradient(linear,50% 0,50% 100%,color-stop(0%,#0096d6),color-stop(100%,#0096d6));background-image:-webkit-linear-gradient(#0096d6,#0096d6);background-image:-moz-linear-gradient(#0096d6,#0096d6);background-image:-o-linear-gradient(#0096d6,#0096d6);background-image:-ms-linear-gradient(#0096d6,#0096d6);background-image:linear-gradient(#0096d6,#0096d6);*zoom:1;filter:progid:DXImageTransform.Microsoft.gradient(gradientType=0,startColorstr='#FF0096d6',endColorstr='#FF0096d6');color:white;font-weight:normal;border-color:#0096d6 transparent #e3e3e3;text-shadow:none}*/
+/*selected row in grid */
+.ui-iggrid td.ui-state-active,.ui-iggrid .ui-ig-altrecord td.ui-state-active,.ui-iggrid th.ui-iggrid-rowselector-class.ui-state-active,.ui-iggrid .ui-ig-altrecord th.ui-iggrid-rowselector-class.ui-state-active,.ui-iggrid tbody .ui-iggrid-mergedcell.ui-state-active,.ui-iggrid tbody .ui-ig-altrecord .ui-iggrid-mergedcell.ui-state-active,.ui-iggrid tbody .ui-iggrid-mergedcellstop.ui-state-active,.ui-iggrid tbody .ui-ig-altrecord .ui-iggrid-mergedcellstop.ui-state-active{background:0;background-color:#B9B8BB;background-image:-webkit-gradient(linear,50% 0,50% 100%,color-stop(0%,#B9B8BB),color-stop(100%,#B9B8BB));background-image:-webkit-linear-gradient(#B9B8BB,#B9B8BB);background-image:-moz-linear-gradient(#B9B8BB,#B9B8BB);background-image:-o-linear-gradient(#B9B8BB,#B9B8BB);background-image:-ms-linear-gradient(#B9B8BB,#B9B8BB);background-image:linear-gradient(#B9B8BB,#B9B8BB);*zoom:1;filter:progid:DXImageTransform.Microsoft.gradient(gradientType=0,startColorstr='#B9B8BB',endColorstr='#B9B8BB');color:white;font-weight:normal;border-color:#B9B8BB transparent #e3e3e3;text-shadow:none}
+
+.ui-iggrid .ui-iggrid-paging-item.ui-state-focus,.ui-iggrid .ui-iggrid-paging-item.ui-state-default.ui-state-focus,.ui-iggrid .ui-iggrid-page.ui-state-focus,.ui-iggrid .ui-iggrid-pageui-state-default.ui-state-focus{background-color:#333;background-image:none;background-repeat:repeat-x;border:1px solid #2788b1}
+.ui-iggrid .ui-iggrid-paging-item.ui-state-focus span,.ui-iggrid .ui-iggrid-paging-item.ui-state-default.ui-state-focus span,.ui-iggrid .ui-iggrid-page.ui-state-focus a,.ui-iggrid .ui-iggrid-pageui-state-default.ui-state-focus a{color:white;text-shadow:none}
+.ui-iggrid .ui-iggrid-paging-item.ui-state-focus .ui-icon,.ui-iggrid .ui-iggrid-paging-item.ui-state-default.ui-state-focus .ui-icon{background-image:url(images/ui-icons_858585_256x240.png)}
+.ui-menu .ui-icon{background-image:url(images/igGrid/filter-icons-858585.png)}
+.ui-igedit-list .ui-igedit-listitem{font-size:1em;line-height:1.4em}
+.ui-iggrid-filterbutton{border:1px solid transparent}
+.ui-iggrid-filterbutton.ui-state-hover,.ui-iggrid-filterbutton.ui-state-active,.ui-iggrid-filterbutton.ui-state-focus{border:1px solid #0096d6}
+.ui-iggrid-filterdd,.ui-iggrid-featurechooser-dropdown-dialog{background:white;border:1px solid #b1b1b1}
+.ui-igedit-list .ui-igedit-listitem.ui-state-default,.ui-iggrid-filterddlist li.ui-state-default,.ui-iggrid-featurechooser-list li.ui-state-default,.ui-igcombo-listitemholder li.ui-state-default{background:white none;color:#333;text-shadow:none;border:0}
+.ui-igedit-list .ui-igedit-listitem.ui-state-hover,.ui-igedit-list .ui-igedit-listitem.ui-state-active,.ui-iggrid-filterddlist li.ui-state-hover,.ui-iggrid-filterddlist li.ui-state-active,.ui-iggrid-filterddlistitem.ui-state-hover a,.ui-iggrid-filterddlistitem.ui-state-active a,.ui-iggrid-featurechooser-list li.ui-state-hover,.ui-iggrid-featurechooser-list li.ui-state-active,.ui-iggrid-featurechooser-list.ui-state-hover a,.ui-iggrid-featurechooser-list.ui-state-active a,.ui-igcombo-listitemholder li.ui-state-hover,.ui-igcombo-listitemholder li.ui-state-active,.ui-igcombo-listitemholder li.ui-state-hover a,.ui-igcombo-listitemholder li.ui-state-active a{background-color:#eaeaea;background-image:none;background-repeat:repeat-x;color:#4b4b4b;text-shadow:0 transparent;border:0}
+.ui-igedit-list .ui-igedit-listitem.ui-state-highlight,.ui-igcombo-listitemholder li.ui-state-highlight,.ui-igcombo-listitemholder li.ui-state-highlight a{background-color:#0096d6;background-image:none;background-repeat:repeat-x;background-position:0 0;color:white;text-shadow:0 transparent;border:0}
+.ui-igedit-list .ui-igedit-listitem.ui-state-hover a,.ui-igedit-list .ui-igedit-listitem.ui-state-active a{color:white;text-shadow:0 transparent}
+.ui-iggrid td.ui-state-highlight{background:0;background-color:#b3e6f5;color:#333;font-weight:normal;border-color:#b3e2f6}
+.ui-iggrid tbody td.ui-iggrid-nongrouprowemptycell,.ui-iggrid tbody .ui-ig-altrecord td.ui-iggrid-nongrouprowemptycell{background-color:white}
+.ui-iggrid tbody td.ui-iggrid-nongrouprowemptycell.ui-state-hover{background-image:none}
+.ui-draggable-dragging .ui-iggrid-headertext{font-family:"Segoe UI",Arial,sans-serif}
+ui-iggrid-groupbyarea a,.ui-iggrid-groupbyareatext a{color:#3bb7eb}
+.ui-iggrid-expandcolumn-expanded{border-bottom-width:0!important}
+.ui-iggrid-expandcolumn-expanded.ui-state-focus{border-bottom-width:1px!important}
+.ui-iggrid-altrecord+tr>td.ui-iggrid-childarea{background-color:#ebebeb;border-color:#ebebeb #dcdcdc #dcdcdc}
+.ui-iggrid-featurechooser-list .item-selected .ui-iggrid-featurechooserddlistitemtext{text-shadow:none}
+.ui-iggrid-modaldialog-caption-buttoncontainer .ui-button.ui-state-hover{background:#2686ae none repeat-x;border:1px solid #2788b1;-moz-box-shadow:none;-webkit-box-shadow:none;-o-box-shadow:none;box-shadow:none;-moz-border-radius:3px;-webkit-border-radius:3px;-o-border-radius:3px;-ms-border-radius:3px;-khtml-border-radius:3px;border-radius:3px}
+.ui-iggrid-modaldialog-caption-buttoncontainer .ui-button.ui-state-hover .ui-button span{-moz-border-radius:3px;-webkit-border-radius:3px;-o-border-radius:3px;-ms-border-radius:3px;-khtml-border-radius:3px;border-radius:3px}
+.ui-iggrid-dialog-groupby-button a,.ui-iggrid-columnchooser-item a,.ui-iggrid-sorting-dialog-unsortedcolumns-sortbybutton a{color:#3bb7eb;text-decoration:none}
+.ui-widget-footer{border-bottom:1px solid #dcdcdc;border-right:1px solid #dcdcdc}
+.ui-iggrid tfoot td.ui-widget-content,.ui-iggrid tfoot td.ui-state-default{background-color:transparent;color:#333;border-color:#dcdcdc;border-style:solid}
+.ui-iggrid tfoot td.ui-state-hover{background-color:#ebebeb}
+.ui-iggrid tfoot td.ui-state-default .ui-icon{background-image:url(images/ui-icons_858585_256x240.png)}
+@-webkit-keyframes addingHighlight{0%{background-color:#5f97af}
+100%{background-color:transparent}
+}
+@-moz-keyframes addingHighlight{0%{background-color:#5f97af}
+100%{background-color:transparent}
+}
+.ui-iggrid-modifiedrecord>td{-webkit-animation-name:addingHighlight;-webkit-animation-timing-function:ease-in-out;-webkit-animation-duration:1s;-moz-animation-name:addingHighlight;-moz-animation-timing-function:ease-in-out;-moz-animation-duration:1s;-o-animation-name:addingHighlight;-o-animation-timing-function:ease-in-out;-o-animation-duration:1s;animation-name:addingHighlight;animation-timing-function:ease-in-out;animation-duration:1s}
+.ui-iggrid-modifiedrecord>td{background-color:transparent;color:#666}
+.ui-iggrid .ui-iggrid-mergedcell,.ui-iggrid .ui-ig-altrecord .ui-iggrid-mergedcell,.ui-iggrid .ui-iggrid-mergedcell.ui-state-highlight{background-color:white}
+.ui-iggrid .ui-iggrid-mergedcell,.ui-iggrid .ui-ig-altrecord .ui-iggrid-mergedcell,.ui-iggrid .ui-iggrid-mergedcell.ui-state-highlight,.ui-iggrid .ui-ig-altrecord .ui-iggrid-mergedcell.ui-state-highlight{color:#dcdcdc;border-bottom-color:transparent;border-top-color:transparent}
+.ui-iggrid .ui-iggrid-mergedcellstop.ui-state-highlight,.ui-iggrid .ui-iggrid-mergedcell.ui-state-highlight,.ui-iggrid .ui-ig-altrecord .ui-iggrid-mergedcell.ui-state-highlight{border-left-color:#b3e2f6}
+.ui-iggrid .ui-iggrid-mergedcellstop,.ui-iggrid .ui-iggrid-mergedcellstop.ui-state-highlight,.ui-iggrid .ui-iggrid-mergedcell.ui-state-highlight{background-color:white;border-bottom-color:white;border-top-color:white}
+.ui-iggrid .ui-iggrid-mergedcell.ui-state-active,.ui-iggrid .ui-ig-altrecord .ui-iggrid-mergedcell.ui-state-active,.ui-iggrid .ui-iggrid-mergedcell.ui-state-focus,.ui-iggrid .ui-ig-altrecord .ui-iggrid-mergedcell.ui-state-focus{color:white}
+.ui-iggrid tbody .ui-iggrid-mergedcell.ui-state-hover,.ui-iggrid tbody .ui-ig-altrecord .ui-iggrid-mergedcell.ui-state-hover{color:#333}
+.ui-iggrid .ui-ig-altrecord .ui-iggrid-mergedcellsbottom.ui-state-highlight,.ui-iggrid .ui-iggrid-mergedcellsbottom.ui-state-highlight{border-bottom-color:#b3e2f6}
+.ui-iggrid tbody .ui-iggrid-mergedcell.ui-iggrid-mergedcellsbottom{border-bottom-color:#dcdcdc}
+.ui-igrating,.ui-igrating.ui-state-default{background-color:transparent;background-image:none;border:0}
+.ui-icon.ui-igrating-vote,.ui-iggrid .ui-icon.ui-igrating-vote{background-image:url(images/igRating/ig-rating.png);background-position:-75px 0;width:20px;height:20px}
+.ui-icon.ui-igrating-voteselected,.ui-iggrid .ui-icon.ui-igrating-voteselected{background-image:url(images/igRating/ig-rating.png);background-position:0 0;width:20px;height:20px}
+.ui-icon.ui-igrating-votehover,.ui-iggrid .ui-icon.ui-igrating-votehover{background-image:url(images/igRating/ig-rating.png);background-position:-25px 0;width:20px;height:20px}
+.ui-icon.ui-igrating-votedisabled,.ui-iggrid .ui-icon.ui-igrating-votedisabled{background-image:url(images/igRating/ig-rating.png);background-position:-100px 0;width:20px;height:20px}
+.ui-icon.ui-igrating-votedisabledselected,.ui-iggrid .ui-icon.ui-igrating-votedisabledselected{background-image:url(images/igRating/ig-rating.png);background-position:-50px 0;width:20px;height:20px}
+
+.ui-igcheckbox-small .ui-icon,.ui-igcheckbox-normal .ui-icon,.ui-iggrid th .ui-igcheckbox-normal.ui-state-default .ui-icon,.ui-igcombo-checkbox .ui-icon{background-image:url(images/ui-icons_00AADE_256x240.png); background-color:white!important; opacity:1!important} /*images/ui-icons_0096d6_256x240.png*/
+
+.ui-igedit-list .ui-igedit-listitem.ui-state-default,.ui-iggrid-filterddlist li.ui-state-default,.ui-iggrid-featurechooser-list li.ui-state-default,.ui-igcombo-listitemholder li.ui-state-default{color:#4B4B4B;text-shadow:none}
+.ui-iggrid-addrow.ui-state-active .ui-icon{background-image:url(images/ui-icons_ffffff_256x240.png)!important}
+.ui-iggrid .ui-iggrid-headercaption.ui-widget-header{border-color:transparent;background-color:#0096d6;color:white}
+.ui-iggrid th,.ui-iggrid th.ui-state-default{border-bottom-width:2px!important}
+.ui-iggrid th.ui-state-default:first-child,.ui-iggrid table th:first-child{border-left-color:transparent}
+.ui-iggrid th.ui-state-hover,.ui-iggrid th.ui-state-hover:first-child{border-color:#858585 #858585 #0096d6 #858585}
+.ui-iggrid th.ui-state-active,.ui-iggrid th.ui-state-active:first-child{border-color:#0096d6}
+.ui-iggrid .ui-iggrid-header.ui-iggrid-sortableheaderactive .ui-iggrid-headertext{color:#fff}
+.ui-iggrid .ui-iggrid-header.ui-iggrid-sortableheaderfocus.ui-state-focus .ui-iggrid-headertext{color:#4B4B4B}
+.ui-iggrid .ui-iggrid-header.ui-iggrid-sortableheaderfocus.ui-state-focus .ui-icon{background-image:url(images/ui-icons_858585_256x240.png)}
+.ui-iggrid th.ui-state-active .ui-iggrid-indicatorcontainer .ui-icon{background-image:url(images/ui-icons_ffffff_256x240.png)}
+.ui-iggrid th.ui-state-focus{border-color:#0096d6}
+.ui-iggrid th a,.ui-iggrid th.ui-state-default a,.ui-iggrid th.ui-state-hover a,.ui-iggrid th.ui-state-active a{}
+.ui-iggrid .ui-iggrid-toolbar{border-top:1px solid #e3e3e3;border-bottom:1px solid #e3e3e3}
+.ui-iggrid-headertext{color:#fff}
+.ui-iggrid-headertable{border-left:none!important;background-color:white;}
+.ui-iggrid td.ui-state-highlight{border-style:solid}
+.ui-iggrid td.ui-state-hover{border-width:1px 0!important;padding:4px 5px}
+.ui-iggrid td.ui-state-active{border-width:0!important;padding:5px!important}
+.ui-iggrid .ui-iggrid-paging .ui-iggrid-firstpage,.ui-iggrid .ui-iggrid-paging .ui-iggrid-prevpage{padding:5px 12px!important}
+.ui-iggrid .ui-iggrid-paging .ui-iggrid-nextpage,.ui-iggrid .ui-iggrid-paging .ui-iggrid-lastpage{padding:5px 12px!important}
+.ui-iggrid .ui-iggrid-paging .ui-iggrid-firstpage,.ui-iggrid .ui-iggrid-paging .ui-iggrid-nextpage{border-right:0}
+.ui-iggrid .ui-iggrid-paging div,.ui-iggrid .ui-iggrid-paging span,.ui-iggrid .ui-iggrid-paging li,.ui-iggrid .ui-iggrid-paging input,.ui-iggrid .ui-iggrid-results span,.ui-iggrid .ui-iggrid-results input{line-height:1.2em!important}
+.ui-iggrid-paging>.ui-iggrid-pagedropdowncontainer{margin-top:.3em}
+.ui-igedit-listitem.ui-state-highlight{padding:0 0 0 2px!important}
+/*.ui-iggrid .ui-iggrid-footer{border-width:0 1px 1px;background-color:#0096d6;color:white;line-height:2.1em}*/
+/* footer background color*/
+.ui-iggrid .ui-iggrid-footer{border-width:0 1px 1px;background-color:#767676;color:white;line-height:2.1em}
+
+/*.ui-iggrid .ui-iggrid-footer .ui-iggrid-firstpage,.ui-iggrid .ui-iggrid-footer .ui-iggrid-prevpage,.ui-iggrid .ui-iggrid-footer .ui-iggrid-nextpage,.ui-iggrid .ui-iggrid-footer .ui-iggrid-lastpage{border-color:#0096d6;background-color:#0096d6;color:white}*/
+/*Paging backgrounds in the footer*/
+.ui-iggrid .ui-iggrid-footer .ui-iggrid-firstpage,.ui-iggrid .ui-iggrid-footer .ui-iggrid-prevpage,.ui-iggrid .ui-iggrid-footer .ui-iggrid-nextpage,.ui-iggrid .ui-iggrid-footer .ui-iggrid-lastpage{border-color:#767676;background-color:#767676;color:white}
+
+.ui-iggrid .ui-iggrid-footer .ui-iggrid-firstpage .ui-icon,.ui-iggrid .ui-iggrid-footer .ui-iggrid-prevpage .ui-icon,.ui-iggrid .ui-iggrid-footer .ui-iggrid-nextpage .ui-icon,.ui-iggrid .ui-iggrid-footer .ui-iggrid-lastpage .ui-icon{background-image:url(images/icon_sprite.png)}
+.ui-iggrid .ui-iggrid-footer .ui-iggrid-firstpage .ui-icon{background-position:0 -63px;margin-left:-4px}
+.ui-iggrid .ui-iggrid-footer .ui-iggrid-prevpage .ui-icon{background-position:0 -47px;margin-left:-4px}
+.ui-iggrid .ui-iggrid-footer .ui-iggrid-nextpage .ui-icon{background-position:-16px -47px;margin-right:-4px}
+.ui-iggrid .ui-iggrid-footer .ui-iggrid-lastpage .ui-icon{background-position:-16px -63px;margin-left:-4px}
+.ui-iggrid-results .ui-iggrid-pagesizelabel,.ui-iggrid-results .ui-iggrid-pagesizelabel,.ui-iggrid-pagedropdowncontainer .ui-iggrid-pagedropdownlabels{margin-top:.15em}
+.ui-iggrid .ui-iggrid-paging .ui-iggrid-page.ui-state-default{background-color:transparent;border:1px solid transparent;padding:0px 12px}
+.ui-iggrid .ui-iggrid-paging .ui-iggrid-pagecurrent.ui-state-default{background-color:white; border:1px solid #FFF;padding:0px 12px}
+.ui-iggrid .ui-iggrid-footer.ui-iggrid-pager .ui-iggrid-pagelink{color:black;filter:alpha(opacity=70);opacity:.7;filter:alpha(opacity=70);background-color:white;}
+.ui-iggrid .ui-iggrid-footer.ui-iggrid-pager .ui-state-hover .ui-iggrid-pagelink,.ui-iggrid .ui-iggrid-footer.ui-iggrid-pager .ui-state-hover .ui-iggrid-pagelinkcurrent,.ui-iggrid-pagecurrent.ui-state-active.ui-state-hover a,.ui-iggrid-pagecurrent.ui-iggrid-page-hover a{background:#fff;color:black;}
+.ui-iggrid-pagel.ui-state-active a.ui-iggrid-pagelinkcurrent, .ui-state-active a.ui-iggrid-pagelinkcurrent:link, .ui-state-active a.ui-iggrid-pagelinkcurrent:visited{color:black;}
+.ui-iggrid-paging .ui-iggrid-page.ui-iggrid-page-hover{background-color:#EAEAEA;border:1px solid #B7B7B7}
+.ui-iggrid .ui-igedit-button.ui-state-hover{background-color:#EAEAEA}
+.ui-iggrid .ui-igedit-button.ui-state-hover .ui-icon-triangle-1-s{background-image:url(images/ui-icons_858585_256x240) !important}
+.ui-iggrid .ui-iggrid-filterbutton,.ui-iggrid-filterddlist .ui-iggrid-filtericon{background-image:url(images/igGrid/filter-icons-858585.png)!important}
+/*.ui-iggrid td.ui-iggrid-filtercell{border:0 none!important;background:#0096d6}*/
+/*filter cell background*/
+.ui-iggrid td.ui-iggrid-filtercell{border:0 none!important;background:#767676}
+
+.ui-iggrid-modaldialog-caption-buttoncontainer .ui-igbutton{font-size:1.3em}
+.ui-iggrid-modaldialog-caption-buttoncontainer .ui-igbutton.ui-state-default{border-color:#fff;background-color:transparent}
+.ui-iggrid-modaldialog-caption-buttoncontainer .ui-igbutton.ui-state-default .ui-button-text{color:white}
+.ui-iggrid-modaldialog-caption-buttoncontainer .ui-igbutton.ui-state-hover{border-color:#858585;background-color:#E5E5E5}
+.ui-iggrid-modaldialog-caption-buttoncontainer .ui-igbutton.ui-state-hover .ui-button-text{color:#000}
+.ui-iggrid-modaldialog-caption-buttoncontainer .ui-igbutton.ui-state-focus,.ui-iggrid-modaldialog-caption-buttoncontainer .ui-igbutton.ui-state-active{border-color:#80D5EF;border-width:1px}
+.ui-iggrid-modaldialog-caption-buttoncontainer .ui-igbutton.ui-state-focus .ui-button-text,.ui-iggrid-modaldialog-caption-buttoncontainer .ui-igbutton.ui-state-active .ui-button-text{color:white}
+
+

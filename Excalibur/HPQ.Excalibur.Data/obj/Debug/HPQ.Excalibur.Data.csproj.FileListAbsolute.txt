@@ -1,0 +1,5 @@
+C:\TFS\Excalibur\HPQ.Excalibur.Data\bin\Debug\HPQ.Excalibur.Data.dll
+C:\TFS\Excalibur\HPQ.Excalibur.Data\bin\Debug\HPQ.Excalibur.Data.pdb
+C:\TFS\Excalibur\HPQ.Excalibur.Data\obj\Debug\HPQ.Excalibur.Data.csprojAssemblyReference.cache
+C:\TFS\Excalibur\HPQ.Excalibur.Data\obj\Debug\HPQ.Excalibur.Data.dll
+C:\TFS\Excalibur\HPQ.Excalibur.Data\obj\Debug\HPQ.Excalibur.Data.pdb

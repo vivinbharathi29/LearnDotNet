@@ -1,0 +1,270 @@
+
+
+<HTML>
+
+
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<title>Deliverable Status - Confidential</title>
+	<STYLE>
+		TD{
+	    FONT-SIZE: xx-small;
+	    FONT-FAMILY: Verdana;
+	    }
+		Body{
+	    FONT-FAMILY: Verdana;
+	    FONT-SIZE: x-small;
+	    }
+		A:visited
+		{	
+		COLOR: blue
+		}
+	</STYLE>
+
+<SCRIPT ID=clientEventHandlersJS LANGUAGE=javascript>
+var lastcol, lastseq;
+
+
+	var sortedOn = -1;
+	var TagDepth = 1;
+	var sortDirection = 0;
+	
+	function SortTable(TableName, sortOn,celltype, depth) {
+		TagDepth = depth;
+
+		var table = document.getElementById(TableName);
+		var tbody = table.getElementsByTagName('tbody')[0];
+		var rows = tbody.getElementsByTagName('tr');
+
+		var rowArray = new Array();
+		for (var i=0, length=rows.length; i<length; i++) {
+			rowArray[i] = rows[i].cloneNode(true);
+		}
+		if (sortOn == sortedOn) 
+			{ 
+				rowArray.reverse(); 
+				if (sortDirection==0)
+					sortDirection = 1;
+				else
+					sortDirection=0;
+			}
+		else {
+			sortedOn = sortOn;
+			sortDirection = 0;
+			if (celltype == 1) {
+				rowArray.sort(RowCompareNumbers);
+			}
+			else if (celltype == 2) {
+				rowArray.sort(RowCompareDates);
+			}
+			else if (celltype == 3) {
+					rowArray.sort(RowCompareDollars);
+			}
+			else if (celltype == 4) {
+					rowArray.sort(RowCompareGeneral);
+			}
+			else {
+					rowArray.sort(RowCompare);
+			}
+		}
+		
+		var newTbody = document.createElement('tbody');
+		for (var i=0, length=rowArray.length; i<length; i++) {
+			newTbody.appendChild(rowArray[i]);
+		}
+		
+		table.replaceChild(newTbody, tbody);
+	}
+	
+	function RowCompare(a, b) {
+		if (TagDepth == 1)
+			{
+			var aVal = String(a.getElementsByTagName('td')[sortedOn].firstChild.nodeValue).toLowerCase();
+			var bVal = String(b.getElementsByTagName('td')[sortedOn].firstChild.nodeValue).toLowerCase();
+			}
+		else if (TagDepth == 2)
+			{
+			var aVal = String(a.getElementsByTagName('td')[sortedOn].firstChild.firstChild.nodeValue).toLowerCase();
+			var bVal = String(b.getElementsByTagName('td')[sortedOn].firstChild.firstChild.nodeValue).toLowerCase();
+			}
+		else if (TagDepth == 3)
+			{
+			var aVal = String(a.getElementsByTagName('td')[sortedOn].firstChild.firstChild.firstChild.nodeValue).toLowerCase();
+			var bVal = String(b.getElementsByTagName('td')[sortedOn].firstChild.firstChild.firstChild.nodeValue).toLowerCase();
+			}
+		return (aVal == bVal ? 0 : (aVal > bVal ? 1 : -1));
+	}
+	
+	function RowCompareGeneral(a, b) {
+		if (TagDepth == 1)
+			{
+			var aVal = String(a.getElementsByTagName('td')[sortedOn].firstChild.nodeValue).toLowerCase();
+			var bVal = String(b.getElementsByTagName('td')[sortedOn].firstChild.nodeValue).toLowerCase();
+			}
+		else if (TagDepth == 2)
+			{
+			var aVal = String(a.getElementsByTagName('td')[sortedOn].firstChild.firstChild.nodeValue).toLowerCase();
+			var bVal = String(b.getElementsByTagName('td')[sortedOn].firstChild.firstChild.nodeValue).toLowerCase();
+			}
+		else if (TagDepth == 3)
+			{
+			var aVal = String(a.getElementsByTagName('td')[sortedOn].firstChild.firstChild.firstChild.nodeValue).toLowerCase();
+			var bVal = String(b.getElementsByTagName('td')[sortedOn].firstChild.firstChild.firstChild.nodeValue).toLowerCase();
+			}
+		
+		aVal=_FixValue(aVal);
+		bVal=_FixValue(bVal);
+		return (aVal == bVal ? 0 : (aVal > bVal ? 1 : -1));
+	}
+
+	function RowCompareNumbers(a, b) {
+		if (TagDepth == 1)
+			{
+			var aVal = parseInt(RemoveHTML(a.getElementsByTagName('td')[sortedOn].firstChild.nodeValue));
+			var bVal = parseInt(RemoveHTML(b.getElementsByTagName('td')[sortedOn].firstChild.nodeValue));
+			}
+		else if (TagDepth == 2)
+			{
+			var aVal = parseInt(RemoveHTML(a.getElementsByTagName('td')[sortedOn].firstChild.firstChild.nodeValue));
+			var bVal = parseInt(RemoveHTML(b.getElementsByTagName('td')[sortedOn].firstChild.firstChild.nodeValue));
+			}
+		else if (TagDepth == 3)
+			{
+			var aVal = parseInt(RemoveHTML(a.getElementsByTagName('td')[sortedOn].firstChild.firstChild.firstChild.nodeValue));
+			var bVal = parseInt(RemoveHTML(b.getElementsByTagName('td')[sortedOn].firstChild.firstChild.firstChild.nodeValue));
+			}
+		return (aVal - bVal);
+	}
+
+	function RowCompareDates(a, b) {
+    
+		if (TagDepth == 1)
+			{
+			
+			if (a.getElementsByTagName('td')[sortedOn].firstChild.nodeValue == String.fromCharCode(160) && b.getElementsByTagName('td')[sortedOn].firstChild.nodeValue== String.fromCharCode(160))
+				return 0;
+			else if (a.getElementsByTagName('td')[sortedOn].firstChild.nodeValue== String.fromCharCode(160))
+				return -1;
+			else if (b.getElementsByTagName('td')[sortedOn].firstChild.nodeValue== String.fromCharCode(160))
+				return 1;
+			var aVal = new Date(RemoveHTML(a.getElementsByTagName('td')[sortedOn].firstChild.nodeValue));
+			var bVal = new Date(RemoveHTML(b.getElementsByTagName('td')[sortedOn].firstChild.nodeValue));
+			}
+		else if (TagDepth == 2)
+			{
+			if (a.getElementsByTagName('td')[sortedOn].firstChild.firstChild.nodeValue == String.fromCharCode(160) && b.getElementsByTagName('td')[sortedOn].firstChild.firstChild.nodeValue== String.fromCharCode(160))
+				return 0;
+			else if (a.getElementsByTagName('td')[sortedOn].firstChild.firstChild.nodeValue== String.fromCharCode(160))
+				return -1;
+			else if (b.getElementsByTagName('td')[sortedOn].firstChild.firstChild.nodeValue== String.fromCharCode(160))
+				return 1;
+			var aVal = new Date(RemoveHTML(a.getElementsByTagName('td')[sortedOn].firstChild.firstChild.nodeValue));
+			var bVal = new Date(RemoveHTML(b.getElementsByTagName('td')[sortedOn].firstChild.firstChild.nodeValue));
+			}		
+		else if (TagDepth == 3)
+			{
+			if (a.getElementsByTagName('td')[sortedOn].firstChild.firstChild.firstChild.nodeValue == String.fromCharCode(160) && b.getElementsByTagName('td')[sortedOn].firstChild.firstChild.firstChild.nodeValue== String.fromCharCode(160))
+				return 0;
+			else if (a.getElementsByTagName('td')[sortedOn].firstChild.firstChild.firstChild.nodeValue== String.fromCharCode(160))
+				return -1;
+			else if (b.getElementsByTagName('td')[sortedOn].firstChild.firstChild.firstChild.nodeValue== String.fromCharCode(160))
+				return 1;
+			var aVal = new Date(RemoveHTML(a.getElementsByTagName('td')[sortedOn].firstChild.firstChild.firstChild.nodeValue));
+			var bVal = new Date(RemoveHTML(b.getElementsByTagName('td')[sortedOn].firstChild.firstChild.firstChild.nodeValue));
+			}		
+		return (aVal == bVal ? 0 : (aVal > bVal ? 1 : -1));
+	}
+
+	function RowCompareDollars(a, b) {
+	
+		var aVal = parseFloat(a.getElementsByTagName('td')[sortedOn].firstChild.nodeValue.substr(1));
+		var bVal = parseFloat(b.getElementsByTagName('td')[sortedOn].firstChild.nodeValue.substr(1));
+		return (aVal - bVal);
+	}
+
+
+	
+	function RemoveHTML( strText ){
+
+		var a;
+		var b;
+		var c;
+		var d;
+		var Word;
+		var HTMLlen;
+		var tmp;
+		
+		a = strText.indexOf("<");
+		b = strText.indexOf(">");
+
+		HTMLlen = strText.length;
+		
+		c =	strText.substring(0, a);
+	
+		if(b == -1)
+			b = a;
+	
+		d = strText.substring((b + 1), HTMLlen);
+	
+		Word = c + d;
+	
+		tmp = Word.indexOf("<");
+	
+		if(tmp != -1)
+		Word = RemoveHTML(Word);
+	
+	return Word;
+}
+
+	function _FixValue(strValue){
+		
+		if(! isNaN(Date.parse(strValue)))
+			{		
+			var myDate = new Date(strValue);
+			var myYear = parseInt(myDate.getFullYear());
+			var myMonth = parseInt(myDate.getMonth())+1;
+			var myDay = parseInt(myDate.getDate());
+			
+			myMonth = "00" + myMonth.toString();
+			myMonth = myMonth.substr(myMonth.length-2,2);
+			myDay = "00" + myDay.toString();
+			myDay = myDay.substr(myDay.length-2,2);
+			
+			return myYear + "/" + myMonth + "/" + myDay ;	
+
+			}
+		else if (!isNaN(strValue))
+			{
+			var tmp= "00000000000000000000" + strValue;
+			tmp = tmp.substr(tmp.length-20,20);
+			return tmp
+			}
+		else
+			return strValue;
+}
+
+	
+
+
+
+
+function window_onload() {
+	lblOTS.style.display="none";
+}
+
+//-->
+</SCRIPT>
+</HEAD>
+<BODY LANGUAGE=javascript onload="return window_onload()">
+
+
+
+	<label ID=lblOTS>
+	
+	Accessing OTS.  Please Wait...
+	
+	</label>
+<table style="width:100%" border=1 cellpadding=3 cellspacing=0><tr style="height:10px"><td bgcolor=blue colspan=10></td></tr><tr><td bgcolor=gainsboro colspan=2 nowrap align=center><b>Security Apps - Face Recognition for HP ProtectTools</td><td bgcolor=gainsboro colspan=3 align=center><b>Mistry, Anil</td><td bgcolor=gainsboro colspan=3 align=center><b>Cogent</td></tr><tr><td valign=top rowspan=3 bgcolor=gainsboro><font color=red>Executive<br>Summary <img style="width:32px;height:32px" src="../images/status1.jpg" /><BR><BR></td><td valign=top rowspan=3 style="width:100%"><i>EC - test&nbsp;</i></td><td nowrap bgcolor=gainsboro colspan=3>CF Product: N/A</td><td nowrap bgcolor=gainsboro colspan=3>CF Date: N/A</td></tr><tr><td nowrap bgcolor=gainsboro colspan=3>CF Product: N/A</td><td nowrap bgcolor=gainsboro colspan=3>CF Date: N/A</td></tr><tr><td nowrap bgcolor=gainsboro colspan=3>CF Product: N/A</td><td nowrap bgcolor=gainsboro colspan=3>CF Date: N/A</td></tr><tr><td valign=top rowspan=2 bgcolor=gainsboro>HP&nbsp;People&nbsp;&<br>Process</td><td valign=top rowspan=2 bgcolor=#FFFFCC><i>HPP - test&nbsp;</i></td><td nowrap bgcolor=gainsboro align=center valign=bottom>Backlog<BR>P1</td><td nowrap bgcolor=gainsboro align=center valign=bottom>Investigating<BR>P1</td><td nowrap bgcolor=gainsboro align=center valign=bottom>Identified<BR>P1</td><td nowrap bgcolor=gainsboro align=center valign=bottom>Fix In Progress<BR>P1</td><td nowrap bgcolor=gainsboro align=center valign=bottom>Retest<BR>P1</td><td nowrap bgcolor=gainsboro align=center valign=bottom>Backlog<BR>P2</td></tr><tr><td nowrap bgcolor=gainsboro align=center>4</td><td nowrap bgcolor=gainsboro align=center>0</td><td nowrap bgcolor=gainsboro align=center>2</td><td nowrap bgcolor=gainsboro align=center>1</td><td nowrap bgcolor=gainsboro align=center>1</td><td nowrap bgcolor=gainsboro align=center>11</td></tr><tr><td valign=top bgcolor=gainsboro>HP<BR>Equipment</td><td valign=top bgcolor=#FFCCCC><i>HE - Test&nbsp;</i></td><td valign=center align=center rowspan=4 colspan=7><IMG src="../thumbnail.aspx?img=/temp/rad7F4A1.tmp.gif&amp;w=600&amp;h=400"  border=0 ></td></tr><tr><td valign=top bgcolor=gainsboro>Supplier&nbsp;People<br>Process</td><td valign=top bgcolor=#E6FFCC><i>IPP - Test&nbsp;</i></td></tr><tr><td valign=top bgcolor=gainsboro>Supplier&nbsp;Software</td><td valign=top bgcolor=#FFFFCC><i>IS - Test&nbsp;</i></td></tr><tr><td valign=top bgcolor=gainsboro>Action</td><td valign=top colspan=1><i>Action Item Defined Here&nbsp;</i></td></tr></table>
+</BODY>
+</HTML>
+ 

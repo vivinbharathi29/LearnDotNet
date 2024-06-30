@@ -1,0 +1,2935 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{1EF3EE61-FB39-4533-8171-067C1992819E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>DummyVBApp</RootNamespace>
+    <AssemblyName>DummyVBApp</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ajax, Version=5.7.22.2, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Ajax.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxControlToolkit, Version=1.0.10920.25510, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Brettle.Web.NeatUpload, Version=1.2.5067.19442, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\Brettle.Web.NeatUpload.dll</HintPath>
+    </Reference>
+    <Reference Include="ControlLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\ControlLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="eWorld.UI, Version=2.0.6.2393, Culture=neutral, PublicKeyToken=24d65337282035f2, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\eWorld.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=1.2.4.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="skmValidators, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\skmValidators.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AccountSuspended.asp" />
+    <Content Include="Actions\Action.asp" />
+    <Content Include="Actions\ActionButtons.asp" />
+    <Content Include="Actions\ActionMain.asp" />
+    <Content Include="Actions\ActionRSget.asp" />
+    <Content Include="Actions\ActionSave.asp" />
+    <Content Include="Actions\EmailPreview.asp" />
+    <Content Include="Actions\pdd_export.asp" />
+    <Content Include="Actions\ReviewInput.asp" />
+    <Content Include="Actions\Roadmap.asp" />
+    <Content Include="Actions\RoadmapSummary.asp" />
+    <Content Include="Actions\Schedule.asp" />
+    <Content Include="Actions\ScheduleButtons.asp" />
+    <Content Include="Actions\ScheduleMain.asp" />
+    <Content Include="Actions\ScheduleReorder.asp" />
+    <Content Include="Actions\ScheduleReorderMain.asp" />
+    <Content Include="Actions\ScheduleReorderSave.asp" />
+    <Content Include="Actions\ScheduleRSget.asp" />
+    <Content Include="Actions\ScheduleSave.asp" />
+    <Content Include="Actions\WorkingListReorder.asp" />
+    <Content Include="Actions\WorkingListReorderButtons.asp" />
+    <Content Include="Actions\WorkingListReorderMain.asp" />
+    <Content Include="Actions\WorkingListReorderSave.asp" />
+    <Content Include="AddEditMarketingName.aspx" />
+    <Content Include="AddEditMarketingNameFrame.asp" />
+    <Content Include="AddProgram.asp" />
+    <Content Include="AddProgramMain.asp" />
+    <Content Include="Agency\AdvancedSearch.asp" />
+    <Content Include="Agency\Agency.asp" />
+    <Content Include="Agency\agency.css" />
+    <Content Include="Agency\AgencyButtons.asp" />
+    <Content Include="Agency\AgencyDefinitionList.html" />
+    <Content Include="Agency\AgencyDetailsDialog.htm" />
+    <Content Include="Agency\AgencyDetailsDialog.js" />
+    <Content Include="Agency\AgencyInitWorflowDialog.htm" />
+    <Content Include="Agency\AgencyInitWorkflowDialog.js" />
+    <Content Include="Agency\AgencyLeverage.asp" />
+    <Content Include="Agency\AgencyLeverageMain.asp" />
+    <Content Include="Agency\AgencyMain.asp" />
+    <Content Include="Agency\AgencyMatrix.asp" />
+    <Content Include="Agency\AgencyMatrixTest.asp" />
+    <Content Include="Agency\AgencyPivot.asp" />
+    <Content Include="Agency\AgencyPmViewStatus.aspx" />
+    <Content Include="Agency\AgencyStatusPivot.asp" />
+    <Content Include="Agency\AgencyUploadDialog.js" />
+    <Content Include="Agency\BatchEditButtons.asp" />
+    <Content Include="Agency\BatchEditFrames.asp" />
+    <Content Include="Agency\BatchEditMain.asp" />
+    <Content Include="Agency\ChooseDCR.asp" />
+    <Content Include="Agency\ChooseDCRButtons.asp" />
+    <Content Include="Agency\ChooseDCRMain.asp" />
+    <Content Include="Agency\dmview.asp" />
+    <Content Include="Agency\dmview.jquery.js" />
+    <Content Include="Agency\excel_export.asp" />
+    <Content Include="Agency\jsonParse.htm" />
+    <Content Include="Agency\pdd_export.asp" />
+    <Content Include="Agency\pmview.asp" />
+    <Content Include="Agency\pmview.jquery.js" />
+    <Content Include="AlertDetails.asp" />
+    <Content Include="AMOList\data\closeDBConnection.asp" />
+    <Content Include="AMOList\data\oDataAMO.asp" />
+    <Content Include="AMOList\data\oDataAVL.asp" />
+    <Content Include="AMOList\data\oDataConnection.asp" />
+    <Content Include="AMOList\data\oDataGeneral.asp" />
+    <Content Include="AMOList\data\oDataModule.asp" />
+    <Content Include="AMOList\data\oDataMOLCategory.asp" />
+    <Content Include="AMOList\data\oDataNotification.asp" />
+    <Content Include="AMOList\data\oDataPermission.asp" />
+    <Content Include="AMOList\data\oDataWebCategory.asp" />
+    <Content Include="AMOList\data\openDBConnection.asp" />
+    <Content Include="AMOList\help\HELP_AMO_Localization.asp" />
+    <Content Include="AMOList\help\HELP_AMO_ModuleList_Options.asp" />
+    <Content Include="AMOList\help\HELP_AMO_ModuleList_RAS.asp" />
+    <Content Include="AMOList\help\HELP_AMO_Overview.asp" />
+    <Content Include="AMOList\help\HELP_AMO_Platforms.asp" />
+    <Content Include="AMOList\help\HELP_AMO_Properties.asp" />
+    <Content Include="AMOList\help\HELP_AMO_Reports.asp" />
+    <Content Include="AMOList\images\calendarButton.gif" />
+    <Content Include="AMOList\includes\adovbs.inc" />
+    <Content Include="AMOList\includes\AMO.inc" />
+    <Content Include="AMOList\includes\AMO_Discontinuance_Report.inc" />
+    <Content Include="AMOList\includes\AMO_Report_RASDetail.inc" />
+    <Content Include="AMOList\includes\AMO_SCM_ExcelReport.inc" />
+    <Content Include="AMOList\includes\incConstants.inc" />
+    <Content Include="AMOList\includes\MOL_SendEmail.inc" />
+    <Content Include="AMOList\isapi\AMO_AddBulksDate_popup.asp" />
+    <Content Include="AMOList\isapi\AMO_AddComment.asp" />
+    <Content Include="AMOList\isapi\AMO_AutoloadFiles.asp" />
+    <Content Include="AMOList\isapi\AMO_BlindDateFile.asp" />
+    <Content Include="AMOList\isapi\AMO_CategoryRulesSave.asp" />
+    <Content Include="AMOList\isapi\AMO_ChangeHistory.asp" />
+    <Content Include="AMOList\isapi\AMO_CreateAutoloadFile.asp" />
+    <Content Include="AMOList\isapi\AMO_CreateBlindDateFile.asp" />
+    <Content Include="AMOList\isapi\AMO_CreateDFTDescriptionFile.asp" />
+    <Content Include="AMOList\isapi\AMO_CreateDFTFile.asp" />
+    <Content Include="AMOList\isapi\AMO_DFTDescriptionFile.asp" />
+    <Content Include="AMOList\isapi\AMO_DFTFiles.asp" />
+    <Content Include="AMOList\isapi\AMO_ExcelPropertiesReport.asp" />
+    <Content Include="AMOList\isapi\AMO_GenerateExport.asp" />
+    <Content Include="AMOList\isapi\AMO_Hub_Excel_Report.asp" />
+    <Content Include="AMOList\isapi\AMO_Hub_Html_Report.asp" />
+    <Content Include="AMOList\isapi\AMO_Localization.asp" />
+    <Content Include="AMOList\isapi\AMO_ModuleList.asp" />
+    <Content Include="AMOList\isapi\AMO_ModuleList_Complete.asp" />
+    <Content Include="AMOList\isapi\AMO_ModuleList_Discontinue.asp" />
+    <Content Include="AMOList\isapi\AMO_ModuleList_RAS.asp" />
+    <Content Include="AMOList\isapi\AMO_ModuleList_WIP.asp" />
+    <Content Include="AMOList\isapi\AMO_OptionCategoryRule.asp" />
+    <Content Include="AMOList\isapi\AMO_Platforms.asp" />
+    <Content Include="AMOList\isapi\AMO_Properties.asp" />
+    <Content Include="AMOList\isapi\AMO_Reports.asp" />
+    <Content Include="AMOList\isapi\AMO_Report_Discontinuance.asp" />
+    <Content Include="AMOList\isapi\AMO_Report_Discontinuance_filter.asp" />
+    <Content Include="AMOList\isapi\AMO_Report_HubSKULocalization_filter.asp" />
+    <Content Include="AMOList\isapi\AMO_Report_RASDetail.asp" />
+    <Content Include="AMOList\isapi\AMO_RS.asp" />
+    <Content Include="AMOList\isapi\AMO_Save.asp" />
+    <Content Include="AMOList\isapi\AMO_SaveComment.asp" />
+    <Content Include="AMOList\isapi\AMO_SaveDate.asp" />
+    <Content Include="AMOList\isapi\AMO_SCM_Comparison.asp" />
+    <Content Include="AMOList\isapi\AMO_SCM_ExcelReport.asp" />
+    <Content Include="AMOList\isapi\AMO_SCM_ExcelReport_XML.asp" />
+    <Content Include="AMOList\isapi\AMO_SCM_Excel_Alter_Report_XML.asp" />
+    <Content Include="AMOList\isapi\AMO_SetBulkDateValue.asp" />
+    <Content Include="AMOList\isapi\AMO_SetBulkStatusEmailValue.asp" />
+    <Content Include="AMOList\isapi\AMO_SetBulkStatusValue.asp" />
+    <Content Include="AMOList\isapi\AMO_SetComparability.asp" />
+    <Content Include="AMOList\isapi\AMO_SetDateFieldValue.asp" />
+    <Content Include="AMOList\isapi\AMO_SetFieldValue.asp" />
+    <Content Include="AMOList\isapi\AMO_SetGEODate.asp" />
+    <Content Include="AMOList\isapi\AMO_SetPlatform.asp" />
+    <Content Include="AMOList\isapi\AMO_SetRegion.asp" />
+    <Content Include="AMOList\isapi\AMO_ValidateData.asp" />
+    <Content Include="AMOList\isapi\AMO_ViewCustomize.asp" />
+    <Content Include="AMOList\isapi\AVAMO_Matrix_ExcelReport.asp" />
+    <Content Include="AMOList\isapi\AV_AMO_Report_filter.asp" />
+    <Content Include="AMOList\isapi\GetGroupsForModuleRole.asp" />
+    <Content Include="AMOList\library\images\gifs\1pix.gif" />
+    <Content Include="AMOList\library\images\gifs\add_hover.gif" />
+    <Content Include="AMOList\library\images\gifs\arrow_brown2_beveled.gif" />
+    <Content Include="AMOList\library\images\gifs\BFR_PVC.jpg" />
+    <Content Include="AMOList\library\images\gifs\bigmodernhplogo.gif" />
+    <Content Include="AMOList\library\images\gifs\Blank.gif" />
+    <Content Include="AMOList\library\images\gifs\bluecheck.gif" />
+    <Content Include="AMOList\library\images\gifs\bluechecktrans.gif" />
+    <Content Include="AMOList\library\images\gifs\blueflag.gif" />
+    <Content Include="AMOList\library\images\gifs\bottomleftblue.gif" />
+    <Content Include="AMOList\library\images\gifs\bottomleftblue_dk.gif" />
+    <Content Include="AMOList\library\images\gifs\bottomrightblue.gif" />
+    <Content Include="AMOList\library\images\gifs\bottomrightblue_dk.gif" />
+    <Content Include="AMOList\library\images\gifs\calendar.gif" />
+    <Content Include="AMOList\library\images\gifs\calendarButton.gif" />
+    <Content Include="AMOList\library\images\gifs\check.gif" />
+    <Content Include="AMOList\library\images\gifs\checkedbox.gif" />
+    <Content Include="AMOList\library\images\gifs\checkeredflag.gif" />
+    <Content Include="AMOList\library\images\gifs\clear1.gif" />
+    <Content Include="AMOList\library\images\gifs\clear2.gif" />
+    <Content Include="AMOList\library\images\gifs\close.gif" />
+    <Content Include="AMOList\library\images\gifs\createspreadsheet_down_button.gif" />
+    <Content Include="AMOList\library\images\gifs\createspreadsheet_down_button_hover.gif" />
+    <Content Include="AMOList\library\images\gifs\createspreadsheet_right_button.gif" />
+    <Content Include="AMOList\library\images\gifs\createspreadsheet_right_button_hover.gif" />
+    <Content Include="AMOList\library\images\gifs\CurrentStatus.GIF" />
+    <Content Include="AMOList\library\images\gifs\del_hover.gif" />
+    <Content Include="AMOList\library\images\gifs\dir_asp.gif" />
+    <Content Include="AMOList\library\images\gifs\dir_doc.gif" />
+    <Content Include="AMOList\library\images\gifs\dir_folder.gif" />
+    <Content Include="AMOList\library\images\gifs\dir_htm.gif" />
+    <Content Include="AMOList\library\images\gifs\dir_img.gif" />
+    <Content Include="AMOList\library\images\gifs\dir_misc.gif" />
+    <Content Include="AMOList\library\images\gifs\dir_msg.gif" />
+    <Content Include="AMOList\library\images\gifs\dir_parent.gif" />
+    <Content Include="AMOList\library\images\gifs\dir_pdf.gif" />
+    <Content Include="AMOList\library\images\gifs\dir_ppt.gif" />
+    <Content Include="AMOList\library\images\gifs\dir_txt.gif" />
+    <Content Include="AMOList\library\images\gifs\dir_xls.gif" />
+    <Content Include="AMOList\library\images\gifs\dir_zip.gif" />
+    <Content Include="AMOList\library\images\gifs\downarrow.gif" />
+    <Content Include="AMOList\library\images\gifs\empty.gif" />
+    <Content Include="AMOList\library\images\gifs\folders.gif" />
+    <Content Include="AMOList\library\images\gifs\gears_ani_0.gif" />
+    <Content Include="AMOList\library\images\gifs\gears_ani_1.gif" />
+    <Content Include="AMOList\library\images\gifs\gears_ani_2.gif" />
+    <Content Include="AMOList\library\images\gifs\gears_ani_3.gif" />
+    <Content Include="AMOList\library\images\gifs\gears_an_original.gif" />
+    <Content Include="AMOList\library\images\gifs\goalsobjectivesblue.gif" />
+    <Content Include="AMOList\library\images\gifs\goalsobjectivesdarkblue.gif" />
+    <Content Include="AMOList\library\images\gifs\GreenCheck.gif" />
+    <Content Include="AMOList\library\images\gifs\greenflag.gif" />
+    <Content Include="AMOList\library\images\gifs\GreenQuestion.gif" />
+    <Content Include="AMOList\library\images\gifs\hidetoc1.gif" />
+    <Content Include="AMOList\library\images\gifs\hidetoc2.gif" />
+    <Content Include="AMOList\library\images\gifs\hidetree1.gif" />
+    <Content Include="AMOList\library\images\gifs\hplogo-reverseblue_sm.gif" />
+    <Content Include="AMOList\library\images\gifs\hplogo.gif" />
+    <Content Include="AMOList\library\images\gifs\hp_invent.gif" />
+    <Content Include="AMOList\library\images\gifs\ieLinksBkgd_hov.gif" />
+    <Content Include="AMOList\library\images\gifs\ieLinksBkgd_off.gif" />
+    <Content Include="AMOList\library\images\gifs\igdw_BodyEdgeBottom.gif" />
+    <Content Include="AMOList\library\images\gifs\igdw_headercontent_navy.gif" />
+    <Content Include="AMOList\library\images\gifs\igdw_headercornerleft_navy.gif" />
+    <Content Include="AMOList\library\images\gifs\igdw_headercornerright_navy.gif" />
+    <Content Include="AMOList\library\images\gifs\igg_Selected.gif" />
+    <Content Include="AMOList\library\images\gifs\ig_ajaxIndicator.gif" />
+    <Content Include="AMOList\library\images\gifs\ig_checkbox_off.gif" />
+    <Content Include="AMOList\library\images\gifs\ig_progressIndicator.gif" />
+    <Content Include="AMOList\library\images\gifs\ig_tblTri_Blue3d.gif" />
+    <Content Include="AMOList\library\images\gifs\ig_treeXPMinus.GIF" />
+    <Content Include="AMOList\library\images\gifs\ig_treeXPPlus.GIF" />
+    <Content Include="AMOList\library\images\gifs\img01.gif" />
+    <Content Include="AMOList\library\images\gifs\img02.gif" />
+    <Content Include="AMOList\library\images\gifs\img1.gif" />
+    <Content Include="AMOList\library\images\gifs\img2.gif" />
+    <Content Include="AMOList\library\images\gifs\img3.gif" />
+    <Content Include="AMOList\library\images\gifs\irscomet-darkblue.gif" />
+    <Content Include="AMOList\library\images\gifs\irscomet-small.gif" />
+    <Content Include="AMOList\library\images\gifs\irscomethome.gif" />
+    <Content Include="AMOList\library\images\gifs\irscometnohome.gif" />
+    <Content Include="AMOList\library\images\gifs\layerWinClose.gif" />
+    <Content Include="AMOList\library\images\gifs\leaf.gif" />
+    <Content Include="AMOList\library\images\gifs\loading.gif" />
+    <Content Include="AMOList\library\images\gifs\lock.gif" />
+    <Content Include="AMOList\library\images\gifs\mailBtn_hov.gif" />
+    <Content Include="AMOList\library\images\gifs\mainmenublue.gif" />
+    <Content Include="AMOList\library\images\gifs\masterShadow.gif" />
+    <Content Include="AMOList\library\images\gifs\max.gif" />
+    <Content Include="AMOList\library\images\gifs\min.gif" />
+    <Content Include="AMOList\library\images\gifs\Minus.gif" />
+    <Content Include="AMOList\library\images\gifs\new1.gif" />
+    <Content Include="AMOList\library\images\gifs\new2.gif" />
+    <Content Include="AMOList\library\images\gifs\NextStatus_Green.GIF" />
+    <Content Include="AMOList\library\images\gifs\NextStatus_Yellow.GIF" />
+    <Content Include="AMOList\library\images\gifs\next_hover.gif" />
+    <Content Include="AMOList\library\images\gifs\notselected_radio.gif" />
+    <Content Include="AMOList\library\images\gifs\onepixel.gif" />
+    <Content Include="AMOList\library\images\gifs\Pencil.gif" />
+    <Content Include="AMOList\library\images\gifs\Plus.gif" />
+    <Content Include="AMOList\library\images\gifs\Process_Active.GIF" />
+    <Content Include="AMOList\library\images\gifs\Process_Commitment.GIF" />
+    <Content Include="AMOList\library\images\gifs\Process_MKCoordination.GIF" />
+    <Content Include="AMOList\library\images\gifs\Process_MKSignoff.GIF" />
+    <Content Include="AMOList\library\images\gifs\Process_PostPOR.GIF" />
+    <Content Include="AMOList\library\images\gifs\Process_SEPMReview.GIF" />
+    <Content Include="AMOList\library\images\gifs\publish.gif" />
+    <Content Include="AMOList\library\images\gifs\RedCross.gif" />
+    <Content Include="AMOList\library\images\gifs\refresh1.gif" />
+    <Content Include="AMOList\library\images\gifs\refresh2.gif" />
+    <Content Include="AMOList\library\images\gifs\reportlogo.gif" />
+    <Content Include="AMOList\library\images\gifs\reports1.gif" />
+    <Content Include="AMOList\library\images\gifs\resize.gif" />
+    <Content Include="AMOList\library\images\gifs\restore.gif" />
+    <Content Include="AMOList\library\images\gifs\rounduparrow-black.gif" />
+    <Content Include="AMOList\library\images\gifs\rounduparrow-blue.gif" />
+    <Content Include="AMOList\library\images\gifs\search1.gif" />
+    <Content Include="AMOList\library\images\gifs\search2.gif" />
+    <Content Include="AMOList\library\images\gifs\selected_radio.gif" />
+    <Content Include="AMOList\library\images\gifs\sitesmenublue.gif" />
+    <Content Include="AMOList\library\images\gifs\sorton_rightarrow.gif" />
+    <Content Include="AMOList\library\images\gifs\tab-leftlightsteelblue.gif" />
+    <Content Include="AMOList\library\images\gifs\tab-leftpalegoldenrod.gif" />
+    <Content Include="AMOList\library\images\gifs\tab-rightlightsteelblue.gif" />
+    <Content Include="AMOList\library\images\gifs\tab-rightpalegoldenrod.gif" />
+    <Content Include="AMOList\library\images\gifs\top.gif" />
+    <Content Include="AMOList\library\images\gifs\topleftbluelong.gif" />
+    <Content Include="AMOList\library\images\gifs\topleftbluelong_dk.gif" />
+    <Content Include="AMOList\library\images\gifs\topleftblue_dk.gif" />
+    <Content Include="AMOList\library\images\gifs\toprightbluelong.gif" />
+    <Content Include="AMOList\library\images\gifs\toprightbluelong_dk.gif" />
+    <Content Include="AMOList\library\images\gifs\toprightblue_dk.gif" />
+    <Content Include="AMOList\library\images\gifs\tree1.gif" />
+    <Content Include="AMOList\library\images\gifs\tree2.gif" />
+    <Content Include="AMOList\library\images\gifs\tri.gif" />
+    <Content Include="AMOList\library\images\gifs\uncheckedbox.gif" />
+    <Content Include="AMOList\library\images\gifs\uparrow.gif" />
+    <Content Include="AMOList\library\images\gifs\wait30.gif" />
+    <Content Include="AMOList\library\images\gifs\warning.gif" />
+    <Content Include="AMOList\library\images\gifs\wordicon.gif" />
+    <Content Include="AMOList\library\images\gifs\YellowExclam.gif" />
+    <Content Include="AMOList\library\images\gifs\yellowflag.gif" />
+    <Content Include="AMOList\library\images\jpegs\BFR_PVC.jpg" />
+    <Content Include="AMOList\library\images\jpegs\blueTab1.jpg" />
+    <Content Include="AMOList\library\images\jpegs\globe.jpg" />
+    <Content Include="AMOList\library\images\jpegs\lightblueTab1.jpg" />
+    <Content Include="AMOList\library\images\jpegs\lmhelp_colselector.JPG" />
+    <Content Include="AMOList\library\images\jpegs\lmhelp_editbuttons.JPG" />
+    <Content Include="AMOList\library\images\jpegs\lmhelp_header.JPG" />
+    <Content Include="AMOList\library\images\jpegs\lmhelp_header1.JPG" />
+    <Content Include="AMOList\library\images\jpegs\lmhelp_managebuttons.JPG" />
+    <Content Include="AMOList\library\images\jpegs\lmhelp_nonTransValue.JPG" />
+    <Content Include="AMOList\library\images\jpegs\lmhelp_popup.JPG" />
+    <Content Include="AMOList\library\images\jpegs\lmhelp_rowselector.JPG" />
+    <Content Include="AMOList\library\images\jpegs\lmhelp_TransValue.JPG" />
+    <Content Include="AMOList\library\images\jpegs\yellowtriangle.jpg" />
+    <Content Include="AMOList\library\includes\CategoryRs.inc" />
+    <Content Include="AMOList\library\includes\Cookies.inc" />
+    <Content Include="AMOList\library\includes\DLbx_Category.inc" />
+    <Content Include="AMOList\library\includes\DualListboxRs.inc" />
+    <Content Include="AMOList\library\includes\ErrHandler.inc" />
+    <Content Include="AMOList\library\includes\General.inc" />
+    <Content Include="AMOList\library\includes\GlobalFooter.inc" />
+    <Content Include="AMOList\library\includes\Grid.inc" />
+    <Content Include="AMOList\library\includes\Groups.inc" />
+    <Content Include="AMOList\library\includes\htmlControls.inc" />
+    <Content Include="AMOList\library\includes\Lbx_Category.inc" />
+    <Content Include="AMOList\library\includes\lib_debug.inc" />
+    <Content Include="AMOList\library\includes\ListboxRs.inc" />
+    <Content Include="AMOList\library\includes\MenuRoles.inc" />
+    <Content Include="AMOList\library\includes\MOL_CategoryRs.inc" />
+    <Content Include="AMOList\library\includes\MOL_SendEmail.inc" />
+    <Content Include="AMOList\library\includes\Overview.inc" />
+    <Content Include="AMOList\library\includes\popup.inc" />
+    <Content Include="AMOList\library\includes\Roles.inc" />
+    <Content Include="AMOList\library\includes\SessionValidation.inc" />
+    <Content Include="AMOList\library\includes\Users.inc" />
+    <Content Include="AMOList\library\scripts\Calendar.js" />
+    <Content Include="AMOList\library\scripts\FormChek.js" />
+    <Content Include="AMOList\library\scripts\General.js" />
+    <Content Include="AMOList\library\scripts\msrsclient.js" />
+    <Content Include="AMOList\library\scripts\popitmenu.js" />
+    <Content Include="AMOList\library\stylesheets\IRSHelp.css" />
+    <Content Include="AMOList\library\stylesheets\popup.css" />
+    <Content Include="AMOList\library\stylesheets\simple.css" />
+    <Content Include="AMOList\nj.asp" />
+    <Content Include="AMOList\popup\amoproperties.aspx" />
+    <Content Include="AMOList\scripts\amo.js" />
+    <Content Include="AMOList\scripts\jquery-1.10.2.min.js" />
+    <Content Include="AMOList\scripts\jquery-ui-1.11.4.min.js" />
+    <Content Include="AMOList\style\amo.css" />
+    <Content Include="AMOList\style\amo_ie8.css" />
+    <Content Include="AMOList\style\cupertino\images\ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
+    <Content Include="AMOList\style\cupertino\images\ui-bg_glass_100_e4f1fb_1x400.png" />
+    <Content Include="AMOList\style\cupertino\images\ui-bg_glass_50_3baae3_1x400.png" />
+    <Content Include="AMOList\style\cupertino\images\ui-bg_glass_80_d7ebf9_1x400.png" />
+    <Content Include="AMOList\style\cupertino\images\ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
+    <Content Include="AMOList\style\cupertino\images\ui-bg_highlight-hard_70_000000_1x100.png" />
+    <Content Include="AMOList\style\cupertino\images\ui-bg_highlight-soft_100_deedf7_1x100.png" />
+    <Content Include="AMOList\style\cupertino\images\ui-bg_highlight-soft_25_ffef8f_1x100.png" />
+    <Content Include="AMOList\style\cupertino\images\ui-icons_2694e8_256x240.png" />
+    <Content Include="AMOList\style\cupertino\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="AMOList\style\cupertino\images\ui-icons_3d80b3_256x240.png" />
+    <Content Include="AMOList\style\cupertino\images\ui-icons_72a7cf_256x240.png" />
+    <Content Include="AMOList\style\cupertino\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="AMOList\style\cupertino\jquery-ui.css" />
+    <Content Include="AMOList\style\cupertino\jquery-ui.min.css" />
+    <Content Include="AMOList\style\cupertino\theme.css" />
+    <Content Include="AMOList\style\images\ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
+    <Content Include="AMOList\style\images\ui-bg_glass_100_e4f1fb_1x400.png" />
+    <Content Include="AMOList\style\images\ui-bg_glass_50_3baae3_1x400.png" />
+    <Content Include="AMOList\style\images\ui-bg_glass_80_d7ebf9_1x400.png" />
+    <Content Include="AMOList\style\images\ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
+    <Content Include="AMOList\style\images\ui-bg_highlight-hard_70_000000_1x100.png" />
+    <Content Include="AMOList\style\images\ui-bg_highlight-soft_100_deedf7_1x100.png" />
+    <Content Include="AMOList\style\images\ui-bg_highlight-soft_25_ffef8f_1x100.png" />
+    <Content Include="AMOList\style\images\ui-icons_2694e8_256x240.png" />
+    <Content Include="AMOList\style\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="AMOList\style\images\ui-icons_3d80b3_256x240.png" />
+    <Content Include="AMOList\style\images\ui-icons_72a7cf_256x240.png" />
+    <Content Include="AMOList\style\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="ChooseColumns.asp" />
+    <Content Include="ChooseColumnsMain.asp" />
+    <Content Include="ChooseColumnsSave.asp" />
+    <Content Include="ChooseVersions.asp" />
+    <Content Include="ChooseVersionsButtons.asp" />
+    <Content Include="ChooseVersionsMain.asp" />
+    <Content Include="ChooseVersionsSave.asp" />
+    <Content Include="ColCollapse.asp" />
+    <Content Include="CommodityGuidanceCategoryFilter.aspx" />
+    <Content Include="CommodityGuidanceCategoryFilterFrame.asp" />
+    <Content Include="Common\AddressBook.asp" />
+    <Content Include="Common\Calendar.aspx" />
+    <Content Include="Common\DeliverableRoot.asp" />
+    <Content Include="Common\DeliverableRootButtons.asp" />
+    <Content Include="Common\DeliverableRootMain.asp" />
+    <Content Include="Common\FileUpload.aspx" />
+    <Content Include="Common\GetFileList.aspx" />
+    <Content Include="Common\upload.htm" />
+    <Content Include="contextMenu.js" />
+    <Content Include="Countries\Copy.asp" />
+    <Content Include="Countries\CopyButtons.asp" />
+    <Content Include="Countries\CopyMain.asp" />
+    <Content Include="Countries\Countries.asp" />
+    <Content Include="Countries\CountriesButtons.asp" />
+    <Content Include="Countries\CountriesMain.asp" />
+    <Content Include="Countries\CountriesSave.asp" />
+    <Content Include="Countries\excel_export.asp" />
+    <Content Include="Countries\LocalizationReleaseEdit.asp" />
+    <Content Include="Countries\Localizations.asp" />
+    <Content Include="Countries\LocalizationsButtons.asp" />
+    <Content Include="Countries\LocalizationsMain.asp" />
+    <Content Include="Countries\LocalizationsSave.asp" />
+    <Content Include="Countries\rptCountriesWhereUsed.asp" />
+    <Content Include="Countries\rptDiff.asp" />
+    <Content Include="Countries\rptDiffSelection.asp" />
+    <Content Include="Countries\rptImageLocalization.asp" />
+    <Content Include="Countries\rptProductCountries.asp" />
+    <Content Include="Countries\rptProductLocalization.asp" />
+    <Content Include="ctest.asp" />
+    <Content Include="ctitle.asp" />
+    <Content Include="DefaultProductFilterRSUpdate.asp" />
+    <Content Include="DefaultProductTabRSUpdate.asp" />
+    <Content Include="Deliverable\AdvancedSupport.asp" />
+    <Content Include="Deliverable\AdvancedSupportButtons.asp" />
+    <Content Include="Deliverable\AdvancedSupportMain.asp" />
+    <Content Include="Deliverable\AdvancedSupportSave.asp" />
+    <Content Include="Deliverable\ChooseOTS.asp" />
+    <Content Include="Deliverable\ChooseOTSButtons.asp" />
+    <Content Include="Deliverable\ChooseOTSmain.asp" />
+    <Content Include="Deliverable\ChooseOTSSave.asp" />
+    <Content Include="Deliverable\Commodity\AccessoryStatus.asp" />
+    <Content Include="Deliverable\Commodity\AccessoryStatusButtons.asp" />
+    <Content Include="Deliverable\Commodity\AccessoryStatusButtonsPulsar.asp" />
+    <Content Include="Deliverable\Commodity\AccessoryStatusMain.asp" />
+    <Content Include="Deliverable\Commodity\AccessoryStatusMainPulsar.asp" />
+    <Content Include="Deliverable\Commodity\AccessoryStatusPulsar.asp" />
+    <Content Include="Deliverable\Commodity\AccessoryStatusSave.asp" />
+    <Content Include="Deliverable\Commodity\AccessoryStatusSavePulsar.asp" />
+    <Content Include="Deliverable\Commodity\CommodityMatrix.asp" />
+    <Content Include="Deliverable\Commodity\MultiTestStatus.asp" />
+    <Content Include="Deliverable\Commodity\MultiTestStatusButtons.asp" />
+    <Content Include="Deliverable\Commodity\MultiTestStatusButtonsPulsar.asp" />
+    <Content Include="Deliverable\Commodity\MultiTestStatusMain.asp" />
+    <Content Include="Deliverable\Commodity\MultiTestStatusMainPulsar.asp" />
+    <Content Include="Deliverable\Commodity\MultiTestStatusPulsar.asp" />
+    <Content Include="Deliverable\Commodity\MultiTestStatusSave.asp" />
+    <Content Include="Deliverable\Commodity\MultiTestStatusSavePulsar.asp" />
+    <Content Include="Deliverable\Commodity\PartNumber.asp" />
+    <Content Include="Deliverable\Commodity\PartNumberMain.asp" />
+    <Content Include="Deliverable\Commodity\PartNumberSave.asp" />
+    <Content Include="Deliverable\Commodity\PilotStatus.asp" />
+    <Content Include="Deliverable\Commodity\PilotStatusButtons.asp" />
+    <Content Include="Deliverable\Commodity\PilotStatusButtonsPulsar.asp" />
+    <Content Include="Deliverable\Commodity\PilotStatusMain.asp" />
+    <Content Include="Deliverable\Commodity\PilotStatusMainPulsar.asp" />
+    <Content Include="Deliverable\Commodity\PilotStatusPulsar.asp" />
+    <Content Include="Deliverable\Commodity\PilotStatusSave.asp" />
+    <Content Include="Deliverable\Commodity\PilotStatusSavePulsar.asp" />
+    <Content Include="Deliverable\Commodity\QualMatrix.asp" />
+    <Content Include="Deliverable\Commodity\QualStatus.asp" />
+    <Content Include="Deliverable\Commodity\QualStatusButtons.asp" />
+    <Content Include="Deliverable\Commodity\QualStatusButtonsPulsar.asp" />
+    <Content Include="Deliverable\Commodity\QualStatusMain.asp" />
+    <Content Include="Deliverable\Commodity\QualStatusMainPulsar.asp" />
+    <Content Include="Deliverable\Commodity\QualStatusPulsar.asp" />
+    <Content Include="Deliverable\Commodity\QualStatusSave.asp" />
+    <Content Include="Deliverable\Commodity\QualStatusSavePulsar.asp" />
+    <Content Include="Deliverable\Commodity\Release.asp" />
+    <Content Include="Deliverable\Commodity\ReleaseButtons.asp" />
+    <Content Include="Deliverable\Commodity\ReleaseMain.asp" />
+    <Content Include="Deliverable\Commodity\ReleaseSave.asp" />
+    <Content Include="Deliverable\Commodity\SICommodities.asp" />
+    <Content Include="Deliverable\Commodity\SICommoditiesButtons.asp" />
+    <Content Include="Deliverable\Commodity\SICommoditiesMain.asp" />
+    <Content Include="Deliverable\Commodity\SICommoditiesSave.asp" />
+    <Content Include="Deliverable\Commodity\SubAssembly.asp" />
+    <Content Include="Deliverable\Commodity\SubAssemblyMain.asp" />
+    <Content Include="Deliverable\Commodity\SubAssemblyMainPulsar.asp" />
+    <Content Include="Deliverable\Commodity\SubAssemblyPulsar.asp" />
+    <Content Include="Deliverable\Commodity\SubAssemblySave.asp" />
+    <Content Include="Deliverable\Commodity\SubAssemblySavePulsar.asp" />
+    <Content Include="Deliverable\Commodity\SubAssemblyToMultipleProducts.aspx" />
+    <Content Include="Deliverable\Commodity\SubAssemblyToMultipleProductsFrame.asp" />
+    <Content Include="Deliverable\Commodity\SubAssemblyToMultipleProductsFramePulsar.asp" />
+    <Content Include="Deliverable\Commodity\SubAssemblyToMultipleProductsPulsar.aspx" />
+    <Content Include="Deliverable\DeliverableRootChange.asp" />
+    <Content Include="Deliverable\DetailedFileInfo\Test.asp" />
+    <Content Include="Deliverable\DevRejectProductRequest.asp" />
+    <Content Include="Deliverable\DevRejectProductRequestButton.asp" />
+    <Content Include="Deliverable\DevRejectProductRequestMain.asp" />
+    <Content Include="Deliverable\EOLDate.asp" />
+    <Content Include="Deliverable\EOLDateButtons.asp" />
+    <Content Include="Deliverable\EOLDateMain.asp" />
+    <Content Include="Deliverable\EOLDateSave.asp" />
+    <Content Include="Deliverable\EOLMultiUpdate.asp" />
+    <Content Include="Deliverable\Features\ChooseFeatures.asp" />
+    <Content Include="Deliverable\Features\ChooseFeaturesButtons.asp" />
+    <Content Include="Deliverable\Features\ChooseFeaturesMain.asp" />
+    <Content Include="Deliverable\Generate.asp" />
+    <Content Include="Deliverable\GenerateButtons.asp" />
+    <Content Include="Deliverable\GenerateHelp.asp" />
+    <Content Include="Deliverable\GenerateMain.asp" />
+    <Content Include="Deliverable\GenerateSave.asp" />
+    <Content Include="Deliverable\HardwareMatrix.asp" />
+    <Content Include="Deliverable\HardwareMatrix_BatteryReport.asp" />
+    <Content Include="Deliverable\InternalRev.asp" />
+    <Content Include="Deliverable\InternalRevMain.asp" />
+    <Content Include="Deliverable\InternalRevSave.asp" />
+    <Content Include="Deliverable\MultiDevApproval.asp" />
+    <Content Include="Deliverable\MultiDevApprovalButtons.asp" />
+    <Content Include="Deliverable\MultiDevApprovalMain.asp" />
+    <Content Include="Deliverable\MultiDevApprovalSave.asp" />
+    <Content Include="Deliverable\MultiEOLDate.asp" />
+    <Content Include="Deliverable\MultiEOLDateButtons.asp" />
+    <Content Include="Deliverable\MultiEOLDateMain.asp" />
+    <Content Include="Deliverable\MultiEOLDateSave.asp" />
+    <Content Include="Deliverable\NoOSind.asp" />
+    <Content Include="Deliverable\OTSCoreTeamDashboard.asp" />
+    <Content Include="Deliverable\OTSCoreTeamDashboardOTSList.asp" />
+    <Content Include="Deliverable\Owners.asp" />
+    <Content Include="Deliverable\pdd_hardware.asp" />
+    <Content Include="Deliverable\pdd_software.asp" />
+    <Content Include="Deliverable\pdd_software_xlstyle.asp" />
+    <Content Include="Deliverable\PreinstallProperties.asp" />
+    <Content Include="Deliverable\PreinstallPropertiesButtons.asp" />
+    <Content Include="Deliverable\PreinstallPropertiesMain.asp" />
+    <Content Include="Deliverable\PreinstallPropertiesSave.asp" />
+    <Content Include="Deliverable\ProductDeliverableStatus.asp" />
+    <Content Include="Deliverable\ProductsSupported.asp" />
+    <Content Include="Deliverable\ProductsSupportedButtons.asp" />
+    <Content Include="Deliverable\ProductsSupportedMain.asp" />
+    <Content Include="Deliverable\ProductsSupportedSave.asp" />
+    <Content Include="Deliverable\QuickReports.asp" />
+    <Content Include="Deliverable\QuickReportsAvailability.asp" />
+    <Content Include="Deliverable\Restrict\Restrict.asp" />
+    <Content Include="Deliverable\Restrict\RestrictButtons.asp" />
+    <Content Include="Deliverable\Restrict\RestrictButtonsPulsar.asp" />
+    <Content Include="Deliverable\Restrict\RestrictMain.asp" />
+    <Content Include="Deliverable\Restrict\RestrictMainPulsar.asp" />
+    <Content Include="Deliverable\Restrict\RestrictPulsar.asp" />
+    <Content Include="Deliverable\Restrict\RestrictSave.asp" />
+    <Content Include="Deliverable\Restrict\RestrictSavePulsar.asp" />
+    <Content Include="Deliverable\Restrict\RestrictVersionReleasesRSget.asp" />
+    <Content Include="Deliverable\Restrict\RestrictVersionsRSget.asp" />
+    <Content Include="Deliverable\SaveDevNotificationStatus.asp" />
+    <Content Include="Deliverable\Schedule.asp" />
+    <Content Include="Deliverable\ScheduleButtons.asp" />
+    <Content Include="Deliverable\ScheduleMain.asp" />
+    <Content Include="Deliverable\ScheduleSave.asp" />
+    <Content Include="Deliverable\Scorecard\RootScorecard.asp" />
+    <Content Include="Deliverable\Scorecard\RootScorecardButtons.asp" />
+    <Content Include="Deliverable\Scorecard\RootScorecardMain.asp" />
+    <Content Include="Deliverable\Scorecard\RootScorecardSave.asp" />
+    <Content Include="Deliverable\Scorecard\test.htm" />
+    <Content Include="Deliverable\SupplierCode.asp" />
+    <Content Include="Deliverable\SupplierCodeButtons.asp" />
+    <Content Include="Deliverable\SupplierCodeMain.asp" />
+    <Content Include="Deliverable\SupplierCodeSave.asp" />
+    <Content Include="Deliverable\TestTeam\MultiUpdateTestStatus.asp" />
+    <Content Include="Deliverable\TestTeam\MultiUpdateTestStatusButtons.asp" />
+    <Content Include="Deliverable\TestTeam\MultiUpdateTestStatusMain.asp" />
+    <Content Include="Deliverable\TestTeam\MultiUpdateTestStatusSave.asp" />
+    <Content Include="Deliverable\TestTeam\TestStatus.asp" />
+    <Content Include="Deliverable\TestTeam\TestStatusButtons.asp" />
+    <Content Include="Deliverable\TestTeam\TestStatusButtonsPulsar.asp" />
+    <Content Include="Deliverable\TestTeam\TestStatusMain.asp" />
+    <Content Include="Deliverable\TestTeam\TestStatusMainPulsar.asp" />
+    <Content Include="Deliverable\TestTeam\TestStatusPulsar.asp" />
+    <Content Include="Deliverable\TestTeam\TestStatusSave.asp" />
+    <Content Include="Deliverable\TestTeam\TestStatusSavePulsar.asp" />
+    <Content Include="Deliverable\tmpUpdateEOADates.asp" />
+    <Content Include="Deliverable\WWANPanelStatus.asp" />
+    <Content Include="Deliverable\WWANPanelStatusMain.asp" />
+    <Content Include="Deliverable\WWANPanelStatusSave.asp" />
+    <Content Include="DelSyntax.asp" />
+    <Content Include="Dependencies.asp" />
+    <Content Include="Devices.asp" />
+    <Content Include="dmview.asp" />
+    <Content Include="DownloadZip.aspx" />
+    <Content Include="Email\AddressBook.asp" />
+    <Content Include="Email\AddressBookButtons.asp" />
+    <Content Include="Email\AddressBookMain.asp" />
+    <Content Include="Errors\401_2.asp" />
+    <Content Include="Errors\401_2.gif" />
+    <Content Include="Errors\404.htm" />
+    <Content Include="Errors\40X.htm" />
+    <Content Include="Errors\autoconfig.gif" />
+    <Content Include="Excalibur.asp" />
+    <Content Include="ExportDetails.asp" />
+    <Content Include="ExportOffice.asp" />
+    <Content Include="ExportOptions.asp" />
+    <Content Include="ExportQuery.asp" />
+    <Content Include="favicon.ico" />
+    <Content Include="FavoritesRSupdate.asp" />
+    <Content Include="FileBrowse.asp" />
+    <Content Include="FileBrowseError.asp" />
+    <Content Include="FileBrowseInfo.asp" />
+    <Content Include="FileBrowseResult.asp" />
+    <Content Include="FileBrowseResult.aspx" />
+    <Content Include="findHFCN.asp" />
+    <Content Include="findprogram.asp" />
+    <Content Include="GetFileDetails.asp" />
+    <Content Include="global.asa" />
+    <Content Include="Global.asax" />
+    <Content Include="help\ActionItems.asp" />
+    <Content Include="help\default.htm" />
+    <Content Include="help\HFCN.asp" />
+    <Content Include="help\Login.asp" />
+    <Content Include="HFCN\HFCN.asp" />
+    <Content Include="HFCN\HFCNAdd.asp" />
+    <Content Include="HFCN\HFCNAddMain.asp" />
+    <Content Include="HFCN\HFCNButtons.asp" />
+    <Content Include="HFCN\HFCNMain.asp" />
+    <Content Include="HFCN\HFCNSave.asp" />
+    <Content Include="HFCN\HFCNSaveRoot.asp" />
+    <Content Include="Identifier.asp" />
+    <Content Include="images\3.gif" />
+    <Content Include="images\ActionItemStatus.gif" />
+    <Content Include="images\alert.gif" />
+    <Content Include="images\ArrowAdd.gif" />
+    <Content Include="images\ArrowDown.gif" />
+    <Content Include="images\arrowleft.gif" />
+    <Content Include="images\ArrowRemove.gif" />
+    <Content Include="images\ArrowUp.gif" />
+    <Content Include="images\Background.gif" />
+    <Content Include="images\banner1.gif" />
+    <Content Include="images\banner2.gif" />
+    <Content Include="images\banner3.gif" />
+    <Content Include="images\bannerblue.jpg" />
+    <Content Include="images\bg.png" />
+    <Content Include="images\blank.gif" />
+    <Content Include="images\BLD.BMP" />
+    <Content Include="images\blue.gif" />
+    <Content Include="images\bluedown.gif" />
+    <Content Include="images\bubble.gif" />
+    <Content Include="images\bubble_filler.gif" />
+    <Content Include="images\busy.gif" />
+    <Content Include="images\calendar.gif" />
+    <Content Include="images\closed.gif" />
+    <Content Include="images\col_arcd.GIF" />
+    <Content Include="images\col_arcd2.GIF" />
+    <Content Include="images\col_controlpanel.gif" />
+    <Content Include="images\col_desktop.gif" />
+    <Content Include="images\col_developerApproved.GIF" />
+    <Content Include="images\COL_DIB.GIF" />
+    <Content Include="images\col_DRDVD.gif" />
+    <Content Include="images\col_FactoryPatch.gif" />
+    <Content Include="images\col_HPPI.gif" />
+    <Content Include="images\col_infocenter.GIF" />
+    <Content Include="images\col_inimage.gif" />
+    <Content Include="images\col_menu.gif" />
+    <Content Include="images\col_MIR.gif" />
+    <Content Include="images\col_preload.gif" />
+    <Content Include="images\col_Prinstall.GIF" />
+    <Content Include="images\col_Royalty.gif" />
+    <Content Include="images\col_selectiverestore.GIF" />
+    <Content Include="images\col_systemtray.gif" />
+    <Content Include="images\col_target.gif" />
+    <Content Include="images\col_Web.GIF" />
+    <Content Include="images\CPQLOGO.gif" />
+    <Content Include="images\cpqred.gif" />
+    <Content Include="images\cva.GIF" />
+    <Content Include="images\CVASPQ.GIF" />
+    <Content Include="images\DefectAuditReport.gif" />
+    <Content Include="images\DeliverableManagement.ico" />
+    <Content Include="images\DeliverableObservationReport.gif" />
+    <Content Include="images\DownArrow.GIF" />
+    <Content Include="images\DownDel.GIF" />
+    <Content Include="images\DownProduct.GIF" />
+    <Content Include="images\dude07232001blank.gif" />
+    <Content Include="images\dude07232001down.gif" />
+    <Content Include="images\dude07232001up.gif" />
+    <Content Include="images\edit.gif" />
+    <Content Include="images\edit2.gif" />
+    <Content Include="images\excalibur.jpg" />
+    <Content Include="images\folder.gif" />
+    <Content Include="images\form.png" />
+    <Content Include="images\form_exit.png" />
+    <Content Include="images\form_header.png" />
+    <Content Include="images\FunctionalGroupInformation.gif" />
+    <Content Include="images\go.bmp" />
+    <Content Include="images\go.gif" />
+    <Content Include="images\greenbanner.jpg" />
+    <Content Include="images\greyball.gif" />
+    <Content Include="images\hlink.bmp" />
+    <Content Include="images\hpblue.gif" />
+    <Content Include="images\ICON-DOC-ACCESS.GIF" />
+    <Content Include="images\ICON-DOC-EXCEL.GIF" />
+    <Content Include="images\ICON-DOC-HTML.GIF" />
+    <Content Include="images\ICON-DOC-OUTLOOK.GIF" />
+    <Content Include="images\ICON-DOC-OUTLOOK2.GIF" />
+    <Content Include="images\ICON-DOC-PPT.GIF" />
+    <Content Include="images\ICON-DOC-PROJECT.GIF" />
+    <Content Include="images\ICON-DOC-WORD.GIF" />
+    <Content Include="images\ICON-FORM.gif" />
+    <Content Include="images\ICON-FORM2.gif" />
+    <Content Include="images\indent.bmp" />
+    <Content Include="images\indicator.gif" />
+    <Content Include="images\info.png" />
+    <Content Include="images\information.gif" />
+    <Content Include="images\irscomethome.gif" />
+    <Content Include="images\ITL.BMP" />
+    <Content Include="images\leaf.bmp" />
+    <Content Include="images\Legend.jpg" />
+    <Content Include="images\line1.bmp" />
+    <Content Include="images\loading.gif" />
+    <Content Include="images\loading19.gif" />
+    <Content Include="images\Loading24.gif" />
+    <Content Include="images\logo.gif" />
+    <Content Include="images\MAIL06.ICO" />
+    <Content Include="images\new!.gif" />
+    <Content Include="images\new.jpg" />
+    <Content Include="images\open.jpg" />
+    <Content Include="images\ordList.bmp" />
+    <Content Include="images\outdent.bmp" />
+    <Content Include="images\pdpims.gif" />
+    <Content Include="images\PIN_in.gif" />
+    <Content Include="images\PIN_out.gif" />
+    <Content Include="images\PLUS.GIF" />
+    <Content Include="images\PLUS2.GIF" />
+    <Content Include="images\pm.ico" />
+    <Content Include="images\PM1.ico" />
+    <Content Include="images\print.gif" />
+    <Content Include="images\ProduceComparisonDocument.gif" />
+    <Content Include="images\Product.ico" />
+    <Content Include="images\Product1.ico" />
+    <Content Include="images\ProductDefinitionDocument.gif" />
+    <Content Include="images\ProductObservationReport.gif" />
+    <Content Include="images\ProductRequirementsDocument.gif" />
+    <Content Include="images\ProductScheduleReport.gif" />
+    <Content Include="images\programoffice.gif" />
+    <Content Include="images\progressbar.gif" />
+    <Content Include="images\PRS.gif" />
+    <Content Include="images\PulsarHeader.gif" />
+    <Content Include="images\QuestionMark.gif" />
+    <Content Include="images\red.gif" />
+    <Content Include="images\redx.png" />
+    <Content Include="images\redx2.png" />
+    <Content Include="images\red_led_blink.gif" />
+    <Content Include="images\RequirementExceptionReport.gif" />
+    <Content Include="images\runFromCurrentLocation.gif" />
+    <Content Include="images\search-blue.png" />
+    <Content Include="images\SEARCH.gif" />
+    <Content Include="images\shadow.gif" />
+    <Content Include="images\software.ICO" />
+    <Content Include="images\sort.gif" />
+    <Content Include="images\sort_asc.gif" />
+    <Content Include="images\sort_desc.gif" />
+    <Content Include="images\spinner.gif" />
+    <Content Include="images\spq.gif" />
+    <Content Include="images\status1.jpg" />
+    <Content Include="images\target.gif" />
+    <Content Include="images\today.gif" />
+    <Content Include="images\Tool.gif" />
+    <Content Include="images\UNDRLN.BMP" />
+    <Content Include="images\uordlist.bmp" />
+    <Content Include="images\UpArrow.GIF" />
+    <Content Include="images\UpDel.GIF" />
+    <Content Include="images\UpProduct.GIF" />
+    <Content Include="images\web.gif" />
+    <Content Include="images\win8busy.gif" />
+    <Content Include="images\win8busy_dark.gif" />
+    <Content Include="images\win8busy_light.gif" />
+    <Content Include="images\X.gif" />
+    <Content Include="images\X2.gif" />
+    <Content Include="Image\AddProductOS.asp" />
+    <Content Include="Image\AddProductOSButtons.asp" />
+    <Content Include="Image\AddProductOSMain.asp" />
+    <Content Include="Image\AddProductOSSave.asp" />
+    <Content Include="Image\Buildplan.asp" />
+    <Content Include="Image\Changes.asp" />
+    <Content Include="Image\CompareDeliverableImages.asp" />
+    <Content Include="Image\CompareImage.asp" />
+    <Content Include="Image\CompareImageChoose.asp" />
+    <Content Include="Image\CompareImagesChooseProduct.asp" />
+    <Content Include="Image\CompareImageTestServer.asp" />
+    <Content Include="Image\DeliverableChanges.asp" />
+    <Content Include="Image\DeliverableMatrix.asp" />
+    <Content Include="Image\DisplayPartNumberButton.asp" />
+    <Content Include="Image\DisplayPartNumberMain.asp" />
+    <Content Include="Image\DisplayPartNumbers.asp" />
+    <Content Include="Image\DRDVDTextFile.asp" />
+    <Content Include="Image\FCSButtons.asp" />
+    <Content Include="Image\FCSEdit.asp" />
+    <Content Include="Image\FCSEditMain.asp" />
+    <Content Include="Image\FCSSave.asp" />
+    <Content Include="Image\Fusion\Buildplan.asp" />
+    <Content Include="Image\Fusion\Buildplan_Pulsar.asp" />
+    <Content Include="Image\Fusion\CompareDeliverableImages.asp" />
+    <Content Include="Image\Fusion\CompareFusionImage.asp" />
+    <Content Include="Image\Fusion\CompareImage.asp" />
+    <Content Include="Image\Fusion\CompareImageChoose.asp" />
+    <Content Include="Image\Fusion\CompareImagesChooseProduct.asp" />
+    <Content Include="Image\Fusion\CompareImagesChooseProduct_Pulsar.asp" />
+    <Content Include="Image\Fusion\CompareImageTestServer.asp" />
+    <Content Include="Image\Fusion\CompareImage_Pulsar.asp" />
+    <Content Include="Image\Fusion\dev_UpdateList.asp" />
+    <Content Include="Image\Fusion\FCSButtons.asp" />
+    <Content Include="Image\Fusion\FCSEdit.asp" />
+    <Content Include="Image\Fusion\FCSEditMain.asp" />
+    <Content Include="Image\Fusion\FCSEditMain_Pulsar.asp" />
+    <Content Include="Image\Fusion\FCSEdit_Pulsar.asp" />
+    <Content Include="Image\Fusion\FCSSave.asp" />
+    <Content Include="Image\Fusion\Image.asp" />
+    <Content Include="Image\Fusion\ImageButtons.asp" />
+    <Content Include="Image\Fusion\ImageDelete.asp" />
+    <Content Include="Image\Fusion\ImageDelete_Pulsar.asp" />
+    <Content Include="Image\Fusion\ImageMain.asp" />
+    <Content Include="Image\Fusion\ImageMain_Pulsar.asp" />
+    <Content Include="Image\Fusion\ImageRegions_Pulsar.asp" />
+    <Content Include="Image\Fusion\Image_Pulsar.asp" />
+    <Content Include="Image\Fusion\Import.asp" />
+    <Content Include="Image\Fusion\ImportButtons.asp" />
+    <Content Include="Image\Fusion\ImportButtons_Pulsar.asp" />
+    <Content Include="Image\Fusion\ImportMain.asp" />
+    <Content Include="Image\Fusion\ImportMain_Pulsar.asp" />
+    <Content Include="Image\Fusion\ImportRSget.asp" />
+    <Content Include="Image\Fusion\ImportRSget_Pulsar.asp" />
+    <Content Include="Image\Fusion\ImportSave.asp" />
+    <Content Include="Image\Fusion\ImportSave_Pulsar.asp" />
+    <Content Include="Image\Fusion\Import_Pulsar.asp" />
+    <Content Include="Image\Fusion\IRSComponentList.asp" />
+    <Content Include="Image\Fusion\IRSComponentList_Pulsar.asp" />
+    <Content Include="Image\Fusion\IRSComponentUpdateList.asp" />
+    <Content Include="Image\Fusion\lib_debug.inc" />
+    <Content Include="Image\Fusion\Localization.asp" />
+    <Content Include="Image\Fusion\Localization_Pulsar.asp" />
+    <Content Include="Image\Fusion\SaveImage.asp" />
+    <Content Include="Image\Fusion\SaveImage_Pulsar.asp" />
+    <Content Include="Image\Fusion\scripts\imagemain_pulsar.js" />
+    <Content Include="Image\Fusion\SelectFusionImageUpdates.asp" />
+    <Content Include="Image\Fusion\SelectFusionImageUpdatesSave.asp" />
+    <Content Include="Image\Fusion\SelectFusionImageUpdates_Pulsar.asp" />
+    <Content Include="Image\Fusion\ShowDifference.asp" />
+    <Content Include="Image\GenerateText.asp" />
+    <Content Include="Image\Image.asp" />
+    <Content Include="Image\ImageButtons.asp" />
+    <Content Include="Image\ImageDelete.asp" />
+    <Content Include="Image\ImageDriveDefinition.asp" />
+    <Content Include="Image\ImageDriveDefinitionMain.aspx" />
+    <Content Include="Image\ImageMain.asp" />
+    <Content Include="Image\imagetest.asp" />
+    <Content Include="Image\Import.asp" />
+    <Content Include="Image\ImportButtons.asp" />
+    <Content Include="Image\ImportMain.asp" />
+    <Content Include="Image\ImportRSget.asp" />
+    <Content Include="Image\ImportSave.asp" />
+    <Content Include="Image\IRSComponentList.asp" />
+    <Content Include="Image\Localization.asp" />
+    <Content Include="Image\Localization2.asp" />
+    <Content Include="Image\PatchImages.asp" />
+    <Content Include="Image\PIProperties.asp" />
+    <Content Include="Image\PIPropertiesMain.asp" />
+    <Content Include="Image\PIPropertiesSave.asp" />
+    <Content Include="Image\Product\SelectProductImageUpdates.asp" />
+    <Content Include="Image\Product\SelectProductImageUpdatesSave.asp" />
+    <Content Include="Image\RevImages.asp" />
+    <Content Include="Image\RevImagesMain.asp" />
+    <Content Include="Image\RevIMagesSave.asp" />
+    <Content Include="Image\rptTestMatrix.asp" />
+    <Content Include="Image\SaveImage.asp" />
+    <Content Include="Image\SelectMstrSkuComp.aspx" />
+    <Content Include="Image\SelectMstrSkuCompFrame.asp" />
+    <Content Include="Image\ShowDifference.asp" />
+    <Content Include="Image\WhqlVerify.asp" />
+    <Content Include="includes\adovbs.inc" />
+    <Content Include="includes\bundleConfig.inc" />
+    <Content Include="includes\client\bootstrap-contextmenu.js" />
+    <Content Include="includes\client\Common.js" />
+    <Content Include="includes\client\dragdrop.htc" />
+    <Content Include="includes\client\jquery-1.10.2.js" />
+    <Content Include="includes\client\jquery-1.11.0.min.js" />
+    <Content Include="includes\client\jquery-1.4.1.min.js" />
+    <Content Include="includes\client\jquery-1.4.2.min.js" />
+    <Content Include="includes\client\jquery-1.4.4.min.js" />
+    <Content Include="includes\client\jquery-1.6.2.js" />
+    <Content Include="includes\client\jquery-1.6.2.min.js" />
+    <Content Include="includes\client\jquery-1.7.1.min.js" />
+    <Content Include="includes\client\jquery-ui-1.10.4.js" />
+    <Content Include="includes\client\jquery-ui-1.10.4.min.js" />
+    <Content Include="includes\client\jquery-ui-1.8.18.custom.min.js" />
+    <Content Include="includes\client\jquery-ui-1.8.2.custom.min.js" />
+    <Content Include="includes\client\jquery-ui-1.8.7.custom.min.js" />
+    <Content Include="includes\client\jquery-ui.min.js" />
+    <Content Include="includes\client\jquery.blockUI.js" />
+    <Content Include="includes\client\jquery.fixedheadertable.js" />
+    <Content Include="includes\client\jquery.fixedheadertable.min.js" />
+    <Content Include="includes\client\jquery.min.js" />
+    <Content Include="includes\client\jquery.tablesorter.min.js" />
+    <Content Include="includes\client\jqueryui\jquery-ui-1.11.4\external\jquery\jquery.js" />
+    <Content Include="includes\client\jqueryui\jquery-ui-1.11.4\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="includes\client\jqueryui\jquery-ui-1.11.4\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="includes\client\jqueryui\jquery-ui-1.11.4\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="includes\client\jqueryui\jquery-ui-1.11.4\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="includes\client\jqueryui\jquery-ui-1.11.4\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="includes\client\jqueryui\jquery-ui-1.11.4\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="includes\client\jqueryui\jquery-ui-1.11.4\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="includes\client\jqueryui\jquery-ui-1.11.4\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="includes\client\jqueryui\jquery-ui-1.11.4\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="includes\client\jqueryui\jquery-ui-1.11.4\images\ui-icons_222222_256x240.png" />
+    <Content Include="includes\client\jqueryui\jquery-ui-1.11.4\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="includes\client\jqueryui\jquery-ui-1.11.4\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="includes\client\jqueryui\jquery-ui-1.11.4\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="includes\client\jqueryui\jquery-ui-1.11.4\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="includes\client\jqueryui\jquery-ui-1.11.4\index.html" />
+    <Content Include="includes\client\jqueryui\jquery-ui-1.11.4\jquery-ui.css" />
+    <Content Include="includes\client\jqueryui\jquery-ui-1.11.4\jquery-ui.js" />
+    <Content Include="includes\client\jqueryui\jquery-ui-1.11.4\jquery-ui.min.css" />
+    <Content Include="includes\client\jqueryui\jquery-ui-1.11.4\jquery-ui.min.js" />
+    <Content Include="includes\client\jqueryui\jquery-ui-1.11.4\jquery-ui.structure.css" />
+    <Content Include="includes\client\jqueryui\jquery-ui-1.11.4\jquery-ui.structure.min.css" />
+    <Content Include="includes\client\jqueryui\jquery-ui-1.11.4\jquery-ui.theme.css" />
+    <Content Include="includes\client\jqueryui\jquery-ui-1.11.4\jquery-ui.theme.min.css" />
+    <Content Include="includes\client\jqueryui\jquery-ui-1.11.4\start\images\ui-bg_glass_45_0078ae_1x400.png" />
+    <Content Include="includes\client\jqueryui\jquery-ui-1.11.4\start\images\ui-bg_glass_55_f8da4e_1x400.png" />
+    <Content Include="includes\client\jqueryui\jquery-ui-1.11.4\start\images\ui-bg_glass_75_79c9ec_1x400.png" />
+    <Content Include="includes\client\jqueryui\jquery-ui-1.11.4\start\images\ui-bg_gloss-wave_45_e14f1c_500x100.png" />
+    <Content Include="includes\client\jqueryui\jquery-ui-1.11.4\start\images\ui-bg_gloss-wave_50_6eac2c_500x100.png" />
+    <Content Include="includes\client\jqueryui\jquery-ui-1.11.4\start\images\ui-bg_gloss-wave_75_2191c0_500x100.png" />
+    <Content Include="includes\client\jqueryui\jquery-ui-1.11.4\start\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="includes\client\jqueryui\jquery-ui-1.11.4\start\images\ui-icons_0078ae_256x240.png" />
+    <Content Include="includes\client\jqueryui\jquery-ui-1.11.4\start\images\ui-icons_056b93_256x240.png" />
+    <Content Include="includes\client\jqueryui\jquery-ui-1.11.4\start\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="includes\client\jqueryui\jquery-ui-1.11.4\start\images\ui-icons_e0fdff_256x240.png" />
+    <Content Include="includes\client\jqueryui\jquery-ui-1.11.4\start\images\ui-icons_f5e175_256x240.png" />
+    <Content Include="includes\client\jqueryui\jquery-ui-1.11.4\start\images\ui-icons_f7a50d_256x240.png" />
+    <Content Include="includes\client\jqueryui\jquery-ui-1.11.4\start\images\ui-icons_fcd113_256x240.png" />
+    <Content Include="includes\client\jqueryui\jquery-ui-1.11.4\start\jquery-ui.min.css" />
+    <Content Include="includes\client\jqueryui\jquery-ui-1.11.4\start\theme.css" />
+    <Content Include="includes\client\json2.js" />
+    <Content Include="includes\client\json_parse.js" />
+    <Content Include="includes\client\popup.js" />
+    <Content Include="includes\client\ScrollableGridPlugin.js" />
+    <Content Include="includes\client\sort.htc" />
+    <Content Include="includes\client\tablehl.htc" />
+    <Content Include="includes\client\tablehl2.htc" />
+    <Content Include="includes\common.asp" />
+    <Content Include="includes\Cookies.inc" />
+    <Content Include="includes\DataWrapper.asp" />
+    <Content Include="includes\Date.asp" />
+    <Content Include="includes\EmailQueue.asp" />
+    <Content Include="includes\EmailWrapper.asp" />
+    <Content Include="includes\ExcelExport.asp" />
+    <Content Include="includes\htmlArea\images\disk.png" />
+    <Content Include="includes\htmlArea\scripts\jHtmlArea-0.8.alpha.min.js" />
+    <Content Include="includes\htmlArea\scripts\jHtmlArea.ColorPickerMenu-0.8.alpha.min.js" />
+    <Content Include="includes\htmlArea\scripts\jquery-1.9.1.min.js" />
+    <Content Include="includes\htmlArea\style\jHtmlArea.ColorPickerMenu.css" />
+    <Content Include="includes\htmlArea\style\jHtmlArea.css" />
+    <Content Include="includes\htmlArea\style\jHtmlArea.png" />
+    <Content Include="includes\htmlArea\style\jHtmlArea_Toolbar_Group_BG.png" />
+    <Content Include="includes\htmlArea\style\jHtmlArea_Toolbar_Group__Btn_Select_BG.png" />
+    <Content Include="includes\lib_debug.inc" />
+    <Content Include="includes\no-cache.asp" />
+    <Content Include="includes\NoAccess.inc" />
+    <Content Include="includes\oConnect.asp" />
+    <Content Include="includes\orsProduct.asp" />
+    <Content Include="includes\orsProgramMatrix.asp" />
+    <Content Include="includes\ReportFunctions.asp" />
+    <Content Include="includes\Security.asp" />
+    <Content Include="includes\UserInfo.asp" />
+    <Content Include="includes\vb_datepicker.asp" />
+    <Content Include="includes\xml-helper.asp" />
+    <Content Include="InitialOffering.aspx" />
+    <Content Include="InitialOfferingFilter.aspx" />
+    <Content Include="InitialOfferingFilter2.aspx" />
+    <Content Include="InitialOfferingFilterFrame.asp" />
+    <Content Include="InitialOfferingFilterFrame2.asp" />
+    <Content Include="InitialOfferingLegend.aspx" />
+    <Content Include="InitialOfferingLegendFrame.asp" />
+    <Content Include="InitialOfferingUpdate.asp" />
+    <Content Include="JupiterXLR8ReportExclusionsButton.asp" />
+    <Content Include="JupiterXLR8ReportExclusionsFrame.asp" />
+    <Content Include="JupiterXLR8ReportExclusionsMain.asp" />
+    <Content Include="JupiterXLR8ReportExclusionsSave.asp" />
+    <Content Include="maint\blank.htm" />
+    <Content Include="maint\blank_loading.htm" />
+    <Content Include="maint\CheckConveyorServers.asp" />
+    <Content Include="maint\clone.asp" />
+    <Content Include="maint\CompareDBTables1.asp" />
+    <Content Include="maint\EmailListGenerator.asp" />
+    <Content Include="maint\EmployeeNameCheck.asp" />
+    <Content Include="maint\Mail.asp" />
+    <Content Include="maint\OTSSystemBIOSYearly.asp" />
+    <Content Include="maint\ProductClone\ChooseProducts.asp" />
+    <Content Include="maint\ProductClone\FindImages.asp" />
+    <Content Include="maint\ProductClone\FindRoots.asp" />
+    <Content Include="maint\ProductClone\FindVersions.asp" />
+    <Content Include="maint\QCRefreshProductList.asp" />
+    <Content Include="maint\QCRemoveUnsupportedProductDeliverables.asp" />
+    <Content Include="maint\RoHSImport.asp" />
+    <Content Include="maint\RollbackWorkflow.aspx" />
+    <Content Include="maint\RunProcedure.asp" />
+    <Content Include="maint\SendDataToMessageQueue.asp" />
+    <Content Include="maint\SendMail.asp" />
+    <Content Include="maint\ServerName.asp" />
+    <Content Include="maint\SIReports\SIVirtualProducts.asp" />
+    <Content Include="maint\UpdateStoredPaths.asp" />
+    <Content Include="maint\Utilities\Deliverables\RollbackVersionWorkflow.asp" />
+    <Content Include="maint\Utilities\Main.asp" />
+    <Content Include="maint\Utilities\SuddenImpact\DeliverableSync.asp" />
+    <Content Include="maint\Utilities\SuddenImpact\SIFunctionalTestDataPush.asp" />
+    <Content Include="maint\Utilities\SuddenImpact\UpdateSIFunctionalTestODMProducts.asp" />
+    <Content Include="MapDeliverables.asp" />
+    <Content Include="MeadCo\ScriptX.cab" />
+    <Content Include="menubarblank.asp" />
+    <Content Include="MeView.asp" />
+    <Content Include="MFTStatus.asp" />
+    <Content Include="mhtest.asp" />
+    <Content Include="MobileSE\Compare.asp" />
+    <Content Include="MobileSE\ConfigCodes.asp" />
+    <Content Include="MobileSE\Countries.asp" />
+    <Content Include="MobileSE\default.asp" />
+    <Content Include="MobileSE\DelCompare.asp" />
+    <Content Include="MobileSE\Deliverables.asp" />
+    <Content Include="MobileSE\DelMatrix.asp" />
+    <Content Include="MobileSE\Exceptions.asp" />
+    <Content Include="MobileSE\images\ActionItemStatus.gif" />
+    <Content Include="MobileSE\images\alert.gif" />
+    <Content Include="MobileSE\images\Background.gif" />
+    <Content Include="MobileSE\images\banner1.gif" />
+    <Content Include="MobileSE\images\banner2.gif" />
+    <Content Include="MobileSE\images\banner3.gif" />
+    <Content Include="MobileSE\images\blank.gif" />
+    <Content Include="MobileSE\images\blue.gif" />
+    <Content Include="MobileSE\images\blueblock.gif" />
+    <Content Include="MobileSE\images\CPQLOGO.gif" />
+    <Content Include="MobileSE\images\cpqred.gif" />
+    <Content Include="MobileSE\images\DefectAuditReport.gif" />
+    <Content Include="MobileSE\images\DeliverableObservationReport.gif" />
+    <Content Include="MobileSE\images\folder.gif" />
+    <Content Include="MobileSE\images\FunctionalGroupInformation.gif" />
+    <Content Include="MobileSE\images\greenblock.gif" />
+    <Content Include="MobileSE\images\greyball.gif" />
+    <Content Include="MobileSE\images\ICON-DOC-ACCESS.GIF" />
+    <Content Include="MobileSE\images\ICON-DOC-EXCEL.GIF" />
+    <Content Include="MobileSE\images\ICON-DOC-HTML.GIF" />
+    <Content Include="MobileSE\images\ICON-DOC-OUTLOOK.GIF" />
+    <Content Include="MobileSE\images\ICON-DOC-PPT.GIF" />
+    <Content Include="MobileSE\images\ICON-DOC-PROJECT.GIF" />
+    <Content Include="MobileSE\images\ICON-DOC-WORD.GIF" />
+    <Content Include="MobileSE\images\information.gif" />
+    <Content Include="MobileSE\images\logo.gif" />
+    <Content Include="MobileSE\images\pdpims.gif" />
+    <Content Include="MobileSE\images\print.gif" />
+    <Content Include="MobileSE\images\ProduceComparisonDocument.gif" />
+    <Content Include="MobileSE\images\ProductDefinitionDocument.gif" />
+    <Content Include="MobileSE\images\ProductObservationReport.gif" />
+    <Content Include="MobileSE\images\ProductRequirementsDocument.gif" />
+    <Content Include="MobileSE\images\ProductScheduleReport.gif" />
+    <Content Include="MobileSE\images\programoffice.gif" />
+    <Content Include="MobileSE\images\PRS.gif" />
+    <Content Include="MobileSE\images\purpleblock.gif" />
+    <Content Include="MobileSE\images\red.gif" />
+    <Content Include="MobileSE\images\redblock.gif" />
+    <Content Include="MobileSE\images\RequirementExceptionReport.gif" />
+    <Content Include="MobileSE\images\runFromCurrentLocation.gif" />
+    <Content Include="MobileSE\images\shadow.gif" />
+    <Content Include="MobileSE\images\web.gif" />
+    <Content Include="MobileSE\images\whiteblock.gif" />
+    <Content Include="MobileSE\menubar.asp" />
+    <Content Include="MobileSE\menubarODM.asp" />
+    <Content Include="MobileSE\ModusImageInfo.asp" />
+    <Content Include="MobileSE\ModusMain.asp" />
+    <Content Include="MobileSE\Observations.asp" />
+    <Content Include="MobileSE\PDD.asp" />
+    <Content Include="MobileSE\PostRTM\RequestButtons.asp" />
+    <Content Include="MobileSE\PostRTM\RequestRSgetProduct.asp" />
+    <Content Include="MobileSE\PostRTM\RequestRSgetRoot.asp" />
+    <Content Include="MobileSE\PostRTM\RequestRSgetStatus.asp" />
+    <Content Include="MobileSE\PostRTM\RequestRSgetVersion.asp" />
+    <Content Include="MobileSE\PostRTM\RequestSave.asp" />
+    <Content Include="MobileSE\PostRTM\test.asp" />
+    <Content Include="MobileSE\PostRTM\TestRequest.asp" />
+    <Content Include="MobileSE\PostRTM\TestRequestButtons.asp" />
+    <Content Include="MobileSE\PostRTM\TestRequestMain.asp" />
+    <Content Include="MobileSE\PostRTM\TestRequestSave.asp" />
+    <Content Include="MobileSE\Products.asp" />
+    <Content Include="MobileSE\ProductScheduleSummary.asp" />
+    <Content Include="MobileSE\ProductSummary.asp" />
+    <Content Include="MobileSE\QuickSearch.asp" />
+    <Content Include="MobileSE\QuickSearch_Pulsar.asp" />
+    <Content Include="MobileSE\Schedule.asp" />
+    <Content Include="MobileSE\ScheduleGraph.asp" />
+    <Content Include="MobileSE\style\programoffice.css" />
+    <Content Include="MobileSE\style\prsstyle.css" />
+    <Content Include="MobileSE\SubAssembly.asp" />
+    <Content Include="MobileSE\SubAssemblyButtons.asp" />
+    <Content Include="MobileSE\SubAssemblyFrame.asp" />
+    <Content Include="MobileSE\SubAssemblyMain.asp" />
+    <Content Include="MobileSE\Today\Action.asp" />
+    <Content Include="MobileSE\Today\Action2.asp" />
+    <Content Include="MobileSE\Today\ActionButtons.asp" />
+    <Content Include="MobileSE\Today\ActionEmail.asp" />
+    <Content Include="MobileSE\Today\ActionHistory.asp" />
+    <Content Include="MobileSE\Today\ActionMain.asp" />
+    <Content Include="MobileSE\Today\ActionMultiApprove.asp" />
+    <Content Include="MobileSE\Today\ActionReport.asp" />
+    <Content Include="MobileSE\Today\ActionReportMain.asp" />
+    <Content Include="MobileSE\Today\ActionRSupdate.asp" />
+    <Content Include="MobileSE\Today\ActionSave.asp" />
+    <Content Include="MobileSE\Today\AddAvNoToDeliverable.aspx" />
+    <Content Include="MobileSE\Today\AddAVNoToDeliverableFrame.asp" />
+    <Content Include="MobileSE\Today\AddAvNoToFeature.aspx" />
+    <Content Include="MobileSE\Today\AddAVNoToFeatureFrame.asp" />
+    <Content Include="MobileSE\Today\AddOTSComponents.asp" />
+    <Content Include="MobileSE\Today\AppError.asp" />
+    <Content Include="MobileSE\Today\AppErrorButtons.asp" />
+    <Content Include="MobileSE\Today\AppErrorMain.asp" />
+    <Content Include="MobileSE\Today\AppErrorSave.asp" />
+    <Content Include="MobileSE\Today\ApproverStatus.asp" />
+    <Content Include="MobileSE\Today\BaseUnitMissingSAAction.asp" />
+    <Content Include="MobileSE\Today\BrandDeleteWarning.asp" />
+    <Content Include="MobileSE\Today\BrandUpdate.asp" />
+    <Content Include="MobileSE\Today\BrandUpdateButtons.asp" />
+    <Content Include="MobileSE\Today\BrandUpdateMain.asp" />
+    <Content Include="MobileSE\Today\BrandUpdateMain_Pulsar.asp" />
+    <Content Include="MobileSE\Today\BrandUpdateSave.asp" />
+    <Content Include="MobileSE\Today\BrandUpdate_Pulsar.asp" />
+    <Content Include="MobileSE\Today\calDraw1.asp" />
+    <Content Include="MobileSE\Today\ChangeCM.asp" />
+    <Content Include="MobileSE\Today\ChangeCMMain.asp" />
+    <Content Include="MobileSE\Today\ChangeCMSave.asp" />
+    <Content Include="MobileSE\Today\ChangeMarketing.asp" />
+    <Content Include="MobileSE\Today\ChangeMarketingMain.asp" />
+    <Content Include="MobileSE\Today\ChangeMarketingSave.asp" />
+    <Content Include="MobileSE\Today\ChangePC.asp" />
+    <Content Include="MobileSE\Today\ChangePCMain.asp" />
+    <Content Include="MobileSE\Today\ChangePCSave.asp" />
+    <Content Include="MobileSE\Today\ChangePhWeb.asp" />
+    <Content Include="MobileSE\Today\ChangePhWebMain.asp" />
+    <Content Include="MobileSE\Today\ChangePhWebSave.asp" />
+    <Content Include="MobileSE\Today\ChangePINPM.asp" />
+    <Content Include="MobileSE\Today\ChangePINPMMain.asp" />
+    <Content Include="MobileSE\Today\ChangePINPMSave.asp" />
+    <Content Include="MobileSE\Today\ChangePM.asp" />
+    <Content Include="MobileSE\Today\ChangePMMain.asp" />
+    <Content Include="MobileSE\Today\ChangePMSave.asp" />
+    <Content Include="MobileSE\Today\ChangeUser.asp" />
+    <Content Include="MobileSE\Today\ChangeUserMain.asp" />
+    <Content Include="MobileSE\Today\ChangeUserSave.asp" />
+    <Content Include="MobileSE\Today\ChannelPartnerCreated.asp" />
+    <Content Include="MobileSE\Today\ChooseComponentCoreTeam.asp" />
+    <Content Include="MobileSE\Today\ChooseComponentCoreTeamMain.asp" />
+    <Content Include="MobileSE\Today\ChooseComponentCoreTeamSave.asp" />
+    <Content Include="MobileSE\Today\ChooseComponentOwner.asp" />
+    <Content Include="MobileSE\Today\ChooseComponentOwnerMain.asp" />
+    <Content Include="MobileSE\Today\ChooseComponentOwnerSave.asp" />
+    <Content Include="MobileSE\Today\ChooseEmployee.asp" />
+    <Content Include="MobileSE\Today\ChooseEmployeeMain.asp" />
+    <Content Include="MobileSE\Today\CompareVersions.asp" />
+    <Content Include="MobileSE\Today\Configure.asp" />
+    <Content Include="MobileSE\Today\ConfigureButtons.asp" />
+    <Content Include="MobileSE\Today\ConfigureMain.asp" />
+    <Content Include="MobileSE\Today\ConfigureSave.asp" />
+    <Content Include="MobileSE\Today\CreateAv.asp" />
+    <Content Include="MobileSE\Today\CreateSimpleAV_Pulsar.asp" />
+    <Content Include="MobileSE\Today\CurrentUSers.asp" />
+    <Content Include="MobileSE\Today\DCRUpdateWorkflowData.asp" />
+    <Content Include="MobileSE\Today\DCRUpdateWorkflowData.aspx" />
+    <Content Include="MobileSE\Today\DCRWorkflow.aspx" />
+    <Content Include="MobileSE\Today\DCRWorkflowFrame.asp" />
+    <Content Include="MobileSE\Today\DCRWorkflowReassign.asp" />
+    <Content Include="MobileSE\Today\DCRWorkflowReassignFrame.asp" />
+    <Content Include="MobileSE\Today\DCRWorkflowReassignSave.asp" />
+    <Content Include="MobileSE\Today\DCRWorkflowStatus.aspx" />
+    <Content Include="MobileSE\Today\DCRWorkflowTerminate.asp" />
+    <Content Include="MobileSE\Today\DeleteAction.asp" />
+    <Content Include="MobileSE\Today\employee.asp" />
+    <Content Include="MobileSE\Today\employeemain.asp" />
+    <Content Include="MobileSE\Today\EmployeeODMAccountApproval.asp" />
+    <Content Include="MobileSE\Today\employeesave.asp" />
+    <Content Include="MobileSE\Today\ExcelExport.asp" />
+    <Content Include="MobileSE\Today\ExcelExportForms.asp" />
+    <Content Include="MobileSE\Today\family.asp" />
+    <Content Include="MobileSE\Today\familymain.asp" />
+    <Content Include="MobileSE\Today\familysave.asp" />
+    <Content Include="MobileSE\Today\FeaturesRemovedFromPRL.asp" />
+    <Content Include="MobileSE\Today\FeaturesRemovedFromPRLActions.asp" />
+    <Content Include="MobileSE\Today\Feature\RejectFeatureRequest.asp" />
+    <Content Include="MobileSE\Today\Feature\RejectFeatureRequestMain.asp" />
+    <Content Include="MobileSE\Today\Feature\RejectFeatureRequestSave.asp" />
+    <Content Include="MobileSE\Today\Find.asp" />
+    <Content Include="MobileSE\Today\Find_Pulsar.asp" />
+    <Content Include="MobileSE\Today\images\actions.bmp" />
+    <Content Include="MobileSE\Today\images\actions.png" />
+    <Content Include="MobileSE\Today\images\alert.bmp" />
+    <Content Include="MobileSE\Today\images\alert.png" />
+    <Content Include="MobileSE\Today\images\banner3.gif" />
+    <Content Include="MobileSE\Today\images\calendar.gif" />
+    <Content Include="MobileSE\Today\images\folder.gif" />
+    <Content Include="MobileSE\Today\images\go.bmp" />
+    <Content Include="MobileSE\Today\images\go.gif" />
+    <Content Include="MobileSE\Today\images\go.png" />
+    <Content Include="MobileSE\Today\images\ICON-DOC-ACCESS.GIF" />
+    <Content Include="MobileSE\Today\images\ICON-DOC-EXCEL.GIF" />
+    <Content Include="MobileSE\Today\images\ICON-DOC-HTML.GIF" />
+    <Content Include="MobileSE\Today\images\ICON-DOC-OUTLOOK.GIF" />
+    <Content Include="MobileSE\Today\images\ICON-DOC-PPT.GIF" />
+    <Content Include="MobileSE\Today\images\ICON-DOC-PROJECT.GIF" />
+    <Content Include="MobileSE\Today\images\ICON-DOC-WORD.GIF" />
+    <Content Include="MobileSE\Today\images\line1.bmp" />
+    <Content Include="MobileSE\Today\images\line1.png" />
+    <Content Include="MobileSE\Today\images\pdpims.gif" />
+    <Content Include="MobileSE\Today\images\today.gif" />
+    <Content Include="MobileSE\Today\ImageTabChangeActions.asp" />
+    <Content Include="MobileSE\Today\ImageTabChangeShowSCM.asp" />
+    <Content Include="MobileSE\Today\ImageTabChangeToLocalization.asp" />
+    <Content Include="MobileSE\Today\InitialOfferingLTF.aspx" />
+    <Content Include="MobileSE\Today\InitialOfferingLTFFrame.asp" />
+    <Content Include="MobileSE\Today\InitialOfferingTodayUpdate.asp" />
+    <Content Include="MobileSE\Today\MSOWC.CAB" />
+    <Content Include="MobileSE\Today\OTSHWComponents.asp" />
+    <Content Include="MobileSE\Today\OverrideFeatureActions.asp" />
+    <Content Include="MobileSE\Today\OverrideFeatureFeedback.asp" />
+    <Content Include="MobileSE\Today\OverrideFeatureNamingRequest.asp" />
+    <Content Include="MobileSE\Today\PDMFeedback2.asp" />
+    <Content Include="MobileSE\Today\PDMFeedbackMain2.asp" />
+    <Content Include="MobileSE\Today\PDMFeedbackMainMultiples2.asp" />
+    <Content Include="MobileSE\Today\PDMFeedbackSave2.asp" />
+    <Content Include="MobileSE\Today\PHwebAVActionItems_Pulsar.asp" />
+    <Content Include="MobileSE\Today\Platform.asp" />
+    <Content Include="MobileSE\Today\PlatformBaseUnitList.asp" />
+    <Content Include="MobileSE\Today\PlatformButtons.asp" />
+    <Content Include="MobileSE\Today\PlatformList.asp" />
+    <Content Include="MobileSE\Today\PlatformMain.asp" />
+    <Content Include="MobileSE\Today\PlatformSave.asp" />
+    <Content Include="MobileSE\Today\PreinstallPrepStatus.asp" />
+    <Content Include="MobileSE\Today\PreinstallReassignMain.asp" />
+    <Content Include="MobileSE\Today\PreinstallReassignSave.asp" />
+    <Content Include="MobileSE\Today\ProductCycle.asp" />
+    <Content Include="MobileSE\Today\ProductCycleButtons.asp" />
+    <Content Include="MobileSE\Today\ProductCycleMain.asp" />
+    <Content Include="MobileSE\Today\ProductCycleSave.asp" />
+    <Content Include="MobileSE\Today\ProductID.asp" />
+    <Content Include="MobileSE\Today\ProductIDButtons.asp" />
+    <Content Include="MobileSE\Today\ProductIDMain.asp" />
+    <Content Include="MobileSE\Today\ProductRelease.asp" />
+    <Content Include="MobileSE\Today\ProductReleaseButtons.asp" />
+    <Content Include="MobileSE\Today\ProductReleaseCheckRelease.asp" />
+    <Content Include="MobileSE\Today\ProductReleaseMain.asp" />
+    <Content Include="MobileSE\Today\ProductReleaseSave.asp" />
+    <Content Include="MobileSE\Today\ProductSite.asp" />
+    <Content Include="MobileSE\Today\ProductSiteButtons.asp" />
+    <Content Include="MobileSE\Today\ProductSiteMain.asp" />
+    <Content Include="MobileSE\Today\ProductSiteSave.asp" />
+    <Content Include="MobileSE\Today\ProgramAccessory.asp" />
+    <Content Include="MobileSE\Today\ProgramAccessorySave.asp" />
+    <Content Include="MobileSE\Today\programbuttons.asp" />
+    <Content Include="MobileSE\Today\programbuttons_Pulsar.asp" />
+    <Content Include="MobileSE\Today\ProgramFactoryEngineer.asp" />
+    <Content Include="MobileSE\Today\ProgramFactoryEngineerSave.asp" />
+    <Content Include="MobileSE\Today\programmain.asp" />
+    <Content Include="MobileSE\Today\programmain_Pulsar.asp" />
+    <Content Include="MobileSE\Today\Programs.asp" />
+    <Content Include="MobileSE\Today\programsave.asp" />
+    <Content Include="MobileSE\Today\ProgramSaveCommodityPM.asp" />
+    <Content Include="MobileSE\Today\ProgramSaveHWPM.asp" />
+    <Content Include="MobileSE\Today\programsave_Pulsar.asp" />
+    <Content Include="MobileSE\Today\ProgramsCommodityPM.asp" />
+    <Content Include="MobileSE\Today\ProgramsHWPM.asp" />
+    <Content Include="MobileSE\Today\RejectedAVs.asp" />
+    <Content Include="MobileSE\Today\RejectedAvsActions.asp" />
+    <Content Include="MobileSE\Today\rsAlerts.asp" />
+    <Content Include="MobileSE\Today\SCM_XML_Feed.asp" />
+    <Content Include="MobileSE\Today\scripts\actionmain.js" />
+    <Content Include="MobileSE\Today\SetupOTS.asp" />
+    <Content Include="MobileSE\Today\SharedAVActions.asp" />
+    <Content Include="MobileSE\Today\SIAssignments.asp" />
+    <Content Include="MobileSE\Today\SIAssignmentsButtons.asp" />
+    <Content Include="MobileSE\Today\style\actionmain.css" />
+    <Content Include="MobileSE\Today\style\font-awesome.min.css" />
+    <Content Include="MobileSE\Today\style\font\fontawesome-webfont.svg" />
+    <Content Include="MobileSE\Today\style\programoffice.css" />
+    <Content Include="MobileSE\Today\style\prsstyle.css" />
+    <Content Include="MobileSE\Today\Support.asp" />
+    <Content Include="MobileSE\Today\SupportSend.asp" />
+    <Content Include="MobileSE\Today\SystemTeamTemp.htm" />
+    <Content Include="MobileSE\Today\today.css" />
+    <Content Include="MobileSE\Today\UpdateAv.asp" />
+    <Content Include="MobileSE\Today\UpdateBitTransferStatus.asp" />
+    <Content Include="MobileSE\Today\UpdateDCRNo.asp" />
+    <Content Include="MobileSE\Today\UpdateMarketingMissingAvData.asp" />
+    <Content Include="MobileSE\Today\UpdatePhWebAvData2.asp" />
+    <Content Include="MobileSE\Today\UserAccessRequest.asp" />
+    <Content Include="MobileSE\Today\ViewBrands.asp" />
+    <Content Include="MobileSE\Today\ViewBrandsButtons.asp" />
+    <Content Include="MobileSE\Today\ViewBrandsMain.asp" />
+    <Content Include="MultiInputBox.asp" />
+    <Content Include="NeatUpload\cancel.png" />
+    <Content Include="NeatUpload\default.css" />
+    <Content Include="NeatUpload\Error413.aspx" />
+    <Content Include="NeatUpload\Progress.aspx" />
+    <Content Include="NeatUpload\Progress.js" />
+    <Content Include="NeatUpload\refresh.png" />
+    <Content Include="NeatUpload\stop_refresh.png" />
+    <Content Include="NoAccess.asp" />
+    <Content Include="Notification\DataWrapper.asp" />
+    <Content Include="Notification\ScheduleChangeNotification.asp" />
+    <Content Include="notyet.asp" />
+    <Content Include="offline1.asp" />
+    <Content Include="OTS.asp" />
+    <Content Include="OTSMailRSshare.asp" />
+    <Content Include="PMR\SoftpaqFrame.asp" />
+    <Content Include="pmview.asp" />
+    <Content Include="PNPDevices.asp" />
+    <Content Include="ProductStatus.asp" />
+    <Content Include="ProductStatusOptions.asp" />
+    <Content Include="ProductStatusOptionsButtons.asp" />
+    <Content Include="ProductStatusOptionsMain.asp" />
+    <Content Include="Product\EmailTest.asp" />
+    <Content Include="Product\LeadProduct\CompareRootOnLeadProduct.asp" />
+    <Content Include="Product\LeadProduct\Exceptions.asp" />
+    <Content Include="Product\LeadProduct\ExceptionsButtons.asp" />
+    <Content Include="Product\LeadProduct\ExceptionsMain.asp" />
+    <Content Include="Product\LeadProduct\ExceptionsSave.asp" />
+    <Content Include="Product\LeadProduct\Exclusions.asp" />
+    <Content Include="Product\LeadProduct\ExclusionsButtons.asp" />
+    <Content Include="Product\LeadProduct\ExclusionsMain.asp" />
+    <Content Include="Product\LeadProduct\ExclusionsSave.asp" />
+    <Content Include="Product\LeadProduct\QuickExcludeSave.asp" />
+    <Content Include="Product\LeadProduct\Sync.asp" />
+    <Content Include="Product\LeadProduct\ViewAllUpdatesForPM.asp" />
+    <Content Include="Product\LeadProduct\ViewExceptions.asp" />
+    <Content Include="Product\LeadProduct\ViewExceptionsButtons.asp" />
+    <Content Include="Product\LeadProduct\ViewExceptionsMain.asp" />
+    <Content Include="Product\LeadProduct\ViewExceptionsSave.asp" />
+    <Content Include="Product\LeadProduct\ViewExclusions.asp" />
+    <Content Include="Product\LeadProduct\ViewExclusionsButtons.asp" />
+    <Content Include="Product\LeadProduct\ViewExclusionsMain.asp" />
+    <Content Include="Product\LeadProduct\ViewExclusionsSave.asp" />
+    <Content Include="Product\MarketingNames.asp" />
+    <Content Include="Product\MilestoneSignoff.asp" />
+    <Content Include="Product\MilestoneSignoffAlertPreview.asp" />
+    <Content Include="Product\MilestoneSignoffButtons.asp" />
+    <Content Include="Product\MilestoneSignoffMain.asp" />
+    <Content Include="Product\MilestoneSignoffReport.asp" />
+    <Content Include="Product\MilestoneSignoffSave.asp" />
+    <Content Include="Product\MultipleRTM.asp" />
+    <Content Include="Product\MultipleRTMButtons.asp" />
+    <Content Include="Product\MultipleRTMMain.asp" />
+    <Content Include="Product\MultipleRTMProgram.asp" />
+    <Content Include="Product\MultipleRTMSave.asp" />
+    <Content Include="Product\ProductOSLanguages.asp" />
+    <Content Include="Product\ProductOSLanguagesXML.asp" />
+    <Content Include="Program\Buttons.asp" />
+    <Content Include="Program\EditProgram.asp" />
+    <Content Include="Program\EditProgramSave.asp" />
+    <Content Include="Program\Program.asp" />
+    <Content Include="Properties\FT.asp" />
+    <Content Include="Properties\FTButtons.asp" />
+    <Content Include="Properties\FTMain.asp" />
+    <Content Include="PublishMarketingReq.aspx" />
+    <Content Include="PublishMarketingReqFrame.asp" />
+    <Content Include="Query\ActionReport.asp" />
+    <Content Include="Query\Actions.asp" />
+    <Content Include="Query\ActionsRSget.asp" />
+    <Content Include="Query\ActionsRSupdate.asp" />
+    <Content Include="Query\CfgRSget.asp" />
+    <Content Include="Query\CfgRSupdate.asp" />
+    <Content Include="Query\ChooseManagers.asp" />
+    <Content Include="Query\ChooseManagersMain.asp" />
+    <Content Include="Query\ChooseSpecificChange.asp" />
+    <Content Include="Query\ChooseSpecificChangeMain.asp" />
+    <Content Include="Query\DateRange.asp" />
+    <Content Include="Query\DateRangeMain.asp" />
+    <Content Include="Query\DelImageReport.asp" />
+    <Content Include="Query\DeliverableDetails.asp" />
+    <Content Include="Query\DeliverableFields.asp" />
+    <Content Include="Query\Deliverables.asp" />
+    <Content Include="Query\DeliverableStatus.asp" />
+    <Content Include="Query\DeliverableVersionDetails.asp" />
+    <Content Include="Query\DeliverableVersionDetails.aspx" />
+    <Content Include="Query\DelReport.asp" />
+    <Content Include="Query\DelRSget.asp" />
+    <Content Include="Query\DelRSupdate.asp" />
+    <Content Include="Query\DelSyntax.asp" />
+    <Content Include="Query\DelVerDetailEmail.asp" />
+    <Content Include="Query\DelVerDetailSendEmail.asp" />
+    <Content Include="Query\Loading.asp" />
+    <Content Include="Query\MdaCompliance.asp" />
+    <Content Include="Query\MdaCompliance2015.asp" />
+    <Content Include="Query\OTSPEActivity.asp" />
+    <Content Include="Query\ProfileShare.asp" />
+    <Content Include="Query\ProfileShareGroup.asp" />
+    <Content Include="Query\ProfileShareGroupMain.asp" />
+    <Content Include="Query\ProfileShareGroupSave.asp" />
+    <Content Include="Query\ProfileShareMain.asp" />
+    <Content Include="Query\ProfileShareProperties.asp" />
+    <Content Include="Query\ProfileSharePropertiesMain.asp" />
+    <Content Include="Query\ProfileSharePropertiesSave.asp" />
+    <Content Include="Query\ReorderColumns.asp" />
+    <Content Include="Query\ReorderColumnsMain.asp" />
+    <Content Include="Query\ReorderColumnsSave.asp" />
+    <Content Include="Query\schedule.aspx" />
+    <Content Include="Query\ScheduleChanges.aspx" />
+    <Content Include="Query\ScheduleSummary.aspx" />
+    <Content Include="Query\test.asp" />
+    <Content Include="Query\test.aspx" />
+    <Content Include="ReadinessReport.asp" />
+    <Content Include="ReadinessReportOptions.asp" />
+    <Content Include="ReadinessReportOptionsButtons.asp" />
+    <Content Include="ReadinessReportOptionsMain.asp" />
+    <Content Include="References\Ajax.dll" />
+    <Content Include="References\AjaxControlToolkit.dll" />
+    <Content Include="References\Brettle.Web.NeatUpload.dll" />
+    <Content Include="References\ControlLibrary.dll" />
+    <Content Include="References\Elmah.dll" />
+    <Content Include="References\eWorld.UI.dll" />
+    <Content Include="References\NPOI.dll" />
+    <Content Include="References\skmValidators.dll" />
+    <Content Include="Release.asp" />
+    <Content Include="ReleaseButtons.asp" />
+    <Content Include="ReleaseMain.asp" />
+    <Content Include="ReleaseNotes.asp" />
+    <Content Include="releases.asp" />
+    <Content Include="Release\Buttons.asp" />
+    <Content Include="Release\DisclaimerNotes.asp" />
+    <Content Include="Release\EditDisclaimerNotes.asp" />
+    <Content Include="Release\EditDisclaimerNotesSave.asp" />
+    <Content Include="Release\EditRelease.asp" />
+    <Content Include="Release\EditReleaseSave.asp" />
+    <Content Include="Release\Release.asp" />
+    <Content Include="ReorderFavs.asp" />
+    <Content Include="Reports\ArchiveCandidates.asp" />
+    <Content Include="Reports\Commodities\Main.asp" />
+    <Content Include="Reports\Commodities\ObservationLists.asp" />
+    <Content Include="Reports\Commodities\PartNumbersTaggedQComplete.asp" />
+    <Content Include="Reports\Commodities\WeeklyVersionsCreated.asp" />
+    <Content Include="Reports\Commodities\WorkflowCompleteTaggedQComplete.asp" />
+    <Content Include="Reports\DelSummary.asp" />
+    <Content Include="Reports\NewReleasesForOSFamily.asp" />
+    <Content Include="Reports\pdd_export.asp" />
+    <Content Include="Reports\pdd_export_schedule.asp" />
+    <Content Include="Reports\pdd_export_xlstyle.asp" />
+    <Content Include="Reports\pdd_export_xlstyle.xml" />
+    <Content Include="Reports\ProjectStatus.asp" />
+    <Content Include="Reports\Reports.css" />
+    <Content Include="RequestDemo.asp" />
+    <Content Include="Requirements\ChangeDistribution.asp" />
+    <Content Include="Requirements\ChangeDistributionMain.asp" />
+    <Content Include="Requirements\ChangeDistributionSave.asp" />
+    <Content Include="Requirements\ChangeImageLanguage.asp" />
+    <Content Include="Requirements\Requirement.asp" />
+    <Content Include="Requirements\RequirementButtons.asp" />
+    <Content Include="Requirements\RequirementImport.asp" />
+    <Content Include="Requirements\RequirementImportMain.asp" />
+    <Content Include="Requirements\RequirementImportRFget.asp" />
+    <Content Include="Requirements\RequirementImportSave.asp" />
+    <Content Include="Requirements\RequirementListmain.asp" />
+    <Content Include="Requirements\RequirementListSave.asp" />
+    <Content Include="Requirements\RequirementMain.asp" />
+    <Content Include="Requirements\RequirementSave.asp" />
+    <Content Include="Requirements\UpdateMasterList.asp" />
+    <Content Include="Requirements\UpdateMasterListMain.asp" />
+    <Content Include="Requirements\UpdateMasterSave.asp" />
+    <Content Include="Root.asp" />
+    <Content Include="roothelp.asp" />
+    <Content Include="RootWizardRSget.asp" />
+    <Content Include="saveRelease.asp" />
+    <Content Include="saveVendor.asp" />
+    <Content Include="Schedule\clsSchedule.asp" />
+    <Content Include="Schedule\CreateScheduleFrame.asp" />
+    <Content Include="Schedule\CreateScheduleMain.asp" />
+    <Content Include="Schedule\deactivateschedule.asp" />
+    <Content Include="Schedule\DeleteSchedule.asp" />
+    <Content Include="Schedule\inc_EmailNotifications.asp" />
+    <Content Include="Schedule\MilestoneBatchUpdate.asp" />
+    <Content Include="Schedule\MilestoneBatchUpdate_Pulsar.asp" />
+    <Content Include="Schedule\MilestoneButtons.asp" />
+    <Content Include="Schedule\MilestoneButtons_Pulsar.asp" />
+    <Content Include="Schedule\MilestoneCopy.asp" />
+    <Content Include="Schedule\MilestoneInsert.asp" />
+    <Content Include="Schedule\MilestoneInsert_Pulsar.asp" />
+    <Content Include="Schedule\MilestoneListMain.asp" />
+    <Content Include="Schedule\MilestoneListMain_Pulsar.asp" />
+    <Content Include="Schedule\MilestoneListSave.asp" />
+    <Content Include="Schedule\MilestoneMain.asp" />
+    <Content Include="Schedule\MilestoneMain_Pulsar.asp" />
+    <Content Include="Schedule\MilestoneSave.asp" />
+    <Content Include="Schedule\Schedule.asp" />
+    <Content Include="Schedule\ScheduleBatchUpdate.asp" />
+    <Content Include="Schedule\ScheduleBatchUpdate_Pulsar.asp" />
+    <Content Include="Schedule\ScheduleCopy.asp" />
+    <Content Include="Schedule\ScheduleDescription.asp" />
+    <Content Include="Schedule\schedule_datepicker.asp" />
+    <Content Include="Schedule\Schedule_Pulsar.asp" />
+    <Content Include="Schedule\SetScheduleDescription.asp" />
+    <Content Include="Schedule\TargetRTPandEMUpdateButtons.asp" />
+    <Content Include="Schedule\TargetRTPandEMUpdateFrame.asp" />
+    <Content Include="Schedule\TargetRTPandEMUpdateMain.asp" />
+    <Content Include="Schedule\TargetRTPandEMUpdateSave.asp" />
+    <Content Include="SCM\AvActionScorecard.aspx" />
+    <Content Include="SCM\AvActionScorecardFrame.asp" />
+    <Content Include="SCM\avBatchEntry.asp" />
+    <Content Include="SCM\avButtons.asp" />
+    <Content Include="SCM\avDelete.asp" />
+    <Content Include="SCM\avDetail.asp" />
+    <Content Include="SCM\AvDetailDelRootValues.asp" />
+    <Content Include="SCM\avFrame.asp" />
+    <Content Include="SCM\avMarketingDetail.asp" />
+    <Content Include="SCM\avOrphans.aspx" />
+    <Content Include="SCM\avOrphansFrame.asp" />
+    <Content Include="SCM\avSetStatus.asp" />
+    <Content Include="SCM\AvsMissingData.aspx" />
+    <Content Include="SCM\AvsMissingDataFrame.asp" />
+    <Content Include="SCM\AvsMissingDelRoot.aspx" />
+    <Content Include="SCM\AvsMissingDelRootFrame.asp" />
+    <Content Include="SCM\catButtons.asp" />
+    <Content Include="SCM\catDetail.asp" />
+    <Content Include="SCM\catFrame.asp" />
+    <Content Include="SCM\changelog.asp" />
+    <Content Include="SCM\changelog.aspx" />
+    <Content Include="SCM\changelog_rollback.aspx" />
+    <Content Include="SCM\cmTodayView.asp" />
+    <Content Include="SCM\copyButtons.asp" />
+    <Content Include="SCM\copyDetail.asp" />
+    <Content Include="SCM\copyFrame.asp" />
+    <Content Include="SCM\default.htm" />
+    <Content Include="SCM\DocKitData.aspx" />
+    <Content Include="SCM\DocKitDataFrame.asp" />
+    <Content Include="SCM\editChngLogButtons.asp" />
+    <Content Include="SCM\editChngLogFrame.asp" />
+    <Content Include="SCM\editChngLogMain.asp" />
+    <Content Include="SCM\FilterByCategory.aspx" />
+    <Content Include="SCM\FilterByCategoryFrame.asp" />
+    <Content Include="SCM\FilterByMktCampaignsAVSelector.aspx" />
+    <Content Include="SCM\FilterByMktCampaignsAVSelectorFrame.asp" />
+    <Content Include="SCM\FilterByPlantsAVSelector.aspx" />
+    <Content Include="SCM\FilterByPlantsAVSelectorFrame.asp" />
+    <Content Include="SCM\FilterByRegionalAVSelector.aspx" />
+    <Content Include="SCM\FilterByRegionalAVSelectorFrame.asp" />
+    <Content Include="SCM\FilterRegionalSCMByMktCampaignAVSelector.aspx" />
+    <Content Include="SCM\FilterRegionalSCMByMktCampAVSelectorFrame.asp" />
+    <Content Include="SCM\FilterRegionalSCMByPlantsAVSelector.aspx" />
+    <Content Include="SCM\FilterRegionalSCMByPlantsAVSelectorFrame.asp" />
+    <Content Include="SCM\form.png" />
+    <Content Include="SCM\form_exit.png" />
+    <Content Include="SCM\form_header.png" />
+    <Content Include="SCM\kmatButtons.asp" />
+    <Content Include="SCM\kmatDetail.asp" />
+    <Content Include="SCM\kmatFrame.asp" />
+    <Content Include="SCM\linkButtons.asp" />
+    <Content Include="SCM\linkFrame.asp" />
+    <Content Include="SCM\linkMain.asp" />
+    <Content Include="SCM\LocalizeAVs.asp" />
+    <Content Include="SCM\LocalizeAvsButtons.asp" />
+    <Content Include="SCM\LocalizeAvsMain.asp" />
+    <Content Include="SCM\LocalizeAVsSeriesNum.aspx" />
+    <Content Include="SCM\LocalizeAvsSeriesNumFrame.asp" />
+    <Content Include="SCM\LocalizeHWKitsMain.asp" />
+    <Content Include="SCM\LocalizeKeyboardsMain.asp" />
+    <Content Include="SCM\LocalizeOSRestoreMediaMain.asp" />
+    <Content Include="SCM\MktCampaigns Edit Screen Frame.asp" />
+    <Content Include="SCM\MktCampaigns Edit Screen.aspx" />
+    <Content Include="SCM\MktCampAVSelectionTool.aspx" />
+    <Content Include="SCM\mktgAccess.asp" />
+    <Content Include="SCM\mrDatesButtons.asp" />
+    <Content Include="SCM\mrDatesDetail.asp" />
+    <Content Include="SCM\mrDatesFrame.asp" />
+    <Content Include="SCM\mrDatesView.asp" />
+    <Content Include="SCM\na_xlsExport.asp" />
+    <Content Include="SCM\pasteButtons.asp" />
+    <Content Include="SCM\pasteDetail.asp" />
+    <Content Include="SCM\pasteFrame.asp" />
+    <Content Include="SCM\PDMFeedback.aspx" />
+    <Content Include="SCM\PDMFeedbackFrame.asp" />
+    <Content Include="SCM\PlantsAVSelectionTool.aspx" />
+    <Content Include="SCM\PMGandGPSyExport.aspx" />
+    <Content Include="SCM\PMGandGPSyExportFrame.asp" />
+    <Content Include="SCM\pmview.asp" />
+    <Content Include="SCM\pmviewLegacy.asp" />
+    <Content Include="SCM\RegionalAVSelectionTool.aspx" />
+    <Content Include="SCM\RegionalAVSelectionToolFrame.asp" />
+    <Content Include="SCM\rs_ClearHistory.asp" />
+    <Content Include="SCM\rs_ProgramMatrix.asp" />
+    <Content Include="SCM\sample.css" />
+    <Content Include="SCM\scmPublishRollback.aspx" />
+    <Content Include="SCM\SCM_PM_Publish_ValidateData.asp" />
+    <Content Include="SCM\securitytest.asp" />
+    <Content Include="SCM\setPublishDt.asp" />
+    <Content Include="SCM\StructureBOM.aspx" />
+    <Content Include="SCM\StructureBOMFrame.asp" />
+    <Content Include="SCM\style.css" />
+    <Content Include="SCM\TestStuff.aspx" />
+    <Content Include="SCM\UnpublishedAVs.aspx" />
+    <Content Include="SCM\UnpublishedAVsFrame.asp" />
+    <Content Include="SCM\UploadAvData.aspx" />
+    <Content Include="SCM\UploadAvDataFrame.asp" />
+    <Content Include="SCM\UploaderFrame.asp" />
+    <Content Include="SCM\ValidateSharedAVConfigRule.asp" />
+    <Content Include="SCM\xlsScmExport.asp" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="MobileSE\Today\style\font\fontawesome-webfont.eot" />
+    <Content Include="MobileSE\Today\style\font\fontawesome-webfont.ttf" />
+    <Content Include="MobileSE\Today\style\font\fontawesome-webfont.woff" />
+    <Content Include="MobileSE\Today\style\font\FontAwesome.otf" />
+    <Content Include="MobileSE\Today\style\font\metabook-roman.ttf" />
+    <None Include="Scripts\jquery-1.4.4-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.4.js" />
+    <Content Include="Scripts\jquery-1.4.4.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\Pulsar2.js" />
+    <Content Include="Scripts\PulsarPlus.js" />
+    <Content Include="Scripts\shared_functions.js" />
+    <Content Include="Scripts\verifyEmailAddress.js" />
+    <Content Include="Search\Common\BuildReportMenu.asp" />
+    <Content Include="Search\Common\BuildSQL.asp" />
+    <Content Include="Search\Common\BuildSQLLookup.asp" />
+    <Content Include="Search\Common\BuildSQLMain.asp" />
+    <Content Include="Search\Common\ConfigureReportSections.asp" />
+    <Content Include="Search\Common\ConfigureReportSectionsMain.asp" />
+    <Content Include="Search\Common\CustomReport.asp" />
+    <Content Include="Search\Common\CustomReport1.asp" />
+    <Content Include="Search\Common\CustomReportMain.asp" />
+    <Content Include="Search\Common\CustomReportMain1.asp" />
+    <Content Include="Search\Common\PageLayout.asp" />
+    <Content Include="Search\Common\PageLayoutMain.asp" />
+    <Content Include="Search\Common\PageLayoutSave.asp" />
+    <Content Include="Search\Common\ProfileProperties.asp" />
+    <Content Include="Search\Common\ProfilePropertiesButtons.asp" />
+    <Content Include="Search\Common\ProfilePropertiesMain.asp" />
+    <Content Include="Search\Common\ProfileShare.asp" />
+    <Content Include="Search\Common\ProfileShareGroup.asp" />
+    <Content Include="Search\Common\ProfileShareGroupMain.asp" />
+    <Content Include="Search\Common\ProfileShareGroupSave.asp" />
+    <Content Include="Search\Common\ProfileShareMain.asp" />
+    <Content Include="Search\Common\ProfileShareProperties.asp" />
+    <Content Include="Search\Common\ProfileSharePropertiesMain.asp" />
+    <Content Include="Search\Common\ProfileSharePropertiesSave.asp" />
+    <Content Include="Search\Common\ReorderColumns.asp" />
+    <Content Include="Search\Common\ReorderColumnsMain.asp" />
+    <Content Include="Search\Common\ReorderColumnsSave.asp" />
+    <Content Include="Search\Common\ReorderProfiles.asp" />
+    <Content Include="Search\Common\SendEmail.asp" />
+    <Content Include="Search\Common\UpdateProfile.asp" />
+    <Content Include="Search\OTS\default.asp" />
+    <Content Include="Search\OTS\default_maintenance.asp" />
+    <Content Include="Search\OTS\EmailWrapper.asp" />
+    <Content Include="Search\OTS\maintenance.html" />
+    <Content Include="Search\OTS\NagReport.asp" />
+    <Content Include="Search\OTS\Offline.asp" />
+    <Content Include="Search\OTS\Report.asp" />
+    <Content Include="SelectReleaseType.asp" />
+    <Content Include="SelectReleaseTypeButtons.asp" />
+    <Content Include="SelectReleaseTypeMain.asp" />
+    <Content Include="Service\Action.asp" />
+    <Content Include="Service\ActionButtons.asp" />
+    <Content Include="Service\ActionMain.asp" />
+    <Content Include="Service\ActionSave.asp" />
+    <Content Include="Service\DeleteSKAV.aspx" />
+    <Content Include="Service\DesktopFamilyDetails.aspx" />
+    <Content Include="Service\DesktopPartnumbers.aspx" />
+    <Content Include="Service\DesktopPartnumbersDetails.aspx" />
+    <Content Include="Service\FindSpareKit.asp" />
+    <Content Include="Service\FindSpareKitButtons.asp" />
+    <Content Include="Service\FindSpareKitMain.asp" />
+    <Content Include="Service\OARpt.aspx" />
+    <Content Include="Service\pmview.asp" />
+    <Content Include="Service\processSKUBOMAS.aspx" />
+    <Content Include="Service\remote_calls.asp" />
+    <Content Include="Service\ReportPlatformAssigment.aspx" />
+    <Content Include="Service\ReportPlatformAssigmentAddDesktop.aspx" />
+    <Content Include="Service\ReportPlatformAssignmentMetrics.aspx" />
+    <Content Include="Service\requestSKUBOMAS.html" />
+    <Content Include="Service\rsBTOServiceSpare.asp" />
+    <Content Include="Service\RslAvMapping.asp" />
+    <Content Include="Service\RslBatchEdit.aspx" />
+    <Content Include="Service\RslBatchEdit_Frame.asp" />
+    <Content Include="Service\rsService.asp" />
+    <Content Include="Service\sample.css" />
+    <Content Include="Service\selCalDate.aspx" />
+    <Content Include="Service\ServiceAdvancedSearchReports.aspx" />
+    <Content Include="Service\ServiceAdvancedSearchReportsSummary.aspx" />
+    <Content Include="Service\ServiceBomReport.aspx" />
+    <Content Include="Service\ServiceEOAUpdate.aspx" />
+    <Content Include="Service\SKUBOMAS.aspx" />
+    <Content Include="Service\SKUDDPrompt.html" />
+    <Content Include="Service\SKUPrompt.html" />
+    <Content Include="Service\SKUsFilter.xsl" />
+    <Content Include="Service\SpareKit.aspx" />
+    <Content Include="Service\SpareKitDetails.asp" />
+    <Content Include="Service\SpareKitDetails.aspx" />
+    <Content Include="Service\SpareKitDetailsBatch.asp" />
+    <Content Include="Service\SpareKitDetailsButtons.asp" />
+    <Content Include="Service\SpareKitDetailsButtonsBatch.asp" />
+    <Content Include="Service\SpareKitDetailsMain.asp" />
+    <Content Include="Service\SpareKitDetailsMainBatch.asp" />
+    <Content Include="Service\SpareKitMap.asp" />
+    <Content Include="Service\SpareKitMapMain2.aspx" />
+    <Content Include="Service\SpareKitMapMain3.aspx" />
+    <Content Include="Service\SparekitsEOSL.aspx" />
+    <Content Include="Service\SpareKitSummary.aspx" />
+    <Content Include="Service\spbEditDetails.aspx" />
+    <Content Include="Service\spbEditDetails_Frame.asp" />
+    <Content Include="Service\SpbMaint.aspx" />
+    <Content Include="Service\spbSetFamilyServicePn.aspx" />
+    <Content Include="Service\spbSetServiceFamilyPn_Frame.asp" />
+    <Content Include="Service\style.css" />
+    <Content Include="Service\TodayExtend.aspx" />
+    <Content Include="SIAssignmentsFrame.asp" />
+    <Content Include="sm.asp" />
+    <Content Include="style\bootstrap-combined.min.css" />
+    <Content Include="style\bubble.css" />
+    <Content Include="style\cupertino\images\ui-anim_basic_16x16.gif" />
+    <Content Include="style\cupertino\images\ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
+    <Content Include="style\cupertino\images\ui-bg_flat_15_cd0a0a_40x100.png" />
+    <Content Include="style\cupertino\images\ui-bg_glass_100_e4f1fb_1x400.png" />
+    <Content Include="style\cupertino\images\ui-bg_glass_50_3baae3_1x400.png" />
+    <Content Include="style\cupertino\images\ui-bg_glass_80_d7ebf9_1x400.png" />
+    <Content Include="style\cupertino\images\ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
+    <Content Include="style\cupertino\images\ui-bg_highlight-hard_70_000000_1x100.png" />
+    <Content Include="style\cupertino\images\ui-bg_highlight-soft_100_deedf7_1x100.png" />
+    <Content Include="style\cupertino\images\ui-bg_highlight-soft_25_ffef8f_1x100.png" />
+    <Content Include="style\cupertino\images\ui-icons_2694e8_256x240.png" />
+    <Content Include="style\cupertino\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="style\cupertino\images\ui-icons_3d80b3_256x240.png" />
+    <Content Include="style\cupertino\images\ui-icons_72a7cf_256x240.png" />
+    <Content Include="style\cupertino\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="style\cupertino\jquery-ui-1.8.2.custom.css" />
+    <Content Include="style\cva.css" />
+    <Content Include="style\deliverableversiondetails.css" />
+    <Content Include="style\Excalibur.css" />
+    <Content Include="style\FixedHeaderTable\960.css" />
+    <Content Include="style\FixedHeaderTable\defaultTheme.css" />
+    <Content Include="style\FixedHeaderTable\demo.css" />
+    <Content Include="style\FixedHeaderTable\myTheme.css" />
+    <Content Include="style\FixedHeaderTable\reset.css" />
+    <Content Include="style\general.css" />
+    <Content Include="style\hp1\images\ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
+    <Content Include="style\hp1\images\ui-bg_flat_100_007ac2_40x100.png" />
+    <Content Include="style\hp1\images\ui-bg_flat_15_cd0a0a_40x100.png" />
+    <Content Include="style\hp1\images\ui-bg_flat_25_ffef8f_40x100.png" />
+    <Content Include="style\hp1\images\ui-bg_flat_70_000000_40x100.png" />
+    <Content Include="style\hp1\images\ui-bg_flat_80_b2b2b2_40x100.png" />
+    <Content Include="style\hp1\images\ui-bg_glass_50_ffffff_1x400.png" />
+    <Content Include="style\hp1\images\ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
+    <Content Include="style\hp1\images\ui-icons_222222_256x240.png" />
+    <Content Include="style\hp1\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="style\hp1\images\ui-icons_72a7cf_256x240.png" />
+    <Content Include="style\hp1\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="style\hp1\jquery-ui-1.8.17.custom.css" />
+    <Content Include="style\hp2\images\ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
+    <Content Include="style\hp2\images\ui-bg_flat_100_b2b2b2_40x100.png" />
+    <Content Include="style\hp2\images\ui-bg_flat_15_cd0a0a_40x100.png" />
+    <Content Include="style\hp2\images\ui-bg_flat_25_ffef8f_40x100.png" />
+    <Content Include="style\hp2\images\ui-bg_flat_70_000000_40x100.png" />
+    <Content Include="style\hp2\images\ui-bg_flat_80_007ac2_40x100.png" />
+    <Content Include="style\hp2\images\ui-bg_glass_50_ffffff_1x400.png" />
+    <Content Include="style\hp2\images\ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
+    <Content Include="style\hp2\images\ui-icons_222222_256x240.png" />
+    <Content Include="style\hp2\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="style\hp2\images\ui-icons_72a7cf_256x240.png" />
+    <Content Include="style\hp2\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="style\hp2\jquery-ui-1.8.17.custom.css" />
+    <Content Include="style\ignite_metro\images\gradient_2.png" />
+    <Content Include="style\ignite_metro\images\icon_sprite.png" />
+    <Content Include="style\ignite_metro\images\igGrid\filter-icons-858585.png" />
+    <Content Include="style\ignite_metro\images\igGrid\ig-rating-touch%402.png" />
+    <Content Include="style\ignite_metro\images\igGrid\ig-rating-touch.png" />
+    <Content Include="style\ignite_metro\images\igGrid\ig-rating.png" />
+    <Content Include="style\ignite_metro\images\igHtmlEditor\html-editor-sprite.png" />
+    <Content Include="style\ignite_metro\images\igRating\ig-rating-touch%402.png" />
+    <Content Include="style\ignite_metro\images\igRating\ig-rating-touch.png" />
+    <Content Include="style\ignite_metro\images\igRating\ig-rating.png" />
+    <Content Include="style\ignite_metro\images\igRating\SOURCE_ig-rating-touch%402.png" />
+    <Content Include="style\ignite_metro\images\igRating\SOURCE_ig-rating-touch.png" />
+    <Content Include="style\ignite_metro\images\igRating\SOURCE_ig-rating.png" />
+    <Content Include="style\ignite_metro\images\igTooltip\igTooltipArrows.png" />
+    <Content Include="style\ignite_metro\images\igVideoPlayer\igVideoPlayerIcons_858585.png" />
+    <Content Include="style\ignite_metro\images\igVideoPlayer\igVideoPlayerIcons_ffffff.png" />
+    <Content Include="style\ignite_metro\images\igVideoPlayer\igVPBookmarkSprite.png" />
+    <Content Include="style\ignite_metro\images\ui-anim_basic_16x16.gif" />
+    <Content Include="style\ignite_metro\images\ui-icons_00AADE_256x240.png" />
+    <Content Include="style\ignite_metro\images\ui-icons_222222_256x240.png" />
+    <Content Include="style\ignite_metro\images\ui-icons_565656_256x240.png" />
+    <Content Include="style\ignite_metro\images\ui-icons_858585_256x240.png" />
+    <Content Include="style\ignite_metro\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="style\ignite_metro\infragistics.theme.css" />
+    <Content Include="style\ignite_metro\infragistics_pulsar.css" />
+    <Content Include="style\menu.css" />
+    <Content Include="style\pddExport.css" />
+    <Content Include="style\programoffice.css" />
+    <Content Include="style\progress.css" />
+    <Content Include="style\prsstyle.css" />
+    <Content Include="style\redmond\images\ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
+    <Content Include="style\redmond\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="style\redmond\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="style\redmond\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="style\redmond\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="style\redmond\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="style\redmond\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="style\redmond\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="style\redmond\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="style\redmond\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="style\redmond\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="style\redmond\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="style\redmond\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="style\redmond\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="style\redmond\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="style\redmond\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="style\redmond\jquery-ui-1.8.7.custom.css" />
+    <Content Include="style\shared.css" />
+    <Content Include="style\targetadvanced.css" />
+    <Content Include="style\TriStateCheckBox\images\3-state-checkbox.gif" />
+    <Content Include="style\TriStateCheckBox\Tri_State_Checkbox.css" />
+    <Content Include="style\wizard style.css" />
+    <Content Include="SupplyChain\avBatchEntry.asp" />
+    <Content Include="SupplyChain\avButtons.asp" />
+    <Content Include="SupplyChain\avDelete.asp" />
+    <Content Include="SupplyChain\avDetail.asp" />
+    <Content Include="SupplyChain\AvDetailDelRootValues.asp" />
+    <Content Include="SupplyChain\avFrame.asp" />
+    <Content Include="SupplyChain\avMarketingDetail.asp" />
+    <Content Include="SupplyChain\avOrphans.aspx" />
+    <Content Include="SupplyChain\avOrphansFrame.asp" />
+    <Content Include="SupplyChain\avSetStatus.asp" />
+    <Content Include="SupplyChain\AvsMissingData.aspx" />
+    <Content Include="SupplyChain\AvsMissingDataFrame.asp" />
+    <Content Include="SupplyChain\AvsMissingDelRoot.aspx" />
+    <Content Include="SupplyChain\AvsMissingDelRootFrame.asp" />
+    <Content Include="SupplyChain\changelog.asp" />
+    <Content Include="SupplyChain\changelog.aspx" />
+    <Content Include="SupplyChain\cmTodayView.asp" />
+    <Content Include="SupplyChain\copyButtons.asp" />
+    <Content Include="SupplyChain\copyDetail.asp" />
+    <Content Include="SupplyChain\copyFrame.asp" />
+    <Content Include="SupplyChain\CreateLocalizedAV.asp" />
+    <Content Include="SupplyChain\default.htm" />
+    <Content Include="SupplyChain\DocKitData.aspx" />
+    <Content Include="SupplyChain\DocKitDataFrame.asp" />
+    <Content Include="SupplyChain\editChngLogButtons.asp" />
+    <Content Include="SupplyChain\editChngLogFrame.asp" />
+    <Content Include="SupplyChain\editChngLogMain.asp" />
+    <Content Include="SupplyChain\FilterByCategory.aspx" />
+    <Content Include="SupplyChain\FilterByCategoryFrame.asp" />
+    <Content Include="SupplyChain\FindMissingSubCategories.asp" />
+    <Content Include="SupplyChain\form.png" />
+    <Content Include="SupplyChain\form_exit.png" />
+    <Content Include="SupplyChain\form_header.png" />
+    <Content Include="SupplyChain\GetAVDates.asp" />
+    <Content Include="SupplyChain\GetBaseAvNo.asp" />
+    <Content Include="SupplyChain\kmatButtons.asp" />
+    <Content Include="SupplyChain\kmatDetail.asp" />
+    <Content Include="SupplyChain\kmatFrame.asp" />
+    <Content Include="SupplyChain\linkButtons.asp" />
+    <Content Include="SupplyChain\linkFrame.asp" />
+    <Content Include="SupplyChain\linkMain.asp" />
+    <Content Include="SupplyChain\LocalizeAVs.asp" />
+    <Content Include="SupplyChain\LocalizeAvsButtons.asp" />
+    <Content Include="SupplyChain\LocalizeAvsMain.asp" />
+    <Content Include="SupplyChain\LocalizeAvsMain_Pulsar.asp" />
+    <Content Include="SupplyChain\LocalizeAVsSeriesNum.aspx" />
+    <Content Include="SupplyChain\LocalizeAvsSeriesNumFrame.asp" />
+    <Content Include="SupplyChain\LocalizeAvsSeriesNumFrame_Pulsar.asp" />
+    <Content Include="SupplyChain\LocalizeAVsSeriesNum_Pulsar.aspx" />
+    <Content Include="SupplyChain\LocalizeAVs_Pulsar.asp" />
+    <Content Include="SupplyChain\LocalizeHWKitsMain.asp" />
+    <Content Include="SupplyChain\LocalizeKeyboardsMain.asp" />
+    <Content Include="SupplyChain\LocalizeKeyboardsMain_Pulsar.asp" />
+    <Content Include="SupplyChain\LocalizeMain_Pulsar.asp" />
+    <Content Include="SupplyChain\LocalizeOSRestoreMediaMain.asp" />
+    <Content Include="SupplyChain\MktCampaigns Edit Screen Frame.asp" />
+    <Content Include="SupplyChain\MktCampaigns Edit Screen.aspx" />
+    <Content Include="SupplyChain\mktgAccess.asp" />
+    <Content Include="SupplyChain\mrDatesButtons.asp" />
+    <Content Include="SupplyChain\mrDatesDetail.asp" />
+    <Content Include="SupplyChain\mrDatesFrame.asp" />
+    <Content Include="SupplyChain\mrDatesView.asp" />
+    <Content Include="SupplyChain\na_xlsExport.asp" />
+    <Content Include="SupplyChain\pasteButtons.asp" />
+    <Content Include="SupplyChain\pasteDetail.asp" />
+    <Content Include="SupplyChain\pasteFrame.asp" />
+    <Content Include="SupplyChain\PDMFeedback.aspx" />
+    <Content Include="SupplyChain\PDMFeedbackFrame.asp" />
+    <Content Include="SupplyChain\platformDelete.asp" />
+    <Content Include="SupplyChain\PMGandGPSyExport.aspx" />
+    <Content Include="SupplyChain\PMGandGPSyExportFrame.asp" />
+    <Content Include="SupplyChain\pmview.asp" />
+    <Content Include="SupplyChain\rs_ClearHistory.asp" />
+    <Content Include="SupplyChain\rs_ProgramMatrix_ManufacturingSites.asp" />
+    <Content Include="SupplyChain\sample.css" />
+    <Content Include="SupplyChain\SCMCatButtons.asp" />
+    <Content Include="SupplyChain\SCMCatDetail.asp" />
+    <Content Include="SupplyChain\SCMCatFrame.asp" />
+    <Content Include="SupplyChain\SCMPublish.asp" />
+    <Content Include="SupplyChain\scmPublishRollback.aspx" />
+    <Content Include="SupplyChain\SCM_PM_Publish_ValidateData.asp" />
+    <Content Include="SupplyChain\SCM_Rollback.asp" />
+    <Content Include="SupplyChain\setPublishDt.asp" />
+    <Content Include="SupplyChain\StructureBOM.aspx" />
+    <Content Include="SupplyChain\StructureBOMFrame.asp" />
+    <Content Include="SupplyChain\style.css" />
+    <Content Include="SupplyChain\UnpublishedAVs.aspx" />
+    <Content Include="SupplyChain\UnpublishedAVsFrame.asp" />
+    <Content Include="SupplyChain\ViewAllPublishedReports.asp" />
+    <Content Include="SupplyChain\xlsScmExport.asp" />
+    <Content Include="Support\Article.asp" />
+    <Content Include="Support\ArticleButtons.asp" />
+    <Content Include="Support\ArticleList.asp" />
+    <Content Include="Support\ArticleListButtons.asp" />
+    <Content Include="Support\ArticleListSave.asp" />
+    <Content Include="Support\ArticleMain.asp" />
+    <Content Include="Support\ArticleSave.asp" />
+    <Content Include="Support\Articles\Pulsar\Images\ExportCompliance.jpg" />
+    <Content Include="Support\Category.asp" />
+    <Content Include="Support\CategoryButtons.asp" />
+    <Content Include="Support\CategoryMain.asp" />
+    <Content Include="Support\CategorySave.asp" />
+    <Content Include="Support\Dashboard.asp" />
+    <Content Include="Support\Default.asp" />
+    <Content Include="Support\Default_AllUser_UnderDev.aspx" />
+    <Content Include="Support\Preview.asp" />
+    <Content Include="Support\StatusReport.asp" />
+    <Content Include="Support\Style\Support.css" />
+    <Content Include="Support\Support.asp" />
+    <Content Include="Support\SupportButtons.asp" />
+    <Content Include="Support\SupportCancel.asp" />
+    <Content Include="Support\SupportMain.asp" />
+    <Content Include="Support\SupportSave.asp" />
+    <Content Include="Support\thumbnail.aspx" />
+    <Content Include="Support\Ticket.asp" />
+    <Content Include="Support\TicketButtons.asp" />
+    <Content Include="Support\TicketMain.asp" />
+    <Content Include="Support\TicketPreview.asp" />
+    <Content Include="Support\TicketSave.asp" />
+    <Content Include="SystemTeam.asp" />
+    <Content Include="Target\ChangeDistribution.asp" />
+    <Content Include="Target\ChangeDistributionMain.asp" />
+    <Content Include="Target\ChangeDistributionSave.asp" />
+    <Content Include="Target\ChangeImageLanguage.asp" />
+    <Content Include="Target\ChangeImages.asp" />
+    <Content Include="Target\ChangeImagesButtons.asp" />
+    <Content Include="Target\ChangeImagesMain.asp" />
+    <Content Include="Target\ChangeImagesSave.asp" />
+    <Content Include="Target\DistributionBrand.asp" />
+    <Content Include="Target\EditExceptions.asp" />
+    <Content Include="Target\EditExceptionsMain.asp" />
+    <Content Include="Target\EditExceptionsSave.asp" />
+    <Content Include="Target\EOL.asp" />
+    <Content Include="Target\EOLMain.asp" />
+    <Content Include="Target\EOLSave.asp" />
+    <Content Include="Target\Fusion\ChangeImages.asp" />
+    <Content Include="Target\Fusion\ChangeImagesButtons.asp" />
+    <Content Include="Target\Fusion\ChangeImagesMain.asp" />
+    <Content Include="Target\Fusion\ChangeImagesSave.asp" />
+    <Content Include="Target\Pulsar\ChangeImages.asp" />
+    <Content Include="Target\Pulsar\ChangeImagesButtons.asp" />
+    <Content Include="Target\Pulsar\ChangeImagesMain.asp" />
+    <Content Include="Target\Pulsar\ChangeImagesSave.asp" />
+    <Content Include="Target\Pulsar\EditExceptions.asp" />
+    <Content Include="Target\RemoveRoot.asp" />
+    <Content Include="Target\RemoveRootMain.asp" />
+    <Content Include="Target\RemoveRootSave.asp" />
+    <Content Include="Target\scripts\targetadvancedmain.js" />
+    <Content Include="Target\TargetAdvanced.asp" />
+    <Content Include="Target\TargetAdvancedButtons.asp" />
+    <Content Include="Target\TargetAdvancedMain.asp" />
+    <Content Include="Target\TargetAdvancedSave.asp" />
+    <Content Include="Target\TargetQuickSave.asp" />
+    <Content Include="Target\TargetReleaseEdit.asp" />
+    <Content Include="temp.asp" />
+    <Content Include="temp\placeholder.txt" />
+    <Content Include="thumbnail.aspx" />
+    <Content Include="Title.asp" />
+    <Content Include="tree.asp" />
+    <Content Include="tree_vendor.asp" />
+    <Content Include="UpdateDevStatus.asp" />
+    <Content Include="UpdateDevStatusButton.asp" />
+    <Content Include="UpdateDevStatusMain.asp" />
+    <Content Include="UpdateDevStatusSave.asp" />
+    <Content Include="UpdateJupiterXLR8ReportProducts.asp" />
+    <Content Include="UpdateMarketingNames.asp" />
+    <Content Include="UpdateMarketingNameSave.asp" />
+    <Content Include="UpdateUserAccess.asp" />
+    <Content Include="uploadify\cancel.png" />
+    <Content Include="uploadify\expressInstall.swf" />
+    <Content Include="uploadify\jquery-1.4.2.min.js" />
+    <Content Include="uploadify\jquery.uploadify.v2.1.4.js" />
+    <Content Include="uploadify\jquery.uploadify.v2.1.4.min.js" />
+    <Content Include="uploadify\swfobject.js" />
+    <Content Include="uploadify\test.htm" />
+    <Content Include="uploadify\uploadify.allglyphs.swf" />
+    <Content Include="uploadify\uploadify.css" />
+    <Content Include="uploadify\uploadify.swf" />
+    <Content Include="Users\OdmUserMaint.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Weekly\DCR.asp" />
+    <Content Include="Weekly\Matrix.asp" />
+    <Content Include="WHQL\images\dfw-logo.bmp" />
+    <Content Include="WHQL\images\greyball.gif" />
+    <Content Include="WHQL\images\logo.gif" />
+    <Content Include="WHQL\images\MicrosoftL.bmp" />
+    <Content Include="WHQL\images\shadow.gif" />
+    <Content Include="WHQL\images\whql_header.gif" />
+    <Content Include="WHQL\leverageStatus.aspx" />
+    <Content Include="WHQL\ModelQuery.aspx" />
+    <Content Include="WHQL\test.asp" />
+    <Content Include="WHQL\whqlIdButtons.asp" />
+    <Content Include="WHQL\whqlIdDetail.asp" />
+    <Content Include="WHQL\whqlIdEdit.asp" />
+    <Content Include="WHQL\whqlIdEdit.aspx" />
+    <Content Include="WHQL\whqlIdFrame.asp" />
+    <Content Include="WHQL\whqlidsubmit.aspx" />
+    <Content Include="WHQL\WHQLMain.asp" />
+    <Content Include="WHQL\WHQLMenu.asp" />
+    <Content Include="WHQL\WHQLPlatformOTS.asp" />
+    <Content Include="WHQL\WHQLSignature.asp" />
+    <Content Include="WHQL\WHQLSignatureButton.asp" />
+    <Content Include="WHQL\WHQLSignatureMain.asp" />
+    <Content Include="WHQL\WHQLSignatureSave.asp" />
+    <Content Include="WHQL\whqlStatus.aspx" />
+    <Content Include="WizardFrames.asp" />
+    <Content Include="_Error\401_2.asp" />
+    <Content Include="_Error\401_2.gif" />
+    <Content Include="_Error\404.htm" />
+    <Content Include="_Error\40X.htm" />
+    <Content Include="_Error\500-100.asp" />
+    <Content Include="_Error\500.asp" />
+    <Content Include="_Error\autoconfig.gif" />
+    <Content Include="_Error\inc_dataaccess.asp" />
+    <Content Include="_Error\inc_xml.asp" />
+    <Content Include="_Error\smr_500.asp" />
+    <Content Include="_Error\test.asp" />
+    <Content Include="_ScriptLibrary\ADOUTILS.ASP" />
+    <Content Include="_ScriptLibrary\BUTTON.ASP" />
+    <Content Include="_ScriptLibrary\BUTTON.HTM" />
+    <Content Include="_ScriptLibrary\CHECKBOX.ASP" />
+    <Content Include="_ScriptLibrary\CHECKBOX.HTM" />
+    <Content Include="_ScriptLibrary\DATAGRID.ASP" />
+    <Content Include="_ScriptLibrary\DATAGRID.HTM" />
+    <Content Include="_ScriptLibrary\EVENTMGR.ASP" />
+    <Content Include="_ScriptLibrary\EVENTMGR.HTM" />
+    <Content Include="_ScriptLibrary\fqdn.js" />
+    <Content Include="_ScriptLibrary\jsrsClient.js" />
+    <Content Include="_ScriptLibrary\jsrsServer.inc" />
+    <Content Include="_ScriptLibrary\LABEL.ASP" />
+    <Content Include="_ScriptLibrary\LABEL.HTM" />
+    <Content Include="_ScriptLibrary\LISTBOX.ASP" />
+    <Content Include="_ScriptLibrary\LISTBOX.HTM" />
+    <Content Include="_ScriptLibrary\MISCUTILS.HTM" />
+    <Content Include="_ScriptLibrary\OPTIONGRP.ASP" />
+    <Content Include="_ScriptLibrary\OPTIONGRP.HTM" />
+    <Content Include="_ScriptLibrary\PM.ASP" />
+    <Content Include="_ScriptLibrary\PM.JS" />
+    <Content Include="_ScriptLibrary\RECORDSET.ASP" />
+    <Content Include="_ScriptLibrary\RECORDSET.HTM" />
+    <Content Include="_ScriptLibrary\RS.ASP" />
+    <Content Include="_ScriptLibrary\RS.HTM" />
+    <Content Include="_ScriptLibrary\RSNAVBAR.ASP" />
+    <Content Include="_ScriptLibrary\RSNAVBAR.HTM" />
+    <Content Include="_ScriptLibrary\Sort.js" />
+    <Content Include="_ScriptLibrary\Sort2.js" />
+    <Content Include="_ScriptLibrary\TEXTBOX.ASP" />
+    <Content Include="_ScriptLibrary\TEXTBOX.HTM" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddEditMarketingName.aspx.designer.vb">
+      <DependentUpon>AddEditMarketingName.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddEditMarketingName.aspx.vb">
+      <DependentUpon>AddEditMarketingName.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Agency\AgencyPmViewStatus.aspx.designer.vb">
+      <DependentUpon>AgencyPmViewStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Agency\AgencyPmViewStatus.aspx.vb">
+      <DependentUpon>AgencyPmViewStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AMOList\popup\amoproperties.aspx.designer.vb">
+      <DependentUpon>amoproperties.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AMOList\popup\amoproperties.aspx.vb">
+      <DependentUpon>amoproperties.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\BasePage.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\EmailQueue.vb" />
+    <Compile Include="App_Code\GridViewExportUtil.vb" />
+    <Compile Include="App_Code\InitialOfferingGridViewTemplate.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommodityGuidanceCategoryFilter.aspx.designer.vb">
+      <DependentUpon>CommodityGuidanceCategoryFilter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CommodityGuidanceCategoryFilter.aspx.vb">
+      <DependentUpon>CommodityGuidanceCategoryFilter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Calendar.aspx.designer.vb">
+      <DependentUpon>Calendar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Calendar.aspx.vb">
+      <DependentUpon>Calendar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\FileUpload.aspx.designer.vb">
+      <DependentUpon>FileUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\FileUpload.aspx.vb">
+      <DependentUpon>FileUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\GetFileList.aspx.designer.vb">
+      <DependentUpon>GetFileList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\GetFileList.aspx.vb">
+      <DependentUpon>GetFileList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Deliverable\Commodity\SubAssemblyToMultipleProducts.aspx.designer.vb">
+      <DependentUpon>SubAssemblyToMultipleProducts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Deliverable\Commodity\SubAssemblyToMultipleProducts.aspx.vb">
+      <DependentUpon>SubAssemblyToMultipleProducts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Deliverable\Commodity\SubAssemblyToMultipleProductsPulsar.aspx.designer.vb">
+      <DependentUpon>SubAssemblyToMultipleProductsPulsar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Deliverable\Commodity\SubAssemblyToMultipleProductsPulsar.aspx.vb">
+      <DependentUpon>SubAssemblyToMultipleProductsPulsar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DownloadZip.aspx.designer.vb">
+      <DependentUpon>DownloadZip.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DownloadZip.aspx.vb">
+      <DependentUpon>DownloadZip.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileBrowseResult.aspx.designer.vb">
+      <DependentUpon>FileBrowseResult.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FileBrowseResult.aspx.vb">
+      <DependentUpon>FileBrowseResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Image\ImageDriveDefinitionMain.aspx.designer.vb">
+      <DependentUpon>ImageDriveDefinitionMain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Image\ImageDriveDefinitionMain.aspx.vb">
+      <DependentUpon>ImageDriveDefinitionMain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Image\SelectMstrSkuComp.aspx.designer.vb">
+      <DependentUpon>SelectMstrSkuComp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Image\SelectMstrSkuComp.aspx.vb">
+      <DependentUpon>SelectMstrSkuComp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InitialOffering.aspx.designer.vb">
+      <DependentUpon>InitialOffering.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InitialOffering.aspx.vb">
+      <DependentUpon>InitialOffering.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InitialOfferingFilter.aspx.designer.vb">
+      <DependentUpon>InitialOfferingFilter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InitialOfferingFilter.aspx.vb">
+      <DependentUpon>InitialOfferingFilter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InitialOfferingFilter2.aspx.designer.vb">
+      <DependentUpon>InitialOfferingFilter2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InitialOfferingFilter2.aspx.vb">
+      <DependentUpon>InitialOfferingFilter2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InitialOfferingLegend.aspx.designer.vb">
+      <DependentUpon>InitialOfferingLegend.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InitialOfferingLegend.aspx.vb">
+      <DependentUpon>InitialOfferingLegend.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="maint\RollbackWorkflow.aspx.designer.vb">
+      <DependentUpon>RollbackWorkflow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="maint\RollbackWorkflow.aspx.vb">
+      <DependentUpon>RollbackWorkflow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MobileSE\Today\AddAvNoToDeliverable.aspx.designer.vb">
+      <DependentUpon>AddAvNoToDeliverable.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MobileSE\Today\AddAvNoToDeliverable.aspx.vb">
+      <DependentUpon>AddAvNoToDeliverable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MobileSE\Today\AddAvNoToFeature.aspx.designer.vb">
+      <DependentUpon>AddAvNoToFeature.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MobileSE\Today\AddAvNoToFeature.aspx.vb">
+      <DependentUpon>AddAvNoToFeature.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MobileSE\Today\DCRUpdateWorkflowData.aspx.designer.vb">
+      <DependentUpon>DCRUpdateWorkflowData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MobileSE\Today\DCRUpdateWorkflowData.aspx.vb">
+      <DependentUpon>DCRUpdateWorkflowData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MobileSE\Today\DCRWorkflow.aspx.designer.vb">
+      <DependentUpon>DCRWorkflow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MobileSE\Today\DCRWorkflow.aspx.vb">
+      <DependentUpon>DCRWorkflow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MobileSE\Today\DCRWorkflowStatus.aspx.designer.vb">
+      <DependentUpon>DCRWorkflowStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MobileSE\Today\DCRWorkflowStatus.aspx.vb">
+      <DependentUpon>DCRWorkflowStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MobileSE\Today\InitialOfferingLTF.aspx.designer.vb">
+      <DependentUpon>InitialOfferingLTF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MobileSE\Today\InitialOfferingLTF.aspx.vb">
+      <DependentUpon>InitialOfferingLTF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PublishMarketingReq.aspx.designer.vb">
+      <DependentUpon>PublishMarketingReq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PublishMarketingReq.aspx.vb">
+      <DependentUpon>PublishMarketingReq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Query\DeliverableVersionDetails.aspx.designer.vb">
+      <DependentUpon>DeliverableVersionDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Query\DeliverableVersionDetails.aspx.vb">
+      <DependentUpon>DeliverableVersionDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Query\schedule.aspx.designer.vb">
+      <DependentUpon>schedule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Query\schedule.aspx.vb">
+      <DependentUpon>schedule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Query\ScheduleChanges.aspx.designer.vb">
+      <DependentUpon>ScheduleChanges.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Query\ScheduleChanges.aspx.vb">
+      <DependentUpon>ScheduleChanges.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Query\ScheduleSummary.aspx.designer.vb">
+      <DependentUpon>ScheduleSummary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Query\ScheduleSummary.aspx.vb">
+      <DependentUpon>ScheduleSummary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Query\test.aspx.designer.vb">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Query\test.aspx.vb">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SCM\AvActionScorecard.aspx.designer.vb">
+      <DependentUpon>AvActionScorecard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SCM\AvActionScorecard.aspx.vb">
+      <DependentUpon>AvActionScorecard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SCM\AvsMissingData.aspx.designer.vb">
+      <DependentUpon>AvsMissingData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SCM\AvsMissingData.aspx.vb">
+      <DependentUpon>AvsMissingData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SCM\AvsMissingDelRoot.aspx.designer.vb">
+      <DependentUpon>AvsMissingDelRoot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SCM\AvsMissingDelRoot.aspx.vb">
+      <DependentUpon>AvsMissingDelRoot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SCM\changelog.aspx.designer.vb">
+      <DependentUpon>changelog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SCM\changelog.aspx.vb">
+      <DependentUpon>changelog.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="SCM\DocKitData.aspx.designer.vb">
+      <DependentUpon>DocKitData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SCM\DocKitData.aspx.vb">
+      <DependentUpon>DocKitData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SCM\FilterByCategory.aspx.designer.vb">
+      <DependentUpon>FilterByCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SCM\FilterByCategory.aspx.vb">
+      <DependentUpon>FilterByCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SCM\FilterByMktCampaignsAVSelector.aspx.designer.vb">
+      <DependentUpon>FilterByMktCampaignsAVSelector.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SCM\FilterByMktCampaignsAVSelector.aspx.vb">
+      <DependentUpon>FilterByMktCampaignsAVSelector.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SCM\FilterByPlantsAVSelector.aspx.designer.vb">
+      <DependentUpon>FilterByPlantsAVSelector.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SCM\FilterByPlantsAVSelector.aspx.vb">
+      <DependentUpon>FilterByPlantsAVSelector.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SCM\FilterByRegionalAVSelector.aspx.designer.vb">
+      <DependentUpon>FilterByRegionalAVSelector.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SCM\FilterByRegionalAVSelector.aspx.vb">
+      <DependentUpon>FilterByRegionalAVSelector.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SCM\FilterRegionalSCMByMktCampaignAVSelector.aspx.designer.vb">
+      <DependentUpon>FilterRegionalSCMByMktCampaignAVSelector.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SCM\FilterRegionalSCMByMktCampaignAVSelector.aspx.vb">
+      <DependentUpon>FilterRegionalSCMByMktCampaignAVSelector.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SCM\FilterRegionalSCMByPlantsAVSelector.aspx.designer.vb">
+      <DependentUpon>FilterRegionalSCMByPlantsAVSelector.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SCM\FilterRegionalSCMByPlantsAVSelector.aspx.vb">
+      <DependentUpon>FilterRegionalSCMByPlantsAVSelector.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SCM\LocalizeAVsSeriesNum.aspx.designer.vb">
+      <DependentUpon>LocalizeAVsSeriesNum.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SCM\LocalizeAVsSeriesNum.aspx.vb">
+      <DependentUpon>LocalizeAVsSeriesNum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SCM\MktCampaigns Edit Screen.aspx.designer.vb">
+      <DependentUpon>MktCampaigns Edit Screen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SCM\MktCampaigns Edit Screen.aspx.vb">
+      <DependentUpon>MktCampaigns Edit Screen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SCM\MktCampAVSelectionTool.aspx.designer.vb">
+      <DependentUpon>MktCampAVSelectionTool.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SCM\MktCampAVSelectionTool.aspx.vb">
+      <DependentUpon>MktCampAVSelectionTool.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SCM\PDMFeedback.aspx.designer.vb">
+      <DependentUpon>PDMFeedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SCM\PDMFeedback.aspx.vb">
+      <DependentUpon>PDMFeedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SCM\PlantsAVSelectionTool.aspx.designer.vb">
+      <DependentUpon>PlantsAVSelectionTool.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SCM\PlantsAVSelectionTool.aspx.vb">
+      <DependentUpon>PlantsAVSelectionTool.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SCM\PMGandGPSyExport.aspx.designer.vb">
+      <DependentUpon>PMGandGPSyExport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SCM\PMGandGPSyExport.aspx.vb">
+      <DependentUpon>PMGandGPSyExport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SCM\RegionalAVSelectionTool.aspx.designer.vb">
+      <DependentUpon>RegionalAVSelectionTool.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SCM\RegionalAVSelectionTool.aspx.vb">
+      <DependentUpon>RegionalAVSelectionTool.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SCM\StructureBOM.aspx.designer.vb">
+      <DependentUpon>StructureBOM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SCM\StructureBOM.aspx.vb">
+      <DependentUpon>StructureBOM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SCM\TestStuff.aspx.designer.vb">
+      <DependentUpon>TestStuff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SCM\TestStuff.aspx.vb">
+      <DependentUpon>TestStuff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SCM\UnpublishedAVs.aspx.designer.vb">
+      <DependentUpon>UnpublishedAVs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SCM\UnpublishedAVs.aspx.vb">
+      <DependentUpon>UnpublishedAVs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SCM\UploadAvData.aspx.designer.vb">
+      <DependentUpon>UploadAvData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SCM\UploadAvData.aspx.vb">
+      <DependentUpon>UploadAvData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Service\DeleteSKAV.aspx.designer.vb">
+      <DependentUpon>DeleteSKAV.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\DeleteSKAV.aspx.vb">
+      <DependentUpon>DeleteSKAV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Service\DesktopFamilyDetails.aspx.designer.vb">
+      <DependentUpon>DesktopFamilyDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\DesktopFamilyDetails.aspx.vb">
+      <DependentUpon>DesktopFamilyDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Service\DesktopPartnumbers.aspx.designer.vb">
+      <DependentUpon>DesktopPartnumbers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\DesktopPartnumbers.aspx.vb">
+      <DependentUpon>DesktopPartnumbers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Service\DesktopPartnumbersDetails.aspx.designer.vb">
+      <DependentUpon>DesktopPartnumbersDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\DesktopPartnumbersDetails.aspx.vb">
+      <DependentUpon>DesktopPartnumbersDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Service\OARpt.aspx.designer.vb">
+      <DependentUpon>OARpt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\OARpt.aspx.vb">
+      <DependentUpon>OARpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Service\processSKUBOMAS.aspx.designer.vb">
+      <DependentUpon>processSKUBOMAS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\processSKUBOMAS.aspx.vb">
+      <DependentUpon>processSKUBOMAS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Service\ReportPlatformAssigment.aspx.designer.vb">
+      <DependentUpon>ReportPlatformAssigment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\ReportPlatformAssigment.aspx.vb">
+      <DependentUpon>ReportPlatformAssigment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Service\ReportPlatformAssigmentAddDesktop.aspx.designer.vb">
+      <DependentUpon>ReportPlatformAssigmentAddDesktop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\ReportPlatformAssigmentAddDesktop.aspx.vb">
+      <DependentUpon>ReportPlatformAssigmentAddDesktop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Service\ReportPlatformAssignmentMetrics.aspx.designer.vb">
+      <DependentUpon>ReportPlatformAssignmentMetrics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\ReportPlatformAssignmentMetrics.aspx.vb">
+      <DependentUpon>ReportPlatformAssignmentMetrics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Service\RslBatchEdit.aspx.designer.vb">
+      <DependentUpon>RslBatchEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\RslBatchEdit.aspx.vb">
+      <DependentUpon>RslBatchEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Service\selCalDate.aspx.designer.vb">
+      <DependentUpon>selCalDate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\selCalDate.aspx.vb">
+      <DependentUpon>selCalDate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Service\ServiceAdvancedSearchReports.aspx.designer.vb">
+      <DependentUpon>ServiceAdvancedSearchReports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\ServiceAdvancedSearchReports.aspx.vb">
+      <DependentUpon>ServiceAdvancedSearchReports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Service\ServiceAdvancedSearchReportsSummary.aspx.designer.vb">
+      <DependentUpon>ServiceAdvancedSearchReportsSummary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\ServiceAdvancedSearchReportsSummary.aspx.vb">
+      <DependentUpon>ServiceAdvancedSearchReportsSummary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Service\ServiceBomReport.aspx.designer.vb">
+      <DependentUpon>ServiceBomReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\ServiceBomReport.aspx.vb">
+      <DependentUpon>ServiceBomReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Service\ServiceEOAUpdate.aspx.designer.vb">
+      <DependentUpon>ServiceEOAUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\ServiceEOAUpdate.aspx.vb">
+      <DependentUpon>ServiceEOAUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Service\SKUBOMAS.aspx.designer.vb">
+      <DependentUpon>SKUBOMAS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\SKUBOMAS.aspx.vb">
+      <DependentUpon>SKUBOMAS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Service\SpareKit.aspx.designer.vb">
+      <DependentUpon>SpareKit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\SpareKit.aspx.vb">
+      <DependentUpon>SpareKit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Service\SpareKitDetails.aspx.designer.vb">
+      <DependentUpon>SpareKitDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\SpareKitDetails.aspx.vb">
+      <DependentUpon>SpareKitDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Service\SpareKitMapMain2.aspx.designer.vb">
+      <DependentUpon>SpareKitMapMain2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\SpareKitMapMain2.aspx.vb">
+      <DependentUpon>SpareKitMapMain2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Service\SpareKitMapMain3.aspx.designer.vb">
+      <DependentUpon>SpareKitMapMain3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\SpareKitMapMain3.aspx.vb">
+      <DependentUpon>SpareKitMapMain3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Service\SparekitsEOSL.aspx.designer.vb">
+      <DependentUpon>SparekitsEOSL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\SparekitsEOSL.aspx.vb">
+      <DependentUpon>SparekitsEOSL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Service\SpareKitSummary.aspx.designer.vb">
+      <DependentUpon>SpareKitSummary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\SpareKitSummary.aspx.vb">
+      <DependentUpon>SpareKitSummary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Service\SpbMaint.aspx.designer.vb">
+      <DependentUpon>SpbMaint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\SpbMaint.aspx.vb">
+      <DependentUpon>SpbMaint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Service\TodayExtend.aspx.designer.vb">
+      <DependentUpon>TodayExtend.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\TodayExtend.aspx.vb">
+      <DependentUpon>TodayExtend.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SupplyChain\AvsMissingData.aspx.designer.vb">
+      <DependentUpon>AvsMissingData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SupplyChain\AvsMissingData.aspx.vb">
+      <DependentUpon>AvsMissingData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SupplyChain\AvsMissingDelRoot.aspx.designer.vb">
+      <DependentUpon>AvsMissingDelRoot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SupplyChain\AvsMissingDelRoot.aspx.vb">
+      <DependentUpon>AvsMissingDelRoot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SupplyChain\DocKitData.aspx.designer.vb">
+      <DependentUpon>DocKitData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SupplyChain\DocKitData.aspx.vb">
+      <DependentUpon>DocKitData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SupplyChain\FilterByCategory.aspx.designer.vb">
+      <DependentUpon>FilterByCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SupplyChain\FilterByCategory.aspx.vb">
+      <DependentUpon>FilterByCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SupplyChain\LocalizeAVsSeriesNum.aspx.designer.vb">
+      <DependentUpon>LocalizeAVsSeriesNum.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SupplyChain\LocalizeAVsSeriesNum.aspx.vb">
+      <DependentUpon>LocalizeAVsSeriesNum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SupplyChain\LocalizeAVsSeriesNum_Pulsar.aspx.designer.vb">
+      <DependentUpon>LocalizeAVsSeriesNum_Pulsar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SupplyChain\LocalizeAVsSeriesNum_Pulsar.aspx.vb">
+      <DependentUpon>LocalizeAVsSeriesNum_Pulsar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SupplyChain\MktCampaigns Edit Screen.aspx.designer.vb">
+      <DependentUpon>MktCampaigns Edit Screen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SupplyChain\MktCampaigns Edit Screen.aspx.vb">
+      <DependentUpon>MktCampaigns Edit Screen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SupplyChain\PDMFeedback.aspx.designer.vb">
+      <DependentUpon>PDMFeedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SupplyChain\PDMFeedback.aspx.vb">
+      <DependentUpon>PDMFeedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SupplyChain\PMGandGPSyExport.aspx.designer.vb">
+      <DependentUpon>PMGandGPSyExport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SupplyChain\PMGandGPSyExport.aspx.vb">
+      <DependentUpon>PMGandGPSyExport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SupplyChain\StructureBOM.aspx.designer.vb">
+      <DependentUpon>StructureBOM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SupplyChain\StructureBOM.aspx.vb">
+      <DependentUpon>StructureBOM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SupplyChain\UnpublishedAVs.aspx.designer.vb">
+      <DependentUpon>UnpublishedAVs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SupplyChain\UnpublishedAVs.aspx.vb">
+      <DependentUpon>UnpublishedAVs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Support\Default_AllUser_UnderDev.aspx.designer.vb">
+      <DependentUpon>Default_AllUser_UnderDev.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Support\Default_AllUser_UnderDev.aspx.vb">
+      <DependentUpon>Default_AllUser_UnderDev.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\OdmUserMaint.aspx.designer.vb">
+      <DependentUpon>OdmUserMaint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\OdmUserMaint.aspx.vb">
+      <DependentUpon>OdmUserMaint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AMOList\popup\web-popup.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="SCM\ExcaliburScmTools.xla" />
+    <Content Include="Templates\Suggestions.oft" />
+    <Content Include="uploadify\check.php" />
+    <Content Include="uploadify\com\adobe\air\logging\FileTarget.as" />
+    <Content Include="uploadify\com\adobe\crypto\HMAC.as" />
+    <Content Include="uploadify\com\adobe\crypto\MD5.as" />
+    <Content Include="uploadify\com\adobe\crypto\MD5Stream.as" />
+    <Content Include="uploadify\com\adobe\crypto\SHA1.as" />
+    <Content Include="uploadify\com\adobe\crypto\SHA224.as" />
+    <Content Include="uploadify\com\adobe\crypto\SHA256.as" />
+    <Content Include="uploadify\com\adobe\crypto\WSSEUsernameToken.as" />
+    <Content Include="uploadify\com\adobe\errors\IllegalStateError.as" />
+    <Content Include="uploadify\com\adobe\fileformats\vcard\Address.as" />
+    <Content Include="uploadify\com\adobe\fileformats\vcard\Email.as" />
+    <Content Include="uploadify\com\adobe\fileformats\vcard\Phone.as" />
+    <Content Include="uploadify\com\adobe\fileformats\vcard\VCard.as" />
+    <Content Include="uploadify\com\adobe\fileformats\vcard\VCardParser.as" />
+    <Content Include="uploadify\com\adobe\images\BitString.as" />
+    <Content Include="uploadify\com\adobe\images\JPGEncoder.as" />
+    <Content Include="uploadify\com\adobe\images\PNGEncoder.as" />
+    <Content Include="uploadify\com\adobe\net\DynamicURLLoader.as" />
+    <Content Include="uploadify\com\adobe\net\IURIResolver.as" />
+    <Content Include="uploadify\com\adobe\net\MimeTypeMap.as" />
+    <Content Include="uploadify\com\adobe\net\proxies\RFC2817Socket.as" />
+    <Content Include="uploadify\com\adobe\net\URI.as" />
+    <Content Include="uploadify\com\adobe\net\URIEncodingBitmap.as" />
+    <Content Include="uploadify\com\adobe\protocols\dict\Database.as" />
+    <Content Include="uploadify\com\adobe\protocols\dict\Definition.as" />
+    <Content Include="uploadify\com\adobe\protocols\dict\Dict.as" />
+    <Content Include="uploadify\com\adobe\protocols\dict\DictionaryServer.as" />
+    <Content Include="uploadify\com\adobe\protocols\dict\events\ConnectedEvent.as" />
+    <Content Include="uploadify\com\adobe\protocols\dict\events\DatabaseEvent.as" />
+    <Content Include="uploadify\com\adobe\protocols\dict\events\DefinitionEvent.as" />
+    <Content Include="uploadify\com\adobe\protocols\dict\events\DefinitionHeaderEvent.as" />
+    <Content Include="uploadify\com\adobe\protocols\dict\events\DictionaryServerEvent.as" />
+    <Content Include="uploadify\com\adobe\protocols\dict\events\DisconnectedEvent.as" />
+    <Content Include="uploadify\com\adobe\protocols\dict\events\ErrorEvent.as" />
+    <Content Include="uploadify\com\adobe\protocols\dict\events\MatchEvent.as" />
+    <Content Include="uploadify\com\adobe\protocols\dict\events\MatchStrategiesEvent.as" />
+    <Content Include="uploadify\com\adobe\protocols\dict\events\NoMatchEvent.as" />
+    <Content Include="uploadify\com\adobe\protocols\dict\MatchStrategy.as" />
+    <Content Include="uploadify\com\adobe\protocols\dict\Response.as" />
+    <Content Include="uploadify\com\adobe\protocols\dict\util\CompleteResponseEvent.as" />
+    <Content Include="uploadify\com\adobe\protocols\dict\util\SocketHelper.as" />
+    <Content Include="uploadify\com\adobe\serialization\json\JSON.as" />
+    <Content Include="uploadify\com\adobe\serialization\json\JSONDecoder.as" />
+    <Content Include="uploadify\com\adobe\serialization\json\JSONEncoder.as" />
+    <Content Include="uploadify\com\adobe\serialization\json\JSONParseError.as" />
+    <Content Include="uploadify\com\adobe\serialization\json\JSONToken.as" />
+    <Content Include="uploadify\com\adobe\serialization\json\JSONTokenizer.as" />
+    <Content Include="uploadify\com\adobe\serialization\json\JSONTokenType.as" />
+    <Content Include="uploadify\com\adobe\utils\ArrayUtil.as" />
+    <Content Include="uploadify\com\adobe\utils\DateUtil.as" />
+    <Content Include="uploadify\com\adobe\utils\DictionaryUtil.as" />
+    <Content Include="uploadify\com\adobe\utils\IntUtil.as" />
+    <Content Include="uploadify\com\adobe\utils\NumberFormatter.as" />
+    <Content Include="uploadify\com\adobe\utils\StringUtil.as" />
+    <Content Include="uploadify\com\adobe\utils\XMLUtil.as" />
+    <Content Include="uploadify\com\adobe\webapis\events\ServiceEvent.as" />
+    <Content Include="uploadify\com\adobe\webapis\ServiceBase.as" />
+    <Content Include="uploadify\com\adobe\webapis\URLLoaderBase.as" />
+    <Content Include="uploadify\Uploadify.ashx" />
+    <Content Include="uploadify\uploadify.fla" />
+    <Content Include="uploadify\uploadify.php" />
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="_ScriptLibrary\VERSION" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AMOList\library\widget\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="HPQ.Excalibur.Data\HPQ.Excalibur.Data.csproj">
+      <Project>{da72afb9-aa05-49b8-9125-9715137793d7}</Project>
+      <Name>HPQ.Excalibur.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <SaveServerSettingsInUserFile>True</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="CustomWebConfigTransform" BeforeTargets="BeforeBuild" Condition="Exists('Web.$(Configuration).config')">
+    <TransformXml source="Web.config" transform="Web.$(Configuration).config" destination="Web.config" />
+  </Target>
+</Project>

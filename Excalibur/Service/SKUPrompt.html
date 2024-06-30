@@ -1,0 +1,66 @@
+<HTML>
+<HEAD>
+<link rel="stylesheet" type="text/css" href="<%= AppRoot %>/service/style.css" />
+<TITLE>SKU LookUp</TITLE>
+<SCRIPT language="javascript">
+
+	function process(iMode)
+	{
+		var oSKU=document.getElementById("txtSKU");
+		var sSKU=null;
+
+		if(iMode==1)
+		{
+			sSKU=oSKU.value;
+
+			if((sSKU!=null)&&(sSKU!=undefined))
+			{
+				if(sSKU.length==0)
+				{
+					alert("SKU can not be blank or white space!");
+					oSKU.focus();
+				}else{
+					window.returnValue=sSKU;
+					window.close();
+				}
+			}else{
+				alert("SKU can not be blank or white space!");
+				oSKU.focus();
+
+			}
+		}else{
+			window.returnValue=null;
+			window.close();
+		}
+		
+	}
+
+        function processKey()
+	{
+		var iCode=window.event.keyCode;
+
+		switch(iCode)
+		{
+			case 27: // Escape
+				process(0);
+				break;
+			case 13: // Enter
+				process(1);
+				break;
+			default: // Ignore
+				break;
+		}
+
+		return;
+	}
+
+</SCRIPT>
+</HEAD>
+<BODY>
+<TABLE align="center" style="FONT-SIZE: normal;FONT-FAMILY: Verdana;FONT-WEIGHT: bold;COLOR: black;">
+<TR><TD><b>Enter the SKU</b></TD></TR>
+<TR><TD><input type="text" id="txtSKU" name="txtSKU" onKeyPress="processKey()" ></TD></TR>
+<TR><TD align="center"><input type="button" value="OK" onclick="process(1)">&nbsp;<input type="button" value="Cancel" onclick="process(0)"></td></tr>
+</TABLE>
+</BODY>
+</HTML>

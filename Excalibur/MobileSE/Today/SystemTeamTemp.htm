@@ -1,0 +1,478 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <table id="tabSystemTeam" style="display:" border="1" cellpadding="2" cellspacing="0"
+        width="100%" bgcolor="cornsilk" bordercolor="tan">
+        <tr bgcolor="Wheat">
+            <td colspan="4">
+                <b>Primary Team Members</b>
+            </td>
+        </tr>
+        <tr>
+            <td width="160" style="vertical-align: top">
+                <strong><font size="2">System&nbsp;Manager:</font></strong><font color="red" size="1">&nbsp;*</font>
+            </td>
+            <td>
+                <select id="cboSM" name="cboSM" style="width: 140px;" language="javascript" onkeypress="return combo_onkeypress()"
+                    onfocus="return combo_onfocus()" onclick="return combo_onclick()" onkeydown="return combo_onkeydown()">
+                    <option></option>
+                    <%=strSMList%>
+                </select>&nbsp;<input type="button" value="Add" id="cmdSMAdd" name="cmdSMAdd" language="javascript"
+                    onclick="return cmdSMAdd_onclick()">
+            </td>
+            <td width="160" style="vertical-align: top">
+                <strong><font size="2">Commercial&nbsp;Marketing:</font></strong>
+            </td>
+            <td>
+                <select id="cboComMarketing" name="cboComMarketing" style="width: 140px;" language="javascript"
+                    onkeypress="return combo_onkeypress()" onfocus="return combo_onfocus()" onclick="return combo_onclick()"
+                    onkeydown="return combo_onkeydown()">
+                    <option selected value="0"></option>
+                    <%=strComMarketingList%>
+                </select>&nbsp;<input type="button" value="Add" id="cmdComMarketingAdd" name="cmdComMarketingAdd"
+                    language="javascript" onclick="return cmdComMarketingAdd_onclick()">
+            </td>
+        </tr>
+        <tr>
+            <td width="160" style="vertical-align: top">
+                <strong><font size="2" id="lblPOPM">
+                    <%=strPOPMLabel%></font></strong><font color="red" size="1">&nbsp;*</font>
+            </td>
+            <td>
+                <select id="cboPM" name="cboPM" style="width: 140px;" language="javascript" onkeypress="return combo_onkeypress()"
+                    onfocus="return combo_onfocus()" onclick="return combo_onclick()" onkeydown="return combo_onkeydown()">
+                    <option></option>
+                    <%=strPMList%>
+                </select>&nbsp;<input type="button" value="Add" id="cmdPMAdd" name="cmdPMAdd" language="javascript"
+                    onclick="return cmdPMAdd_onclick()">
+            </td>
+            <td width="160" style="vertical-align: top">
+                <strong><font size="2">Consumer&nbsp;Marketing:</font></strong>
+            </td>
+            <td>
+                <select id="cboConsMarketing" name="cboConsMarketing" style="width: 140px;" language="javascript"
+                    onkeypress="return combo_onkeypress()" onfocus="return combo_onfocus()" onclick="return combo_onclick()"
+                    onkeydown="return combo_onkeydown()">
+                    <option selected value="0"></option>
+                    <%=strConsMarketingList%>
+                </select>&nbsp;<input type="button" value="Add" id="cmdConsMarketingAdd" name="cmdConsMarketingAdd"
+                    language="javascript" onclick="return cmdConsMarketingAdd_onclick()">
+            </td>
+            <tr>
+                <% if trim(strDevCenter) <> "2"then 'This is a Commercial Product %>
+                <td width="160" style="vertical-align: top">
+                    <strong><font size="2" id="lblTDCCM">Program&nbsp;Office&nbsp;Manager:</font><span
+                        style="display: none" id="POPMRequired"><font color="red" size="1">&nbsp;*</font>
+                    </span></strong>
+                </td>
+                <td valign="top">
+                    <span id="POPMConsOnly"><font face="verdana" size="2" color="green">&nbsp;Consumer Products
+                        Only.</font></span>
+                    <select style="display: none" id="cboTDCCM" name="cboTDCCM" style="width: 140px;"
+                        language="javascript" onkeypress="return combo_onkeypress()" onfocus="return combo_onfocus()"
+                        onclick="return combo_onclick()" onkeydown="return combo_onkeydown()">
+                        <option></option>
+                        <%=strTDCCMList%>
+                    </select>&nbsp;<input style="display: none" type="button" value="Add" id="cmdTDCCMAdd"
+                        name="cmdTDCCMAdd" language="javascript" onclick="return cmdTDCCMAdd_onclick()">
+                </td>
+                <%else 'This is a Consumer Product%>
+                <td width="160" style="vertical-align: top">
+                    <strong><font size="2" id="lblTDCCM">Configuration&nbsp;Manager:</font><span style="display: none"
+                        id="POPMRequired"><font color="red" size="1">&nbsp;*</font></span></strong>
+                </td>
+                <td>
+                    <span style="display: none" id="POPMConsOnly"><font face="verdana" size="2" color="green">
+                        &nbsp;Consumer Products Only.</font></span>
+                    <select id="cboTDCCM" name="cboTDCCM" style="width: 140px;" language="javascript"
+                        onkeypress="return combo_onkeypress()" onfocus="return combo_onfocus()" onclick="return combo_onclick()"
+                        onkeydown="return combo_onkeydown()">
+                        <option></option>
+                        <%=strTDCCMList%>
+                    </select>&nbsp;<input type="button" value="Add" id="cmdTDCCMAdd" name="cmdTDCCMAdd"
+                        language="javascript" onclick="return cmdTDCCMAdd_onclick()">
+                </td>
+                <%end if%>
+                <td width="160" style="vertical-align: top">
+                    <strong><font size="2">SMB&nbsp;Marketing:</font></strong>
+                </td>
+                <td>
+                    <select id="cboSMBMarketing" name="cboSMBMarketing" style="width: 140px;" language="javascript"
+                        onkeypress="return combo_onkeypress()" onfocus="return combo_onfocus()" onclick="return combo_onclick()"
+                        onkeydown="return combo_onkeydown()">
+                        <option selected value="0"></option>
+                        <%=strSMBMarketingList%>
+                    </select>&nbsp;<input type="button" value="Add" id="cmdSMBMarketingAdd" name="cmdSMBMarketingAdd"
+                        language="javascript" onclick="return cmdSMBMarketingAdd_onclick()">
+                </td>
+            </tr>
+            <tr>
+                <td width="160" style="vertical-align: top">
+                    <strong><font size="2">Systems&nbsp;Engineering&nbsp;PM:</font></strong><font color="red"
+                        size="1">&nbsp;*</font>
+                </td>
+                <td>
+                    <select id="cboSEPM" name="cboSEPM" style="width: 140px;" language="javascript" onkeypress="return combo_onkeypress()"
+                        onfocus="return combo_onfocus()" onclick="return combo_onclick()" onkeydown="return combo_onkeydown()">
+                        <option></option>
+                        <%=strSEPMList%>
+                    </select>&nbsp;<input type="button" value="Add" id="cmdSEPMAdd" name="cmdSEPMAdd"
+                        language="javascript" onclick="return cmdSEPMAdd_onclick()">
+                </td>
+                <td width="160" style="vertical-align: top">
+                    <strong><font size="2">Supply&nbsp;Chain:</font></strong>
+                </td>
+                <td>
+                    <select id="cboSupplyChain" name="cboSupplyChain" style="width: 140px;" language="javascript"
+                        onkeypress="return combo_onkeypress()" onfocus="return combo_onfocus()" onclick="return combo_onclick()"
+                        onkeydown="return combo_onkeydown()">
+                        <option selected value="0"></option>
+                        <%=strSupplyChainList%>
+                    </select>&nbsp;<input type="button" value="Add" id="cmdSupplyChainAdd" name="cmdSupplyChainAdd"
+                        language="javascript" onclick="return cmdSupplyChainAdd_onclick()">
+                </td>
+            </tr>
+            <tr>
+                <td width="160" style="vertical-align: top">
+                    <strong><font size="2">Platform&nbsp;Development&nbsp;PM:</font></strong>
+                </td>
+                <td>
+                    <select id="cboPlatformDevelopment" name="cboPlatformDevelopment" style="width: 140px;"
+                        language="javascript" onkeypress="return combo_onkeypress()" onfocus="return combo_onfocus()"
+                        onclick="return combo_onclick()" onkeydown="return combo_onkeydown()">
+                        <option selected value="0"></option>
+                        <%=strPlatformDevelopmentList%>
+                    </select>&nbsp;<input type="button" value="Add" id="cmdPlatformDevelopmentAdd" name="cmdPlatformDevelopmentAdd"
+                        language="javascript" onclick="return cmdPlatformDevelopmentAdd_onclick()">
+                </td>
+                <td width="160" style="vertical-align: top">
+                    <strong><font size="2">Service:</font></strong>
+                </td>
+                <td>
+                    <select id="cboService" name="cboService" style="width: 140px;" language="javascript"
+                        onkeypress="return combo_onkeypress()" onfocus="return combo_onfocus()" onclick="return combo_onclick()"
+                        onkeydown="return combo_onkeydown()">
+                        <option selected value="0"></option>
+                        <%=strServiceList%>
+                    </select>&nbsp;<input type="button" value="Add" id="cmdServiceAdd" name="cmdServiceAdd"
+                        language="javascript" onclick="return cmdServiceAdd_onclick()">
+                </td>
+            </tr>
+            <tr>
+                <td width="160" style="vertical-align: top">
+                    <strong><font size="2">Commodity&nbsp;PM:</font></strong>
+                </td>
+                <td>
+                    <select id="cboPDE" name="cboPDE" style="width: 140px;" language="javascript" onkeypress="return combo_onkeypress()"
+                        onfocus="return combo_onfocus()" onclick="return combo_onclick()" onkeydown="return combo_onkeydown()">
+                        <option selected value="0"></option>
+                        <%=strPDEList%>
+                    </select>&nbsp;<input type="button" value="Add" id="cmdPDEAdd" name="cmdPDEAdd" language="javascript"
+                        onclick="return cmdPDEAdd_onclick()">
+                </td>
+                <td width="160" style="vertical-align: top">
+                    <strong><font size="2">Finance:</font></strong>
+                </td>
+                <td>
+                    <select id="cboFinance" name="cboFinance" style="width: 140px;" language="javascript"
+                        onkeypress="return combo_onkeypress()" onfocus="return combo_onfocus()" onclick="return combo_onclick()"
+                        onkeydown="return combo_onkeydown()">
+                        <option selected value="0"></option>
+                        <%=strFinanceList%>
+                    </select>&nbsp;<input type="button" value="Add" id="cmdFinanceAdd" name="cmdFinanceAdd"
+                        language="javascript" onclick="return cmdFinanceAdd_onclick()">
+                </td>
+            </tr>
+            <tr bgcolor="Wheat">
+                <td colspan="4">
+                    <b>Extended Team Members</b>
+                </td>
+            </tr>
+            <tr>
+                <td width="120" style="vertical-align: top">
+                    <strong><font size="2">Program&nbsp;Coordinator:</font></strong>
+                </td>
+                <td>
+                    <select id="cboPC" name="cboPC" style="width: 140px;" language="javascript" onkeypress="return combo_onkeypress()"
+                        onfocus="return combo_onfocus()" onclick="return combo_onclick()" onkeydown="return combo_onkeydown()">
+                        <option selected value="0"></option>
+                        <%=strPCList%>
+                    </select>&nbsp;<input type="button" value="Add" id="cmdPCAdd" name="cmdPCAdd" language="javascript"
+                        onclick="return cmdPCAdd_onclick()">
+                </td>
+                <td width="120" style="vertical-align: top">
+                    <strong><font size="2">Chipset/Processor&nbsp;PM:</font></strong>
+                </td>
+                <td>
+                    <select id="cboProcessorPM" name="cboProcessorPM" style="width: 140px;" language="javascript"
+                        onkeypress="return combo_onkeypress()" onfocus="return combo_onfocus()" onclick="return combo_onclick()"
+                        onkeydown="return combo_onkeydown()">
+                        <option selected value="0"></option>
+                        <%=strProcessorPMList%>
+                    </select>&nbsp;<input type="button" value="Add" id="cmdProcessorPMAdd" name="cmdProcessorPMAdd"
+                        language="javascript" onclick="return cmdProcessorPMAdd_onclick()">
+                </td>
+            </tr>
+            <tr>
+                <td width="120" style="vertical-align: top">
+                    <strong><font size="2">PDM&nbsp;Team&nbsp;Member:</font></strong>
+                </td>
+                <td>
+                    <select id="cboMarketingOps" name="cboMarketingOps" style="width: 140px;" language="javascript"
+                        onkeypress="return combo_onkeypress()" onfocus="return combo_onfocus()" onclick="return combo_onclick()"
+                        onkeydown="return combo_onkeydown()">
+                        <option selected value="0"></option>
+                        <%=strMarketingOpsList%>
+                    </select>&nbsp;<input type="button" value="Add" id="cmdMarketingOpsAdd" name="cmdMarketingOpsAdd"
+                        language="javascript" onclick="return cmdMarketingOpsAdd_onclick()">
+                </td>
+                <td width="120" style="vertical-align: top">
+                    <strong><font size="2">Graphics&nbsp;Controller&nbsp;PM:</font></strong>
+                </td>
+                <td>
+                    <select id="cboGraphicsControllerPM" name="cboGraphicsControllerPM" style="width: 140px;"
+                        language="javascript" onkeypress="return combo_onkeypress()" onfocus="return combo_onfocus()"
+                        onclick="return combo_onclick()" onkeydown="return combo_onkeydown()">
+                        <option selected value="0"></option>
+                        <%=strGraphicsControllerPMList%>
+                    </select>&nbsp;<input type="button" value="Add" id="cmdGraphicsControllerPMAdd" name="cmdGraphicsControllerPMAdd"
+                        language="javascript" onclick="return cmdGraphicsControllerPMAdd_onclick()">
+                </td>
+            </tr>
+            <tr>
+                <td width="120" style="vertical-align: top">
+                    <strong><font size="2">Documentation&nbsp;PM:</font></strong>
+                </td>
+                <td>
+                    <select id="cboDocPM" name="cboDocPM" style="width: 140px;" language="javascript"
+                        onkeypress="return combo_onkeypress()" onfocus="return combo_onfocus()" onclick="return combo_onclick()"
+                        onkeydown="return combo_onkeydown()">
+                        <option selected value="0"></option>
+                        <%=strDocPMList%>
+                    </select>&nbsp;<input type="button" value="Add" id="cmdDocPMAdd" name="cmdDocPMAdd"
+                        language="javascript" onclick="return cmdDocPMAdd_onclick()">
+                </td>
+                <td width="120" style="vertical-align: top">
+                    <strong><font size="2">Video&nbsp;Memory&nbsp;PM:</font></strong>
+                </td>
+                <td>
+                    <select id="cboVideoMemoryPM" name="cboVideoMemoryPM" style="width: 140px;" language="javascript"
+                        onkeypress="return combo_onkeypress()" onfocus="return combo_onfocus()" onclick="return combo_onclick()"
+                        onkeydown="return combo_onkeydown()">
+                        <option selected value="0"></option>
+                        <%=strVideoMemoryPMList%>
+                    </select>&nbsp;<input type="button" value="Add" id="cmdVideoMemoryPMAdd" name="cmdVideoMemoryPMAdd"
+                        language="javascript" onclick="return cmdVideoMemoryPMAdd_onclick()">
+                </td>
+            </tr>
+            <tr>
+                <td width="120" style="vertical-align: top">
+                    <strong><font size="2">Doc&nbsp;Kit&nbsp;Coordinator:</font></strong>
+                </td>
+                <td>
+                    <select id="cboDKC" name="cboDKC" style="width: 140px;" language="javascript" onkeypress="return combo_onkeypress()"
+                        onfocus="return combo_onfocus()" onclick="return combo_onclick()" onkeydown="return combo_onkeydown()">
+                        <option selected value="0"></option>
+                        <%=strDKCList%>
+                    </select>&nbsp;<input type="button" value="Add" id="cmdDKCAdd" name="cmdDKCAdd" language="javascript"
+                        onclick="return cmdDKCAdd_onclick()">
+                </td>
+                <td width="120" style="vertical-align: top">
+                    <strong><font size="2">Comm&nbsp;HW&nbsp;PM:</font></strong>
+                </td>
+                <td>
+                    <select id="cboCommHWPM" name="cboCommHWPM" style="width: 140px;" language="javascript"
+                        onkeypress="return combo_onkeypress()" onfocus="return combo_onfocus()" onclick="return combo_onclick()"
+                        onkeydown="return combo_onkeydown()">
+                        <option selected value="0"></option>
+                        <%=strCommHWPMList%>
+                    </select>&nbsp;<input type="button" value="Add" id="cmdCommHWPMAdd" name="cmdCommHWPMAdd"
+                        language="javascript" onclick="return cmdCommHWPMAdd_onclick()">
+                </td>
+            </tr>
+            <tr>
+                <td width="120" style="vertical-align: top">
+                    <strong><font size="2">SE&nbsp;Program&nbsp;Engineer:</font></strong>
+                </td>
+                <td>
+                    <select id="cboSEPE" name="cboSEPE" style="width: 140px;" language="javascript" onkeypress="return combo_onkeypress()"
+                        onfocus="return combo_onfocus()" onclick="return combo_onclick()" onkeydown="return combo_onkeydown()">
+                        <option selected value="0"></option>
+                        <%=strSEPEList%>
+                    </select>&nbsp;<input type="button" value="Add" id="cmdSEPEAdd" name="cmdSEPEAdd"
+                        language="javascript" onclick="return cmdSEPEAdd_onclick()">
+                </td>
+                <td width="120" style="vertical-align: top">
+                    <strong><font size="2">Accessory&nbsp;PM:</font></strong>
+                </td>
+                <td>
+                    <select id="cboAccessoryPM" name="cboAccessoryPM" style="width: 140px;" language="javascript"
+                        onkeypress="return combo_onkeypress()" onfocus="return combo_onfocus()" onclick="return combo_onclick()"
+                        onkeydown="return combo_onkeydown()">
+                        <option selected value="0"></option>
+                        <%=strAPMList%>
+                    </select>&nbsp;<input type="button" value="Add" id="cmdAccessoryPMAdd" name="cmdAccessoryPMAdd"
+                        language="javascript" onclick="return cmdAccessoryPMAdd_onclick()">
+                </td>
+            </tr>
+            <tr>
+                <td width="120" style="vertical-align: top">
+                    <strong><font size="2">Preinstall&nbsp;PM:</font></strong>
+                </td>
+                <td>
+                    <select id="cboPINPM" name="cboPINPM" style="width: 140px;" language="javascript"
+                        onkeypress="return combo_onkeypress()" onfocus="return combo_onfocus()" onclick="return combo_onclick()"
+                        onkeydown="return combo_onkeydown()">
+                        <option selected value="0"></option>
+                        <%=strPINPMList%>
+                    </select>&nbsp;<input type="button" value="Add" id="cmdPINPMAdd" name="cmdPINPMAdd"
+                        language="javascript" onclick="return cmdPINPMAdd_onclick()">
+                </td>
+                <td width="120" style="vertical-align: top">
+                    <strong><font size="2">SE&nbsp;Test&nbsp;Lead&nbsp;(Pri):</font></strong>
+                </td>
+                <td>
+                    <select id="cboSETestLead" name="cboSETestLead" style="width: 140px;" language="javascript"
+                        onkeypress="return combo_onkeypress()" onfocus="return combo_onfocus()" onclick="return combo_onclick()"
+                        onkeydown="return combo_onkeydown()">
+                        <option selected value="0"></option>
+                        <%=strSETestLeadList%>
+                    </select>&nbsp;<input type="button" value="Add" id="cmdSETestLeadAdd" name="cmdSETestLeadAdd"
+                        language="javascript" onclick="return cmdSETestLeadAdd_onclick()">
+                </td>
+            </tr>
+            <tr>
+                <td width="120" style="vertical-align: top">
+                    <strong><font size="2">BIOS&nbsp;Lead:</font></strong>
+                </td>
+                <td>
+                    <select id="cboBIOSLead" name="cboBIOSLead" style="width: 140px;" language="javascript"
+                        onkeypress="return combo_onkeypress()" onfocus="return combo_onfocus()" onclick="return combo_onclick()"
+                        onkeydown="return combo_onkeydown()">
+                        <option selected value="0"></option>
+                        <%=strBIOSLeadList%>
+                    </select>&nbsp;<input type="button" value="Add" id="cmdBIOSLeadAdd" name="cmdBIOSLeadAdd"
+                        language="javascript" onclick="return cmdBIOSLeadAdd_onclick()">
+                </td>
+                <td width="120" style="vertical-align: top">
+                    <strong><font size="2">SE&nbsp;Test&nbsp;Lead&nbsp;(Sec):</font></strong>
+                </td>
+                <td>
+                    <select id="cboSETest" name="cboSETest" style="width: 140px;" language="javascript"
+                        onkeypress="return combo_onkeypress()" onfocus="return combo_onfocus()" onclick="return combo_onclick()"
+                        onkeydown="return combo_onkeydown()">
+                        <option selected value="0"></option>
+                        <%=strSETestList%>
+                    </select>&nbsp;<input type="button" value="Add" id="cmdSETestAdd" name="cmdSETestAdd"
+                        language="javascript" onclick="return cmdSETestAdd_onclick()">
+                </td>
+            </tr>
+            <tr>
+                <td width="120" style="vertical-align: top">
+                    <strong><font size="2">SC&nbsp;Factory&nbsp;Engineer:</font></strong>
+                </td>
+                <td>
+                    <select id="cboFactoryEngineer" name="cboFactoryEngineer" style="width: 140px;" language="javascript"
+                        onkeypress="return combo_onkeypress()" onfocus="return combo_onfocus()" onclick="return combo_onclick()"
+                        onkeydown="return combo_onkeydown()">
+                        <option selected value="0"></option>
+                        <%=strFactoryEngineerList%>
+                    </select>&nbsp;<input type="button" value="Add" id="cmdFactoryEngineerAdd" name="cmdFactoryEngineerAdd"
+                        language="javascript" onclick="return cmdFactoryEngineerAdd_onclick()">
+                </td>
+                <td width="120" style="vertical-align: top">
+                    <strong><font size="2">ODM&nbsp;HW&nbsp;Test&nbsp;Lead:</font></strong>
+                </td>
+                <td>
+                    <select id="cboODMTestLead" name="cboODMTestLead" style="width: 140px;" language="javascript"
+                        onkeypress="return combo_onkeypress()" onfocus="return combo_onfocus()" onclick="return combo_onclick()"
+                        onkeydown="return combo_onkeydown()">
+                        <option selected value="0"></option>
+                        <%=strODMTestLeadList%>
+                    </select>&nbsp;<input type="button" value="Add" id="cmdODMTestLeadAdd" name="cmdODMTestLeadAdd"
+                        language="javascript" onclick="return cmdODMTestLeadAdd_onclick()">
+                </td>
+            </tr>
+            <tr style="vertical-align: top">
+                <td width="120" style="vertical-align: top">
+                    <strong><font size="2">Global&nbsp;Product&nbsp;LM:</font></strong>
+                </td>
+                <td>
+                    <select id="cboGplm" name="cboGplm" style="width: 140px;" language="javascript" onkeypress="return combo_onkeypress()"
+                        onfocus="return combo_onfocus()" onclick="return combo_onclick()" onkeydown="return combo_onkeydown()">
+                        <option selected value="0"></option>
+                        <%=strGplmList%>
+                    </select>&nbsp;<input type="button" value="Add" id="cmdGplmAdd" name="cmdGplmAdd"
+                        language="javascript" onclick="return SystemTeamAdd('cboGplm')">
+                </td>
+                <td width="120" style="vertical-align: top">
+                    <strong><font size="2">WWAN&nbsp;Test&nbsp;Lead:</font></strong>
+                </td>
+                <td>
+                    <select id="cboWWANTestLead" name="cboWWANTestLead" style="width: 140px;" language="javascript"
+                        onkeypress="return combo_onkeypress()" onfocus="return combo_onfocus()" onclick="return combo_onclick()"
+                        onkeydown="return combo_onkeydown()">
+                        <option selected value="0"></option>
+                        <%=strWWANTestLeadList%>
+                    </select>&nbsp;<input type="button" value="Add" id="cmdWWANTestLeadAdd" name="cmdWWANTestLeadAdd"
+                        language="javascript" onclick="return cmdWWANTestLeadAdd_onclick()">
+                </td>
+            </tr>
+            <tr style="vertical-align: top">
+                <td width="120" style="vertical-align: top">
+                    <strong><font size="2">Service&nbsp;BOM&nbsp;Analyst:</font></strong>
+                </td>
+                <td>
+                    <select id="cboSpdm" name="cboSpdm" style="width: 140px;" language="javascript" onkeypress="return combo_onkeypress()"
+                        onfocus="return combo_onfocus()" onclick="return combo_onclick()" onkeydown="return combo_onkeydown()">
+                        <option selected value="0"></option>
+                        <%=strSpdmList%>
+                    </select>&nbsp;<input type="button" value="Add" id="cmdSpdmAdd" name="cmdSpdmAdd"
+                        language="javascript" onclick="return SystemTeamAdd('cboSpdm')">
+                </td>
+                <td width="120" style="vertical-align: top">
+                    <strong><font size="2">Sustaining&nbsp;SEPM:</font></strong>
+                </td>
+                <td>
+                    <select id="cboSustainingSEPM" name="cboSustainingSEPM" style="width: 140px;" language="javascript"
+                        onkeypress="return combo_onkeypress()" onfocus="return combo_onfocus()" onclick="return combo_onclick()"
+                        onkeydown="return combo_onkeydown()">
+                        <option selected value="0"></option>
+                        <%=strSustainingSEPMList%>
+                    </select>&nbsp;<input type="button" value="Add" id="cmdSustainingSEPMAdd" name="cmdSustainingSEPMAdd"
+                        language="javascript" onclick="return cmdSustainingSEPMAdd_onclick()">
+                </td>
+            </tr>
+            <tr style="vertical-align: top; display: none">
+                <td width="120" style="vertical-align: top">
+                    <strong><font size="2">Service&nbsp;BOM&nbsp;Analyst:</font></strong>
+                </td>
+                <td>
+                    <select id="cboSba" name="cboSba" style="width: 140px;" language="javascript" onkeypress="return combo_onkeypress()"
+                        onfocus="return combo_onfocus()" onclick="return combo_onclick()" onkeydown="return combo_onkeydown()">
+                        <option selected value="0"></option>
+                        <%=strSbaList%>
+                    </select>&nbsp;<input type="button" value="Add" id="cmdSbaAdd" name="cmdSbaAdd" language="javascript"
+                        onclick="return SystemTeamAdd('cboSba')">
+                </td>
+                <td width="120" style="display: none; vertical-align: top">
+                    <strong><font size="2">Sustaining&nbsp;Manager:</font></strong>
+                </td>
+                <td>
+                    <select id="cboSustainingMgr" name="cboSustainingMgr" style="width: 140px;" language="javascript"
+                        onkeypress="return combo_onkeypress()" onfocus="return combo_onfocus()" onclick="return combo_onclick()"
+                        onkeydown="return combo_onkeydown()">
+                        <option selected value="0"></option>
+                        <%=strSustainingMgrList%>
+                    </select>&nbsp;<input type="button" value="Add" id="cmdSustainingMgrAdd" name="cmdSustainingMgrAdd"
+                        language="javascript" onclick="return cmdSustainingMgrAdd_onclick()">
+                </td>
+            </tr>
+    </table>
+
+</body>
+</html>

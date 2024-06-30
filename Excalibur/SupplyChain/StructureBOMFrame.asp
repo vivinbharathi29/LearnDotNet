@@ -1,0 +1,11 @@
+<%@ Language=VBScript %>
+<!-- #include file = "../includes/no-cache.asp" -->
+<!-- #include file = "../includes/noaccess.inc" -->
+<HTML>
+<HEAD>
+<TITLE>Structure BOM</TITLE>
+</HEAD>
+	<FRAMESET ID=TopWindow >
+		<FRAME noresize ID="UpperWindow" Name="UpperWindow" SRC="StructureBOM.aspx?<%=Request.QueryString %>">
+	</FRAMESET>
+</HTML>

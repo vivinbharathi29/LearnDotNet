@@ -1,0 +1,92 @@
+H1
+{
+    COLOR: #006697;
+    FONT-FAMILY: Tahoma
+}
+H2
+{
+    COLOR: #006697;
+    FONT-FAMILY: Tahoma
+}
+H3
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: x-small;
+    COLOR: #006697;
+    FONT-FAMILY: Tahoma
+}
+BODY
+{
+    FONT-SIZE: x-small;
+    COLOR: black;
+    FONT-FAMILY: Verdana, Tahoma, Arial
+}
+#cc
+{
+}
+#cc H1
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: x-small;
+    COLOR: white;
+    FONT-FAMILY: Verdana, Tahoma, Arial
+}
+#cc P
+{
+    FONT-SIZE: xx-small;
+    COLOR: white;
+    FONT-FAMILY: Verdana, Tahoma, Arial
+}
+#side
+{
+}
+#side H1
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: x-small;
+    COLOR: white;
+    FONT-FAMILY: Verdana, Tahoma, Arial
+}
+#side A:link
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: x-small;
+    COLOR: white;
+    FONT-FAMILY: Verdana, Tahoma, Arial
+}
+#side A:visited
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: x-small;
+    COLOR: white;
+    FONT-FAMILY: Verdana, Tahoma, Arial
+}
+#side A:hover
+{
+    COLOR: yellow;
+    FONT-FAMILY: Verdana, Tahoma, Arial
+}
+A:hover
+{
+    COLOR: red
+}
+TABLE
+{
+    FONT-SIZE: x-small
+}
+#side B
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: x-small;
+    COLOR: yellow;
+    FONT-FAMILY: Verdana, Tahoma, Arial
+}
+TR.action
+{
+    FONT-SIZE: xx-small;
+    COLOR: black
+}
+TR.description
+{
+    FONT-SIZE: xx-small
+}

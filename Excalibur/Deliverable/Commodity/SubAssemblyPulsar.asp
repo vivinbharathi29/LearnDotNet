@@ -1,0 +1,35 @@
+﻿<%@ Language=VBScript %>
+
+
+	<%
+	
+  Response.Buffer = True
+  Response.ExpiresAbsolute = Now() - 1
+  Response.Expires = 0
+  Response.CacheControl = "no-cache"
+	  
+	%>
+
+<!-- #include file = "../../includes/noaccess.inc" -->
+
+<HTML>
+<head>
+    <title>Update Subassembly</title>
+    <script type="text/javascript">
+       
+        function Close(RowID) {
+            if (RowID == "")
+                window.parent.closeModalDialog(true);
+            else
+                window.parent.SubAssemblyResult("" + RowID + "");
+        }
+
+        function Cancel() {
+            window.parent.closeModalDialog(false);
+        }
+    </script>
+</head>
+	<FRAMESET ROWS="*" ID=TopWindow >
+        <FRAME noresize ID="UpperWindow" Name="UpperWindow" SRC="SubAssemblyMainPulsar.asp?VersionID=<%=Request("VersionID")%>&ProductID=<%=Request("ProductID")%>&RootID=<%=Request("RootID")%>&IDList=<%=request("IDList")%>&ReleaseID=<%=Request("ReleaseID")%>&RowID=<%=Request("RowID")%>&ShowOnlyTargetedRelease=<%=Request("ShowOnlyTargetedRelease")%>">    
+	</FRAMESET>
+</HTML>

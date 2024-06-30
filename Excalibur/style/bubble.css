@@ -1,0 +1,103 @@
+﻿/*
+body{font: xx-small, Verdana,sans-serif; background: #FFFFFF; color: #333333}
+div#container{width: 500px; margin:0 auto}
+h1{ color: #F60; margin: 1em 0 0; letter-spacing: -2px; }
+p{margin: 0 0 1.7em; }
+*/
+/*---------- bubble tooltip -----------*/
+a.tt{
+    position:relative;
+    z-index:24;
+    color:#0071b4 ;
+    text-decoration:none;
+}
+a.tt img
+{
+	border:none;
+}
+a.tt span{ display: none; }
+
+/*background:; ie hack, something must be changed in a for ie to execute it*/
+a.tt:hover{ z-index:25; color: #aaaaff; background:;}
+a.tt:hover span.tooltip{
+    display:block;
+    position:absolute;
+    top:0px; left:0;
+	padding: 15px 0 0 0;
+	width:200px;
+	color: #ffffff;
+    text-align: center;
+	filter: alpha(opacity:80);
+	KHTMLOpacity: 0.80;
+	MozOpacity: 0.80;
+	opacity: 0.80;
+	white-space:normal;
+	font-family:Verdana;
+	font-size:xx-small;
+}
+a.tt:hover span.top{
+	display: block;
+	padding: 30px 8px 0;
+    background: url(../images/bubble.gif) no-repeat top;
+}
+a.tt:hover span.middle{ /* different middle bg for stretch */
+	display: block;
+	padding: 0 8px; 
+	background: url(../images/bubble_filler.gif) repeat bottom; 
+}
+a.tt:hover span.bottom{
+	display: block;
+	padding:3px 8px 10px;
+	color: #548912;
+    background: url(../images/bubble.gif) no-repeat bottom;
+}
+
+/*-- Popup --*/
+a.pop{
+    position:relative;
+    z-index:24;
+    color:#0071b4 ;
+    text-decoration:none;
+}
+a.pop img
+{
+	border:none;
+}
+a.pop span{ display: none; }
+
+/*background:; ie hack, something must be changed in a for ie to execute it*/
+a.pop:hover{ z-index:25; color: #aaaaff; background:;}
+a.pop:hover span.tooltip{
+    display:block;
+    position:absolute;
+    top:0px; left:-75px;
+	padding: 15px 0 0 0;
+	width:400px;
+	color: #ffffff;
+    text-align: center;
+	filter: alpha(opacity:80);
+	KHTMLOpacity: 0.80;
+	MozOpacity: 0.80;
+	opacity: 0.80;
+	white-space:normal;
+	font-family:Verdana;
+	font-size:xx-small;
+	border: solid 2px black;
+	background-color: #0000cd;
+}
+a.pop:hover span.top{
+	display: block;
+	padding: 3px 8px 0;
+/*    background: url(../images/bubble.gif) no-repeat top; */
+}
+a.pop:hover span.middle{ /* different middle bg for stretch */
+	display: block;
+	padding: 0 8px; 
+/*	background: url(../images/bubble_filler.gif) repeat bottom;  */
+}
+a.pop:hover span.bottom{
+	display: block;
+	padding:3px 8px 10px;
+	color: #548912;
+/*    background: url(../images/bubble.gif) no-repeat bottom; */
+}

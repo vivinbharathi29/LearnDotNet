@@ -1,0 +1,72 @@
+BODY
+{
+    FONT-FAMILY: Verdana
+}
+TD
+{
+    FONT-SIZE: x-small;
+    FONT-FAMILY: Verdana
+}
+TEXTAREA
+{
+    FONT-FAMILY: Verdana
+}
+.MenuBar
+{
+}
+.MenuBar TR
+{
+	background-color: #0096d6; /* light blue like megamenu */
+}
+.MenuBar A:link
+{
+    COLOR: white;
+    FONT-FAMILY: Verdana;
+    TEXT-DECORATION: none
+}
+.MenuBar A:visited
+{
+    COLOR: white;
+    FONT-FAMILY: Verdana;
+    TEXT-DECORATION: none
+}
+.MenuBar A:hover
+{
+    COLOR: yellow;
+    FONT-FAMILY: Verdana;
+    TEXT-DECORATION: none
+}
+TD#TableID
+{
+}
+.tblInline
+{
+    BACKGROUND-COLOR: silver
+}
+.tblInline TD
+{
+}
+.tblInline TBODY
+{
+}
+.tblInline TBODY TD
+{
+}
+A:link
+{
+    COLOR: blue
+}
+A:visited
+{
+    COLOR: blue
+}
+A:hover
+{
+    COLOR: red
+}
+H3
+{
+    FONT-SIZE: small;
+    COLOR: black;
+    FONT-FAMILY: Verdana
+}

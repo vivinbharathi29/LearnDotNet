@@ -1,0 +1,65 @@
+BODY
+{
+    COLOR: navy;
+    FONT-FAMILY: Arial;
+    FONT-SIZE: 10pt;
+    MARGIN-LEFT: 10px;
+    MARGIN-RIGHT: 10px;
+    background-color : white;
+}
+
+H1
+{
+    COLOR: navy;
+    FONT-FAMILY: Times New Roman;
+    FONT-SIZE: 16pt;
+    MARGIN: 0pt 0px 0px;
+    PADDING-BOTTOM: 0px;
+    PADDING-LEFT: 0px;
+    PADDING-RIGHT: 0px;
+    PADDING-TOP: 0px;
+    TEXT-ALIGN: justify
+}
+H2
+{
+    COLOR: navy;
+    FONT-FAMILY: Times New Roman;
+    FONT-SIZE: 12pt;
+    MARGIN: 0px;
+    PADDING-BOTTOM: 0px;
+    PADDING-LEFT: 0px;
+    PADDING-RIGHT: 0px;
+    PADDING-TOP: 0px;
+    TEXT-TRANSFORM: none
+}
+H3
+{
+    COLOR: navy;
+    FONT-FAMILY: Times New Roman;
+    FONT-SIZE: 10pt;
+    MARGIN: 0px;
+    PADDING-BOTTOM: 0px;
+    PADDING-LEFT: 0px;
+    PADDING-RIGHT: 0px;
+    PADDING-TOP: 0px;
+    TEXT-TRANSFORM: none
+}
+TABLE
+{
+    FONT-FAMILY: Arial;
+    FONT-SIZE: 10pt;
+    MARGIN: 0px;
+    PADDING-BOTTOM: 0px;
+    PADDING-LEFT: 0px;
+    PADDING-RIGHT: 0px;
+    PADDING-TOP: 0px
+}
+A:LINK {
+	color : Blue;
+}
+A:VISITED {
+	color : Blue;
+}
+A:HOVER {
+	color : Black;
+}

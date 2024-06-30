@@ -1,0 +1,28 @@
+.O {
+    COLOR: gray;
+    TEXT-DECORATION: line-through;
+}
+
+.H {
+    background-color: mistyrose;
+}
+
+.A {
+    background-color: cornsilk;
+}
+
+.txtbox {
+    FONT-SIZE: xx-small;
+    FONT-FAMILY: Verdana;
+}
+
+.Table thead tr th {
+    background-color: wheat;
+    border: 1px solid saddlebrown;
+}
+
+TH {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: xx-small;
+    FONT-FAMILY: Tahoma;
+}

@@ -1,0 +1,30 @@
+#pup {
+	position:absolute; 
+	visibility:hidden; 
+	z-index:200; 
+	width:130; 
+}
+
+#popitmenu{
+position: absolute;
+background-color: #FFFFE0;
+border:1px solid black;
+font:normal 9pt Tahoma,Arial;
+line-height: 18px;
+z-index: 100;
+visibility: hidden;
+border-bottom-width: 0;
+}
+
+#popitmenu a{
+text-decoration: none;
+padding-left: 6px;
+color: black;
+display: block;
+border-bottom: 1px solid black;
+}
+
+#popitmenu a:hover{ /*hover background color*/
+background-color: RoyalBlue;
+color: white;
+}

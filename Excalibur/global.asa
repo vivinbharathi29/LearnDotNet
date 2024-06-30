@@ -1,0 +1,314 @@
+<!-- METADATA TYPE="typelib" FILE="c:\program files\common files\system\ado\msado15.dll"-->
+
+<script language="VBScript" runat="Server">
+Function GetAttribute(AttrName)
+	Dim AllAttrs
+	Dim RealAttrName
+	Dim Location
+	Dim Result
+	AllAttrs = Request.ServerVariables("ALL_HTTP")
+	RealAttrName = AttrName
+	Location = instr(AllAttrs, RealAttrName & ":")
+	if Location <= 0 then
+		GetAttribute = ""
+		Exit Function
+	end if
+	Result = mid(AllAttrs, Location + Len(RealAttrName) + 1)
+	Location = instr(Result, chr(10))	'LF character
+	if Location <= 0 then
+		Location = len(Result) + 1
+	end if
+
+	GetAttribute = left(Result, Location - 1)
+End Function
+
+Sub Application_OnStart
+    Application("Initialized") = False
+    Application("EnablePulsar") = False
+    Application("DRDVDTextPaht") = "\\\\PULSARW02\\Temp\\DRDVDText\\"
+    
+    Application("PulsarSupportEmail") =  "Pulsar.Support@hp.com"
+End Sub
+
+Sub ApplicationInit
+	If Application("Initialized") = False Then
+		Application("SendAgencyEmail") = False
+		
+		'--Project Data Connection
+
+	    Dim serverName
+        serverName = LCase(Request.ServerVariables("HTTP_HOST"))
+        If serverName = "" Then
+            serverName = LCase(Request.ServerVariables("SERVER_NAME"))
+        End If
+		Application("FORWARDED_HOST") = serverName
+				
+		Set oConfig = Server.CreateObject("CDO.Configuration")	
+		 
+				'TEST
+				Application("Repository") = "Test"
+				Application("Excalibur_ServerName") = "PulsarTest.usa.hp.com"
+				Application("Excalibur_ODM_ServerName") = "pulsarweb-pro.prp.ext.hp.com"
+				Application("Excalibur_File_Server") = "PulsarTest.usa.hp.com"
+				Application("Excalibur_ODM_File_Server") = "PulsarTest.usa.hp.com"
+                Application("IRS_WebServerName") = "irstest.usa.hp.com"   
+				Application("On_Live_Server") = 0
+		    
+	       Application("PDPIMS_ConnectionString") = "Provider=SQLOLEDB.1;Data Source=TdcPulsarItgDb.tpc.rd.hpicorp.net\\TEST;Initial Catalog=PRS;User ID=prsitguser;Password=ding.dong-76;"
+			
+		    if Request.ServerVariables("HTTPS") = "on" then
+        	   Application("Release_Houston_ServerName") = "https://smrtest.twn.hp.com"
+        else
+        	   Application("Release_Houston_ServerName") = "http://smrtest.twn.hp.com"
+        end if
+         
+		    Application("Release_ODM_ServerName")= "https://psg-itg.prp.ext.hp.com"
+       
+
+
+				oConfig.Fields("http://schemas.microsoft.com/cdo/configuration/sendusing")=1 'cdoSendUsingPickup
+				'oConfig.Fields("http://schemas.microsoft.com/cdo/configuration/sendusing")=2
+				'oConfig.Fields("http://schemas.microsoft.com/cdo/configuration/smtpserver")="smtp3.hp.com"
+				'oConfig.Fields("http://schemas.microsoft.com/cdo/configuration/smtpserverport")=25 
+				'oConfig.Fields("http://schemas.microsoft.com/cdo/configuration/smtpauthenticate")=0
+				'oConfig.Fields.Update
+			
+
+        'IRS AMO SPECIFIC VALUES:
+        Application("ADMIN") = "System Support"
+        Application("AMO_Permission") = "AMOList"
+        Application("AMORAS_Permission") = "AMORAS"
+        Application("AMOCost_Permission") = "AMOCost"
+
+        Application("AMOList") = 184
+	    Application("AMORAS") = 185
+	    Application("AMOGEO") = 186
+	    Application("AMOCost") = 191
+	    Application("AMOPOR") = 193
+        Application("DISABLED_CTRL_STYLE") = " style=""color:gray"" "
+        Application("AMO_GLOBAL_REGIONID") = 334
+
+        'AMO different status
+        Application("AMO_NEW") = 170
+        Application("AMO_RASREVIEW") = 171
+        Application("AMO_COMPLETE") = 172
+        Application("AMO_OBSOLETE") = 173
+        Application("AMO_REJECT") = 177
+        Application("AMO_DISABLED") = 178
+        Application("AMO_RE-ENABLED") = 179
+        Application("AMO_RASUPDATE") = 180
+        Application("AMO_IN_PROCESS") = 181
+	
+		Set Application("CDO_Config") = oConfig
+	    
+		Set oConfig = Nothing
+		
+		On Error Resume Next
+		
+		Dim oFs, oFile, oFolder
+		Set oFs = Server.CreateObject("Scripting.FileSystemObject")
+		Set oFolder = oFs.GetFolder(Server.MapPath("/temp"))
+		For Each oFile in oFolder.Files
+			oFs.DeleteFile oFile, true
+		Next
+		Set oFs = Nothing
+		Set oFile = Nothing
+		Set oFolder = Nothing
+		
+		On Error GoTo 0
+		
+		Application("FCS_ScheduleDefinitionID") = 60
+		Application("Initialized") = true
+	End If 
+End Sub
+
+Sub Session_OnStart
+    CALL ApplicationInit
+
+    Dim czUser      'User Name
+    Dim adVarChar, adInteger, adBoolean, adCmdStoredProc, adParamInput
+    Dim strBrowser
+    Dim AppID
+    Dim UserParts
+    Dim sitem
+
+    adCmdStoredProc = 4
+    adVarChar = 200
+    adInteger = 3
+    adBoolean = 11
+    adParamInput = 1
+    czUser = ""
+    sitem = ""
+    
+    'Get user name from window authentication
+    czUser = Request.ServerVariables("LOGON_USER")
+    
+    'Get user name from UID
+    If Trim(czUser) = "" Then
+        czuser = GetAttribute("HTTP_HPPF_AUTH_NTUSERDOMAINID")
+        czUser = REPLACE(czUser,":","\")
+    End If
+
+    'Get email if username is not available
+    If Trim(czUser) = "" Then
+        czUser = GetAttribute("HTTP_HPPF_AUTH_UID")
+    End If
+
+    Session("LoggedInUser") = czUser
+
+    strBrowser = Request.ServerVariables("HTTP_User_Agent")
+
+    If lcase(Request.ServerVariables("SCRIPT_NAME")) = "/pm.asp" Then
+        StartPage = "Excalibur 3"
+        AppID=10
+    ElseIf lcase(Request.ServerVariables("SCRIPT_NAME")) = "/mobilese/default.asp" Then
+        StartPage = "Mobile Se Web Page"
+        AppID=12
+    ElseIf lcase(Request.ServerVariables("SCRIPT_NAME")) = "/default.asp" Then
+        StartPage = "Main Web Page"
+        AppID=10
+    ElseIf lcase(Request.ServerVariables("SCRIPT_NAME")) = "/mobilese/today/action.asp" Then
+        StartPage = "Action Item (Direct Link)"
+        AppID=13
+    ElseIf lcase(Request.ServerVariables("SCRIPT_NAME")) = "/tabletpc/programoffice/today/today.asp" Then
+        StartPage = "PRS web browser"
+        AppID=10
+    ElseIf lcase(Request.ServerVariables("SCRIPT_NAME")) = "/otsmail.asp" Then
+        StartPage = "OTS Query"
+        AppID=10
+    Else
+        AppID=10
+        startpage = Request.ServerVariables("SCRIPT_NAME")
+    End If
+
+
+    'Create Database Connection
+    set cn = server.CreateObject("ADODB.Connection")
+    cn.ConnectionString = Application("PDPIMS_ConnectionString")
+    cn.Open
+
+	Application.Lock
+	Application("ActiveUsers") = Application("ActiveUsers") + 1
+	Application("ActiveUserNames") = lcase(Application("ActiveUserNames") & "," & czUser  & " - " & StartPage)
+	Application.UnLock
+	Session("CurrentLogin") = lcase("," & czUser  & " - " & StartPage)
+	
+
+	
+	Dim CurrentUser
+	Dim CurrentDomain
+	Dim p
+	Dim rs
+	Dim ServerName
+    Dim bSystemAdmin
+
+	ServerName = Request.ServerVariables("HTTP_HOST")
+	
+	If UCase(Left(ServerName, 3)) = "PRP" Then
+	    ServerName = ServerName & "/excalibur"
+	    Session("ApplicationRoot") = "/excalibur"
+	    Session("ServerName") = ServerName
+		
+	Else
+	    ServerName = Request.ServerVariables("SERVER_NAME")
+	    Session("ApplicationRoot") = "/excalibur"
+	    Session("ServerName") = ServerName
+	End If
+	
+	If instr(czUser,"\") > 0 Then
+		CurrentDomain = left(czUser, instr(czUser,"\") - 1)
+		Currentuser = mid(czUser,instr(czUser,"\") + 1)
+	Else
+		CurrentUser = czuser
+		CurrentDomain = ""
+	End If
+
+	set rs = server.CreateObject("ADODB.Recordset")
+	set cmd = server.CreateObject("ADODB.Command")
+	Set cmd.ActiveConnection = cn
+
+  cmd.CommandType = 1
+	cmd.CommandText = "select [value] from setting where [name]='Environment'"
+  
+  Set rs = cmd.Execute
+  Application("Environment") = "1"
+	If not (rs.EOF and rs.BOF) Then
+    Application("Environment") = rs("value")
+  End If
+  rs.Close
+  set rs = nothing
+  set rs = server.CreateObject("ADODB.Recordset")
+
+	cmd.CommandType = 4
+	cmd.CommandText = "spGetUserInfo"
+	
+	
+	Set p = cmd.CreateParameter("@UserName", 200, &H0001, 80)
+	p.Value = Currentuser
+	cmd.Parameters.Append p
+	
+	Set p = cmd.CreateParameter("@Domain", 200, &H0001, 30)
+	p.Value = CurrentDomain
+	cmd.Parameters.Append p
+
+	Set p = cmd.CreateParameter("@updateLastActivity", 11, &H0001)
+	p.Value = true
+	cmd.Parameters.Append p
+	
+	rs.CursorType = adOpenForwardOnly
+	rs.LockType=AdLockReadOnly
+	Set rs = cmd.Execute 
+	
+	set cmd=nothing
+
+    Session("PDPIMS_ConnectionString") = Application("PDPIMS_ConnectionString")
+	If rs.EOF and rs.BOF Then
+		If left(lcase(Request.ServerVariables("SCRIPT_NAME")),4) <> "/ims" Then
+    	Session("PDPIMS_ConnectionString") = Application("PDPIMS_ConnectionString") '& "Workstation ID=" & CurrentDomain & "_" & CurrentUser & ";" 		
+      Response.Redirect("/Excalibur.asp")
+      Exit Sub
+    End If
+
+  ElseIf rs("accountsuspended") Then
+    Session("UserFullName") =rs("Name")
+  	Response.Redirect("/AccountSuspended.asp")
+		exit sub
+  Else
+    Session("UserFullName") =rs("Name")
+    Session("UserSystemAdmin") = CBool(rs("SystemAdmin"))
+   Application("EnablePulsar") = True
+
+    
+	End If
+	rs.Close
+	set rs = nothing
+
+	Session("PDPIMS_ConnectionString") = Application("PDPIMS_ConnectionString") '& "Workstation ID=" & CurrentDomain & "_" & CurrentUser & ";" 		
+	    
+ON ERROR RESUME NEXT
+	cn.Close
+	set cn = nothing	
+End Sub
+
+Sub Session_OnEnd
+	Dim AppString
+	If Application("ActiveUsers") > 0 Then
+		Application.Lock
+			Application("ActiveUsers") = Application("ActiveUsers") - 1
+			Application("ActiveUserNames") = replace(Application("ActiveUserNames"),Session("CurrentLogin"),"",1,1)
+		Application.UnLock
+	End If
+	
+	On Error Resume Next
+	Dim oFs, saFiles, i
+	Set oFs = Server.CreateObject("Scripting.FileSystemObject")
+	saFiles = Split(Session("TempFiles"), ",")
+	For i = 0 To  UBound(saFiles)
+		If oFs.FileExists(saFiles(i)) Then
+			oFs.DeleteFile saFiles(i)
+		End If
+	Next
+	Set oFs = Nothing
+	On Error Goto 0
+End Sub
+</script>

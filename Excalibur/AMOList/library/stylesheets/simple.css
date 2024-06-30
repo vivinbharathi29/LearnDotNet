@@ -1,0 +1,646 @@
+SELECT
+{
+	VISIBILITY: visible
+}
+BODY
+{
+	FONT-SIZE: 9pt;
+	BACKGROUND: white;
+	MARGIN: 10px;
+	COLOR: black;
+	FONT-FAMILY: Arial
+}
+TABLE.topinclude
+{
+	MARGIN-TOP: -10px;
+	MARGIN-BOTTOM: 10px;
+	WIDTH: 100%;
+	HEIGHT: 28px
+}
+H1
+{
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 0px;
+	FONT-SIZE: 16pt;
+	PADDING-BOTTOM: 0px;
+	MARGIN: 0pt 0px 0px;
+	COLOR: black;
+	PADDING-TOP: 0px;
+	FONT-FAMILY: Times New Roman;
+	TEXT-ALIGN: justify
+}
+H2
+{
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 0px;
+	FONT-SIZE: 12pt;
+	PADDING-BOTTOM: 0px;
+	MARGIN: 0px;
+	TEXT-TRANSFORM: none;
+	COLOR: black;
+	PADDING-TOP: 0px;
+	FONT-FAMILY: Times New Roman
+}
+H3
+{
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 0px;
+	FONT-SIZE: 10pt;
+	PADDING-BOTTOM: 0px;
+	MARGIN: 0px;
+	TEXT-TRANSFORM: none;
+	COLOR: black;
+	PADDING-TOP: 0px;
+	FONT-FAMILY: Times New Roman
+}
+TABLE
+{
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 0px;
+	FONT-SIZE: 9pt;
+	PADDING-BOTTOM: 0px;
+	MARGIN: 0px;
+	PADDING-TOP: 0px;
+	FONT-FAMILY: Arial
+}
+DIV.menuBar
+{
+	PADDING-RIGHT: 2px;
+	PADDING-LEFT: 2px;
+	FONT-WEIGHT: normal;
+	FONT-SIZE: 8pt;
+	Z-INDEX: 99999;
+	PADDING-BOTTOM: 4px;
+	COLOR: #000000;
+	PADDING-TOP: 4px;
+	FONT-STYLE: normal;
+	FONT-FAMILY: Arial;
+	POSITION: relative;
+	BACKGROUND-COLOR: #6699cc;
+	TEXT-ALIGN: left
+}
+TD.menuTD
+{
+	BORDER-RIGHT: medium none;
+	BORDER-TOP: medium none;
+	BORDER-LEFT: medium none;
+	BORDER-BOTTOM: medium none
+}
+DIV.menuBar A.menuButton
+{
+	BORDER-RIGHT: #6699cc 1px solid;
+	PADDING-RIGHT: 6px;
+	BORDER-TOP: #6699cc 1px solid;
+	PADDING-LEFT: 6px;
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 8pt;
+	Z-INDEX: 100;
+	LEFT: 0px;
+	PADDING-BOTTOM: 2px;
+	MARGIN: 1px;
+	BORDER-LEFT: #6699cc 1px solid;
+	CURSOR: default;
+	COLOR: #ffffff;
+	PADDING-TOP: 2px;
+	BORDER-BOTTOM: #6699cc 1px solid;
+	FONT-STYLE: normal;
+	FONT-FAMILY: Arial;
+	POSITION: relative;
+	TOP: 0px;
+	BACKGROUND-COLOR: transparent;
+	TEXT-DECORATION: none
+}
+DIV.menu
+{
+	BORDER-RIGHT: 2px outset;
+	PADDING-RIGHT: 1px;
+	BORDER-TOP: 2px outset;
+	PADDING-LEFT: 0px;
+	FONT-WEIGHT: normal;
+	FONT-SIZE: 8pt;
+	Z-INDEX: 101;
+	LEFT: 0px;
+	VISIBILITY: hidden;
+	PADDING-BOTTOM: 1px;
+	BORDER-LEFT: 2px outset;
+	COLOR: #000000;
+	PADDING-TOP: 0px;
+	BORDER-BOTTOM: 2px outset;
+	FONT-STYLE: normal;
+	FONT-FAMILY: Arial;
+	POSITION: absolute;
+	TOP: 0px;
+	BACKGROUND-COLOR: #b0c4de
+}
+DIV.menu A.menuItem
+{
+	PADDING-RIGHT: 1em;
+	DISPLAY: block;
+	PADDING-LEFT: 1em;
+	FONT-WEIGHT: normal;
+	FONT-SIZE: 8pt;
+	Z-INDEX: 99999;
+	PADDING-BOTTOM: 3px;
+	CURSOR: default;
+	COLOR: #000000;
+	PADDING-TOP: 3px;
+	FONT-STYLE: normal;
+	FONT-FAMILY: Arial;
+	WHITE-SPACE: nowrap;
+	POSITION: relative;
+	TEXT-DECORATION: none
+}
+DIV.menu A.menuItemDisabled
+{
+	PADDING-RIGHT: 1em;
+	DISPLAY: block;
+	PADDING-LEFT: 1em;
+	FONT-WEIGHT: normal;
+	FONT-SIZE: 8pt;
+	Z-INDEX: 99999;
+	PADDING-BOTTOM: 3px;
+	COLOR: Gray;
+	PADDING-TOP: 3px;
+	FONT-STYLE: normal;
+	FONT-FAMILY: Arial;
+	WHITE-SPACE: nowrap;
+	POSITION: relative;
+	TEXT-DECORATION: none
+}
+DIV.TitleBar
+{
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 0px;
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 8pt;
+	PADDING-BOTTOM: 4px;
+	COLOR: #000000;
+	PADDING-TOP: 0px;
+	FONT-FAMILY: Arial;
+	BACKGROUND-COLOR: #ffffff;
+	TEXT-ALIGN: left
+}
+DIV.menuBar A.menuButton:hover
+{
+	BORDER-RIGHT: #e0e0e0 1px outset;
+	BORDER-TOP: #e0e0e0 1px outset;
+	BORDER-LEFT: #e0e0e0 1px outset;
+	COLOR: #000000;
+	BORDER-BOTTOM: #e0e0e0 1px outset;
+	BACKGROUND-COLOR: #b0c4de
+}
+DIV.menuBar A.menuButtonActive
+{
+	BORDER-RIGHT: #e0e0e0 1px inset;
+	BORDER-TOP: #e0e0e0 1px inset;
+	LEFT: 1px;
+	BORDER-LEFT: #e0e0e0 1px inset;
+	COLOR: #000000;
+	BORDER-BOTTOM: #e0e0e0 1px inset;
+	TOP: 1px;
+	BACKGROUND-COLOR: #b0c4de
+}
+DIV.menuBar A.menuButtonActive:hover
+{
+	BORDER-RIGHT: #e0e0e0 1px inset;
+	BORDER-TOP: #e0e0e0 1px inset;
+	LEFT: 1px;
+	BORDER-LEFT: #e0e0e0 1px inset;
+	COLOR: #000000;
+	BORDER-BOTTOM: #e0e0e0 1px inset;
+	TOP: 1px;
+	BACKGROUND-COLOR: #b0c4de
+}
+DIV.menu DIV.menuItemHdr
+{
+	PADDING-RIGHT: 1em;
+	PADDING-LEFT: 1em;
+	FONT-WEIGHT: bold;
+	PADDING-BOTTOM: 3px;
+	PADDING-TOP: 3px
+}
+DIV.menu A.menuItem:hover
+{
+	COLOR: #ffffff;
+	BACKGROUND-COLOR: #6699cc
+}
+DIV.menu A.menuItemHighlight
+{
+	COLOR: #ffffff;
+	BACKGROUND-COLOR: #6699cc
+}
+DIV.menu A.menuItem SPAN.menuItemText
+{
+}
+DIV.menu A.menuItem SPAN.menuItemArrow
+{
+	MARGIN-RIGHT: -0.75em
+}
+DIV.menu DIV.menuItemSep
+{
+	BORDER-TOP: #6699cc 1px inset;
+	MARGIN: 4px 2px;
+	BORDER-BOTTOM: #ffffff 1px inset
+}
+DIV.homeMenuTable
+{
+	PADDING-LEFT: 10px
+}
+DIV.homeMenu
+{
+	PADDING-RIGHT: 4px;
+	PADDING-LEFT: 4px;
+	PADDING-BOTTOM: 4px;
+	PADDING-TOP: 4px;
+	BACKGROUND-COLOR: #eee8aa;
+	TEXT-ALIGN: left
+}
+DIV.homeMenu A.homeMenuButton
+{
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 0px;
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 8pt;
+	LEFT: 0px;
+	PADDING-BOTTOM: 0px;
+	MARGIN: 1px;
+	CURSOR: default;
+	COLOR: #000000;
+	PADDING-TOP: 0px;
+	FONT-FAMILY: Arial;
+	POSITION: relative;
+	TOP: 0px;
+	BACKGROUND-COLOR: transparent;
+	TEXT-DECORATION: none
+}
+DIV.homeMenu A.homeMenuButton:hover
+{
+	COLOR: #000000;
+	BACKGROUND-COLOR: #ffffe0
+}
+DIV.homeUL
+{
+	FONT-SIZE: 8pt;
+	BACKGROUND: white;
+	COLOR: black;
+	FONT-FAMILY: Arial
+}
+DIV.RegText
+{
+	FONT-SIZE: 10pt;
+	FONT-FAMILY: Arial
+}
+DIV.BlueRegText
+{
+	FONT-SIZE: 10pt;
+	COLOR: blue;
+	FONT-FAMILY: Arial
+}
+DIV.menuBar SPAN.verticalbar
+{
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 10pt;
+	COLOR: white;
+	BACKGROUND-COLOR: #6699cc
+}
+DIV.tooltip
+{
+	BORDER-RIGHT: 1px solid;
+	PADDING-RIGHT: 2px;
+	BORDER-TOP: 1px solid;
+	PADDING-LEFT: 2px;
+	FONT-SIZE: 8pt;
+	Z-INDEX: 200;
+	LEFT: 0px;
+	VISIBILITY: hidden;
+	PADDING-BOTTOM: 2px;
+	BORDER-LEFT: 1px solid;
+	PADDING-TOP: 2px;
+	BORDER-BOTTOM: 1px solid;
+	FONT-FAMILY: Tahoma;
+	POSITION: absolute;
+	TOP: 0px;
+	BACKGROUND-COLOR: #ffffe1
+}
+DIV.tooltip A.menuItem
+{
+	PADDING-RIGHT: 1px;
+	DISPLAY: block;
+	PADDING-LEFT: 1px;
+	FONT-WEIGHT: normal;
+	FONT-SIZE: 8pt;
+	Z-INDEX: 99999;
+	PADDING-BOTTOM: 1px;
+	CURSOR: default;
+	COLOR: #000000;
+	PADDING-TOP: 1px;
+	FONT-STYLE: normal;
+	FONT-FAMILY: Arial;
+	WHITE-SPACE: nowrap;
+	POSITION: relative;
+	BACKGROUND-COLOR: #ffffe1;
+	TEXT-DECORATION: none
+}
+A
+{
+	COLOR: blue
+}
+TR.clsHeading
+{
+	/*FONT-WEIGHT: bold;*/
+	BACKGROUND-COLOR: lightsteelblue
+}
+TR.clsCatGroupHeading
+{
+	FONT-WEIGHT: bold;
+	BACKGROUND-COLOR: #bbbbbb
+}
+TR.clsSWCatGroupHeading
+{
+	FONT-WEIGHT: bold;
+	BACKGROUND-COLOR: #996633
+}
+TR.clsCatHeading
+{
+	FONT-WEIGHT: bold;
+	BACKGROUND-COLOR: palegoldenrod
+}
+TR.clsGray
+{
+	FONT-SIZE: 12px;
+	BACKGROUND-COLOR: #cccccc
+}
+TR.clsWhite
+{
+	FONT-SIZE: 12px;
+	BACKGROUND-COLOR: white
+}
+TR.clsModDelete
+{
+	COLOR: gray;
+	TEXT-DECORATION: line-through
+}
+TR.clsModAdd
+{
+}
+TD.clsMouseOver
+{
+	CURSOR: pointer;
+	TEXT-DECORATION: underline
+}
+TD.clsRW
+{
+	color:blue;
+	text-decoration:underline;
+	cursor:pointer
+}
+TD.clsDelMOL_REQUEST_NEW
+{
+	FONT-WEIGHT: bold;
+	COLOR: green
+}
+TD.clsDelMOL_REQUEST_OLD
+{
+	BACKGROUND-COLOR: #999999;
+	COLOR: black
+}
+TD.clsDelMOL_REQUEST_DROPPED
+{
+	BACKGROUND-COLOR: #999999;
+	COLOR: black
+}
+TD.clsDelMOL_REQUEST_NA
+{
+	BACKGROUND-COLOR: #CCCCCC;
+	COLOR: black
+}
+TD.clsDelRWMOL_REQUEST_NEW
+{
+	FONT-WEIGHT: bold;
+	COLOR: blue
+}
+TD.clsDelRWMOL_REQUEST_OLD
+{
+	BACKGROUND-COLOR: #999999;
+	COLOR: blue
+}
+TD.clsDelRWMOL_REQUEST_DROPPED
+{
+	BACKGROUND-COLOR: #999999;
+	COLOR: blue
+}
+TD.clsDelDecommit
+{
+}
+TD.clsPCAAdd
+{
+	COLOR: red
+}
+TD.clsPCADelete
+{
+	COLOR: #565656;
+	TEXT-DECORATION: line-through
+}
+TH.clsPCAAdd
+{
+	COLOR: red
+}
+TH.clsPCADelete
+{
+	COLOR: #565656;
+	TEXT-DECORATION: line-through
+}
+TD.clsComMOL_COMMIT_YES
+{
+	BACKGROUND-COLOR: #66cc66;
+}
+TD.clsComMOL_COMMIT_NO
+{
+	BACKGROUND-COLOR: #ff5858;
+}
+TD.clsComMOL_COMMIT_MAYBE
+{
+	BACKGROUND-COLOR: #ffff99;
+}
+TD.clsComMOL_COMMIT_NA
+{
+	BACKGROUND-COLOR: #e1e1e1;
+}
+TD.clsComRWMOL_COMMIT_PENDING
+{
+	CURSOR: pointer;
+	COLOR: blue;
+	TEXT-DECORATION: underline
+}TD.clsComRWMOL_COMMIT_YES
+{
+	BACKGROUND-COLOR: #66cc66;
+	CURSOR: pointer;
+	COLOR: blue;
+	TEXT-DECORATION: underline
+}
+TD.clsComRWMOL_COMMIT_NO
+{
+	BACKGROUND-COLOR: #ff5858;
+	CURSOR: pointer;
+	COLOR: blue;
+	TEXT-DECORATION: underline
+}
+TD.clsComRWMOL_COMMIT_MAYBE
+{
+	BACKGROUND-COLOR: #ffff99;
+	CURSOR: pointer;
+	COLOR: blue;
+	TEXT-DECORATION: underline
+}
+TD.clsComRWMOL_COMMIT_NA
+{
+	BACKGROUND-COLOR: #e1e1e1;
+	CURSOR: pointer;
+	COLOR: blue;
+	TEXT-DECORATION: underline
+}
+TD.clsComRWBORDERMOL_COMMIT_PENDING
+{
+	CURSOR: pointer;
+	COLOR: blue;
+	TEXT-DECORATION: underline;
+	BORDER-TOP: black 2px solid
+}
+TD.clsComRWBORDERMOL_COMMIT_YES
+{
+	BACKGROUND-COLOR: #66cc66;
+	CURSOR: pointer;
+	COLOR: blue;
+	TEXT-DECORATION: underline;
+	BORDER-TOP: black 2px solid
+}
+TD.clsComRWBORDERMOL_COMMIT_NO
+{
+	BACKGROUND-COLOR: #ff5858;
+	CURSOR: pointer;
+	COLOR: blue;
+	TEXT-DECORATION: underline;
+	BORDER-TOP: black 2px solid
+}
+TD.clsComRWBORDERMOL_COMMIT_MAYBE
+{
+	BACKGROUND-COLOR: #ffff99;
+	CURSOR: pointer;
+	COLOR: blue;
+	TEXT-DECORATION: underline;
+	BORDER-TOP: black 2px solid
+}
+TD.clsComRWBORDERMOL_COMMIT_NA
+{
+	BACKGROUND-COLOR: #e1e1e1;
+	CURSOR: pointer;
+	COLOR: blue;
+	TEXT-DECORATION: underline;
+	BORDER-TOP: black 2px solid
+}
+TD.clsComRW
+{
+	COLOR: blue;
+	CURSOR: pointer;
+	TEXT-DECORATION: underline
+}
+TD.clsComRWBORDER
+{
+	COLOR: blue;
+	CURSOR: pointer;
+	TEXT-DECORATION: underline;
+	BORDER-TOP: black 2px solid
+}
+TR.clsNextModule
+{
+	BORDER-TOP: black 2px solid
+}
+TD.clsNextModule
+{
+	BORDER-TOP: black 2px solid
+}
+FONT.clsCom
+{
+	FONT-WEIGHT:bold
+}
+FONT.clsComMOL_COMMIT_YES
+{
+	FONT-WEIGHT:bold;
+	COLOR: #66cc66
+}
+FONT.clsComMOL_COMMIT_NO
+{
+	FONT-WEIGHT:bold;
+	COLOR: #ff5858
+}
+FONT.clsComMOL_COMMIT_MAYBE
+{
+	FONT-WEIGHT:bold;
+	COLOR: #cfcf69
+}
+FONT.clsComMOL_COMMIT_NA
+{
+	FONT-WEIGHT:bold; 
+	COLOR: #9b9b9b
+}
+FONT.clsOldDel
+{
+	FONT-WEIGHT:normal; 
+	COLOR: black; 
+	TEXT-DECORATION: line-through
+}
+TD.clsTabActive
+{
+	FONT-WEIGHT: bolder;
+	COLOR: blue;
+	BACKGROUND-COLOR: palegoldenrod
+}
+TD.clsTabInactive
+{
+	FONT-WEIGHT: bolder;
+	COLOR: gray;
+	BACKGROUND-COLOR: lightsteelblue
+}
+TD.clsAMO_ChangedCell
+{
+	BACKGROUND-COLOR: #FFFF99;
+}
+TD.clsAMO_ChangedBlankCell
+{
+	BACKGROUND-COLOR: #FFFF99;
+	COLOR: black;
+	TEXT-DECORATION: none
+}
+
+.tblFreezeMain
+{
+   behavior: url(scroll.htc);
+   background-color: white;
+   border: 1px solid black;
+   font-family: Verdana;
+   font-size: 9pt; 
+}
+
+.tblFreezeHeader
+{
+   color: highlighttext;
+}
+
+.tblFreezeBody
+{
+   background-color: #FFFFFF;
+   color: black;
+}
+
+.FieldComment
+{
+	font-size: 10px; 
+	font-style: italic;
+}
+
+.BlueHand
+{
+	COLOR: blue;
+	CURSOR: pointer;
+	TEXT-DECORATION: underline
+}

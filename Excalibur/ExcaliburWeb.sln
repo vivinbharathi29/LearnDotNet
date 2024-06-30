@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.438
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "DummyVBApp", "DummyVBApp.vbproj", "{1EF3EE61-FB39-4533-8171-067C1992819E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HPQ.Excalibur.Data", "HPQ.Excalibur.Data\HPQ.Excalibur.Data.csproj", "{DA72AFB9-AA05-49B8-9125-9715137793D7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1EF3EE61-FB39-4533-8171-067C1992819E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EF3EE61-FB39-4533-8171-067C1992819E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EF3EE61-FB39-4533-8171-067C1992819E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1EF3EE61-FB39-4533-8171-067C1992819E}.Debug|x86.Build.0 = Debug|Any CPU
+		{1EF3EE61-FB39-4533-8171-067C1992819E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EF3EE61-FB39-4533-8171-067C1992819E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EF3EE61-FB39-4533-8171-067C1992819E}.Release|x86.ActiveCfg = Release|Any CPU
+		{1EF3EE61-FB39-4533-8171-067C1992819E}.Release|x86.Build.0 = Release|Any CPU
+		{DA72AFB9-AA05-49B8-9125-9715137793D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA72AFB9-AA05-49B8-9125-9715137793D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA72AFB9-AA05-49B8-9125-9715137793D7}.Debug|x86.ActiveCfg = Debug|x86
+		{DA72AFB9-AA05-49B8-9125-9715137793D7}.Debug|x86.Build.0 = Debug|x86
+		{DA72AFB9-AA05-49B8-9125-9715137793D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA72AFB9-AA05-49B8-9125-9715137793D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA72AFB9-AA05-49B8-9125-9715137793D7}.Release|x86.ActiveCfg = Release|x86
+		{DA72AFB9-AA05-49B8-9125-9715137793D7}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3020391A-E50C-44B0-A732-2D0C696A6113}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfspro.austin.hpicorp.net/tfs/cmit
+		SccProjectUniqueName0 = HPQ.Excalibur.Data\\HPQ.Excalibur.Data.csproj
+		SccProjectName0 = HPQ.Excalibur.Data
+		SccLocalPath0 = HPQ.Excalibur.Data
+		SccLocalPath1 = .
+		SccProjectUniqueName2 = DummyVBApp.vbproj
+		SccLocalPath2 = .
+	EndGlobalSection
+EndGlobal

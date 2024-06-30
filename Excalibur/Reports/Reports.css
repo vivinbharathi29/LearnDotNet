@@ -1,0 +1,71 @@
+BODY
+{
+    FONT-SIZE: xx-small;
+    FONT-FAMILY: Verdana
+}
+.H1
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: large;
+    FONT-FAMILY: Tahoma;
+    TEXT-ALIGN: center
+}
+.H2
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: medium;
+    FONT-FAMILY: Tahoma;
+    TEXT-ALIGN: center
+}
+.H3
+{
+    FONT-SIZE: small;
+    TEXT-ALIGN: center
+}
+.TableTitle
+{
+    BORDER-RIGHT: medium none;
+    BORDER-TOP: medium none;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: x-small;
+    BORDER-LEFT: medium none;
+    BORDER-BOTTOM: medium none;
+    FONT-FAMILY: Tahoma
+}
+.Grid
+{
+    BORDER-COLLAPSE: collapse
+}
+.Grid THEAD TH
+{
+    BORDER-RIGHT: medium none;
+    BORDER-TOP: medium none;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: xx-small;
+    BORDER-LEFT: medium none;
+    COLOR: white;
+    BORDER-BOTTOM: medium none;
+    FONT-FAMILY: Verdana;
+    BACKGROUND-COLOR: black;
+    TEXT-ALIGN: center
+}
+.Grid TBODY TD
+{
+    BORDER-RIGHT: black 1px solid;
+    BORDER-TOP: black 1px solid;
+    FONT-SIZE: xx-small;
+    BORDER-LEFT: black 1px solid;
+    BORDER-BOTTOM: black 1px solid;
+    FONT-FAMILY: Verdana
+}
+TD
+{
+    FONT-SIZE: xx-small;
+    FONT-FAMILY: Verdana
+}
+TH
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: xx-small;
+    FONT-FAMILY: Tahoma
+}

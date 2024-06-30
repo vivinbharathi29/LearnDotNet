@@ -1,0 +1,95 @@
+﻿<style type="text/css">
+        #AgencyInitWorkflowDialog table, #leverageDialog table, #leverageVersionDialog table
+        {
+            border-collapse: collapse;
+            width:100%;
+        }
+        #AgencyInitWorkflowDialog table th, #leverageDialog table th, #leverageVersionDialog table th
+        {
+            height: 20px;
+        }
+        #AgencyInitWorkflowDialog table td, #leverageDialog table td, #leverageVersionDialog table td
+        {
+            padding-left: 5px;
+            padding-right: 3px;
+        }
+</style>
+<div id="AgencyInitWorkflowDialog" title="Initialize Workflow">
+    <div style="padding: 5 0 10 0; margin: 10 0 10 0;">
+        <span class="label">Leverage Previous Version:</span>
+        <input type="hidden" id="hidLeveragedID" name="hidLeveragedID" value="0" />
+        <input type="text" id="txtLeveragedSystem" name="txtLeveragedSystem" value=""
+            readonly="readonly" style="vertical-align: bottom;" />&nbsp;
+        <img id="leverageSearch" src="../images/search-blue.png" alt="Find Platform" border="0"
+            style="vertical-align: bottom;" />
+    </div>
+    <div style="padding: 5 0 10 0; margin: 10 0 10 0;" class="ui-helper-hidden">
+        <span class="label">Deliverable:</span>
+        <select id="ddlDeliverableVersion"></select>
+    </div>    
+    <br />
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Certification
+                </th>
+                <th>
+                    Workflow
+                </th>
+                <th>
+                    Target Milestone
+                </th>
+                <th>
+                    Target Date
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+<div id="leverageDialog" title="Leverage Platform">
+<div style="padding: 5 0 10 0; margin: 10 0 10 0;" class="ui-helper-hidden">
+    <span class="label">Leverage Platform:</span>
+    <select id="selPlatform"></select>
+    </div><br />
+    <input type="hidden" id="deliverableVersionId" />
+    <input type="hidden" id="agencyTypeId" />
+    <table>
+        <thead>
+            <tr>
+                <th colspan="2">
+                    Deliverable
+                </th>
+                <th>
+                    Platform
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr><td><input type="checkbox" /></td><td>Docuemnt 1</td><td>Workflow 1</td></tr>
+        <tr><td><input type="checkbox" /></td><td>Docuemnt 2</td><td>Workflow 1</td></tr>
+        <tr><td><input type="checkbox" /></td><td>Docuemnt 3</td><td>Workflow 1</td></tr>
+        <tr><td><input type="checkbox" /></td><td>Docuemnt 4</td><td>Workflow 1</td></tr>
+        <tr><td><input type="checkbox" /></td><td>Docuemnt 5</td><td>Workflow 5</td></tr>
+        </tbody>
+    </table>
+</div>
+<div id="leverageVersionDialog">
+    <div style="padding: 5 0 10 0; margin: 10 0 10 0;" >
+        <span class="label">Leverage PreviousVersion:</span>
+        <select id="selDelVersion"></select>
+    </div><br />
+    <input type="hidden" id="targetVersionId" />
+    <input type="hidden" id="sourceVersionId" />
+    <table>
+        <thead><tr><th><input type="checkbox" class="checkAll" /></th><th>Document</th></tr></thead>
+        <tbody>
+            <tr><td><input type="checkbox" /></td><td>Document 1</td></tr>
+            <tr><td><input type="checkbox" /></td><td>Document 2</td></tr>
+            <tr><td><input type="checkbox" /></td><td>Document 3</td></tr>
+            <tr><td><input type="checkbox" /></td><td>Document 4</td></tr>
+        </tbody>
+    </table>
+</div>

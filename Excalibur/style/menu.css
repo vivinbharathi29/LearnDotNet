@@ -1,0 +1,135 @@
+BODY
+{
+
+}
+*
+{
+    FONT-SIZE: 10px;
+    FONT-FAMILY: verdana, arial, tahoma, helvetica
+}
+UL
+{
+    BORDER-RIGHT: 0px;
+    PADDING-RIGHT: 0px;
+    BORDER-TOP: 0px;
+    DISPLAY: block;
+    PADDING-LEFT: 0px;
+    PADDING-BOTTOM: 0px;
+    MARGIN: 0px;
+    BORDER-LEFT: 0px;
+    PADDING-TOP: 0px;
+    BORDER-BOTTOM: 0px
+}
+LI
+{
+    BORDER-RIGHT: 0px;
+    PADDING-RIGHT: 0px;
+    BORDER-TOP: 0px;
+    DISPLAY: block;
+    PADDING-LEFT: 0px;
+    PADDING-BOTTOM: 0px;
+    MARGIN: 0px;
+    BORDER-LEFT: 0px;
+    PADDING-TOP: 0px;
+    BORDER-BOTTOM: 0px
+}
+A
+{
+    BORDER-RIGHT: 0px;
+    PADDING-RIGHT: 0px;
+    BORDER-TOP: 0px;
+    DISPLAY: block;
+    PADDING-LEFT: 0px;
+    PADDING-BOTTOM: 0px;
+    MARGIN: 0px;
+    BORDER-LEFT: 0px;
+    PADDING-TOP: 0px;
+    BORDER-BOTTOM: 0px
+}
+UL
+{
+    BORDER-RIGHT: #9d9da1 1px solid;
+    BORDER-TOP: #9d9da1 1px solid;
+    BACKGROUND: white;
+    BORDER-LEFT: #9d9da1 1px solid;
+    WIDTH: 150px;
+    BORDER-BOTTOM: #9d9da1 1px solid;
+    LIST-STYLE-TYPE: none
+}
+LI
+{
+    PADDING-RIGHT: 1px;
+    PADDING-LEFT: 1px;
+    Z-INDEX: 9;
+    PADDING-BOTTOM: 1px;
+    PADDING-TOP: 1px;
+    POSITION: relative
+}
+LI.spacer
+{
+    LINE-HEIGHT: 1px
+}
+LI.folder
+{
+    BACKGROUND: url(../images/item_folder.gif) no-repeat
+}
+LI.folder UL
+{
+    LEFT: 120px;
+    POSITION: absolute;
+    TOP: 5px
+}
+A
+{
+    BORDER-RIGHT: white 1px solid;
+    PADDING-RIGHT: 2px;
+    BORDER-TOP: white 1px solid;
+    PADDING-LEFT: 2px;
+    PADDING-BOTTOM: 2px;
+    BORDER-LEFT: white 1px solid;
+    WIDTH: 100%;
+    COLOR: dimgray;
+    PADDING-TOP: 2px;
+    BORDER-BOTTOM: white 1px solid;
+    TEXT-DECORATION: none
+}
+LI A.submenu
+{
+}
+LI.default A
+{
+    FONT-WEIGHT: bold
+}
+A:hover
+{
+    BORDER-LEFT-COLOR: gray;
+    BORDER-BOTTOM-COLOR: gray;
+    COLOR: black;
+    BORDER-TOP-COLOR: gray;
+    BACKGROUND-COLOR: #bbb7c7;
+    BORDER-RIGHT-COLOR: gray
+}
+LI.folder A:hover
+{
+    BACKGROUND-COLOR: #bbb7c7
+}
+LI.folder:hover
+{
+    Z-INDEX: 10
+}
+UL UL
+{
+    DISPLAY: none
+}
+LI:hover UL UL
+{
+    DISPLAY: none
+}
+LI:hover UL
+{
+    DISPLAY: block
+}
+LI:hover LI:hover UL
+{
+    DISPLAY: block
+}

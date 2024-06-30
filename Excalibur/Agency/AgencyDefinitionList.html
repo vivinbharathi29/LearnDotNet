@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+                // Agency Status Definition List
+            //$("#status").hide();
+            //            $("#status").find("dt").hover(function () {
+            //                document.body.style.cursor = "hand";
+            //                $(this).addClass("highlight");
+            //            }, function () {
+            //                document.body.style.cursor = "auto";
+            //                $(this).removeClass("highlight");
+            //            });
+            //            $('#status').find('dd').hide().end().find('dt').click(function () {
+            //                $(this).next().slideToggle();
+            //            });
+            //            $("#status div").click(function () {
+            //                ShowDialog(7212);
+            //            });
+            //            $("#status div").hover(function () {
+            //                document.body.style.cursor = "hand";
+            //                $(this).addClass("highlight");
+            //            }, function () {
+            //                document.body.style.cursor = "auto";
+
+            //                $(this).removeClass("highlight");
+            //            });
+
+</head>
+<body>
+        <dl id="status">
+            <% Do Until rs.EOF %>
+            <% If sLastProduct <> rs("product_name")&"" Then
+            sLastProduct = rs("product_name") & ""
+            If Not bFirstPass Then
+                Response.Write "</dd></dl></dd>"
+            End If
+            %>
+            <dt class="green">
+                <%=sLastProduct %></dt>
+            <dd>
+                <%
+            sLastAgency = ""
+            bFirstPass = False
+            bFirstCountry = True
+            End If 
+                %>
+                <%
+            If sLastAgency <> rs("agency_name")&"" Then
+                sLastAgency = rs("agency_name") & ""
+                If Not bFirstCountry Then Response.Write "</dd>"
+                %>
+                <div class="green">
+                    <%=sLastAgency %>
+                    <input type="hidden" value="<%=rs("agency_status_id")&""%>" /></div>
+                <%
+            
+            bFirstCountry = False
+            End If
+                %>
+                <%rs.MoveNext %>
+                <% Loop %>
+            </dd>
+        </dl>
+        <%
+
+rs.close
+        %>
+</body>
+</html>

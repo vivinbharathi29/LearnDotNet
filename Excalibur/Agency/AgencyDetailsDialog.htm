@@ -1,0 +1,198 @@
+﻿<style type="text/css">
+#AgencyDetailsDialog .labelCol
+{
+    vertical-align: top;
+    width: 140px;
+    white-space: nowrap;
+}
+#AgencyDetailsDialog .label, #ChangeLeadTime .label
+{
+    font: bold x-small verdana;
+    vertical-align:bottom;
+}
+#AgencyDetailsDialog .text, #ChangeLeadTime .text
+{
+    font: x-small verdana;
+    vertical-align:bottom;
+}
+#AgencyDetailsDialog table
+{
+    width:100%;
+}
+#wfStatus tbody tr td:nth-child(3)
+{
+    text-align:center;
+}
+</style>
+<div style="display:none;">
+<div id="AgencyDetailsDialog" title="Document Status">
+    <table>
+        <col class="labelCol" />
+        <col />
+        <tr>
+            <td>
+                <span class="label">Doocument:</span>
+            </td>
+            <td>
+                <span class="text" id="lblDocument">Document Name</span></td>
+        </tr>
+        <tr>
+            <td>
+                <span class="label">Workflow:</span>&nbsp;
+            </td>
+            <td>
+                <span class="text" id="lblWorkflow">Workflow Name</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="label">Counties:</span>&nbsp;
+            </td>
+            <td>
+                <span class="text" id="lblCountry">Country List, USA, Mexico, Spain...</span>
+            </td>
+        </tr>
+        <tr id="LeveragedRow" class="ui-helper-hidden">
+            <td>
+                <span class="label">Leveraging:</span>
+            </td>
+            <td>
+                <span class="text" id="lblLeveraged">Raptor 1.0</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="label">Current Step:</span>&nbsp;
+            </td>
+            <td>
+                <label class="text" id="lblCurrentStep">Review Documents</label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="label">Target Date:</span>&nbsp;
+            </td>
+            <td>
+                <label class="text" id="lblTargetDt">1/1/2012</label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="label">Days to Target:</span>&nbsp;
+            </td>
+            <td>
+                <label class="text" id="lblDaysToTarget">25</label>
+            </td>
+        </tr>
+        <tr><td colspan="2">
+        <table id="wfStatus" style="width:100%; border-collapse:collapse;">
+        <thead><tr><th>Step</th><th>Target</th><th>Days to Tgt</th><th>Status</th></tr></thead>
+        <tbody><tr><td>Upload Document</td><td>2/1/2011</td><td>45</td><td>Done</td></tr>
+        <tr><td>Review Document</td><td>2/1/2011</td><td>45</td><td>Mark Complete</td></tr>
+        <tr><td>Submit To Country</td><td>2/1/2011</td><td>45</td><td>&nbsp;</td></tr></tbody></table>
+        </td></tr>
+        <tr>
+            <td colspan="2">
+                <span class="label">Notes:</span>
+            </td>
+            </tr><tr>
+            <td colspan="2">
+                <textarea style="width:100%;height:100px" id="txtNotes"></textarea>
+            </td>
+        </tr>
+        <tr id="OrganizerRow" class="ui-helper-hidden">
+            <td>
+                <span class="label">Test Organizer:</span>&nbsp;<font color="red"
+                    size="1">*</font>&nbsp;
+            </td>
+            <td>
+                <input type="text" id="txtTestOrganizer" name="txtTestOrganizer" value="" />
+            </td>
+        </tr>
+        <tr id="BudgetRow" class="ui-helper-hidden">
+            <td>
+                <span class="label">Test Budget:</span>&nbsp;<font color="red"
+                    size="1">*</font>&nbsp;
+            </td>
+            <td>
+                <input type="text" id="txtTestBudget" name="txtTestBudget" value="" />
+            </td>
+        </tr>
+        <tr id="CertNo" class="ui-helper-hidden">
+            <td>
+                <span class="label">Certification No:</span>&nbsp;<font color="red"
+                    size="1">*</font>&nbsp;
+            </td>
+            <td>
+                <input type="text" id="txtCertificationNo" name="txtCertificationNo" value="" />
+            </td>
+        </tr>
+        <tr id="DcrPorSelectRow" class="ui-helper-hidden">
+            <td>
+                <span class="label">Added By:</span>&nbsp;<font color="red"
+                    size="1">*</font>&nbsp;
+            </td>
+            <td>
+                <select id="cboPorDcr" name="cboPorDcr" onchange="cboPorDcr_onchange();">
+                    <option value="">-- Select One --</option>
+                    <option value="POR">POR</option>
+                    <option value="DCR">DCR</option>
+                </select>
+            </td>
+        </tr>
+        <tr id="DcrSelectRow" style="display: none">
+            <td>
+                <span class="label">Added By DCR:</span>&nbsp;<font color="red"
+                    size="1">*</font>&nbsp;
+            </td>
+            <td>
+                <select id="cboDcr" name="cboDcr">
+                    <option value="">-- Select A DCR --</option>
+                    <!-- TODO: Get DCR Statuses -->
+                </select>
+            </td>
+        </tr>
+    </table>
+    <input type="hidden" id="AgencyStatusId" />
+</div>
+<div id="ChangeLeadTime" title="Change Lead Time">
+<table><tbody>
+<tr><td><span class="label">Current Target:</span></td><td><span id="CurrentTargetDt" class="text">12/1/2011</span></td></tr>
+<tr><td><span class="label">Current Due Dt.:</span></td><td><span id="CurrentDueDt" class="text">11/1/2011</span></td></tr>
+<tr><td><span class="label">New Due Dt.:</span></td><td><input type="text" id="txtNewDueDt" /></td></tr>
+</tbody></table>
+<input type="hidden" id="hidWorkflowId" />
+</div>
+
+<div id="AgencyUploadDocument" title="Upload Documents">
+<table>
+        <col class="labelCol" />
+        <col />
+        <tr>
+            <td>
+                <span class="label">Doocument:</span>
+            </td>
+            <td>
+                <span class="text" id="DocName">Document Name</span></td>
+        </tr>
+        <tr id="UploadDocs">
+            <td>
+                <span class="label">Documents:</span>
+            </td>
+            <td>
+                <input id="documentUpload" name="documentUpload" type="file" />
+                <a id="startFileUpload" style="display: none" href="javascript:$('#documentUpload').uploadifyUpload()">Upload Files</a>
+                <input id="uploadedDocuments" type="hidden" />
+            </td>
+        </tr>
+        <tr id="DocumentPath" style="display:none;">
+            <td>
+                <span class="label">Documents:</span>
+            </td>
+            <td>
+				<ul id="documentList" /> 
+            </td>
+        </tr>
+</table>
+</div>
+</div>

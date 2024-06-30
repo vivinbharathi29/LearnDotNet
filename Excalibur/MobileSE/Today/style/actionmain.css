@@ -1,0 +1,317 @@
+﻿@import url("font-awesome.min.css");
+
+/**************************************************************************************
+'* FileName		: actionmain.css
+'* Description	: CSS styles for ActionMain.asp page 
+'* Creator		: Harris, Valerie
+'* Created		: 02/4/2016 - PBI 15660/ Task 16234
+'**************************************************************************************/
+/* SCROLL DIV
+----------------------------------------------------------*/
+.scroll-box {
+   background-color:#FFFFFF !important;
+   width: 310px !important;  
+   height: 350px !important;
+   overflow-x: hidden !important;
+   overflow-y: auto !important;
+   border: 1px solid #5A5A5A !important;
+}
+
+.scroll-box-small {
+   background-color:#FFFFFF !important;
+   width: 225px !important;  
+   height: 250px !important;
+   overflow-x: hidden !important;
+   overflow-y: auto !important;
+   border: 1px solid #5A5A5A !important;
+}
+
+/* SHADE TABLES
+----------------------------------------------------------*/
+table.shade
+{
+    background-color:#FFFFFF !important;
+    border-collapse:collapse;
+    margin: 1px 0px 1px 0px;
+    margin-left: 5px !important;
+    font-size:10px !important;
+    width: 280px !important; 
+}
+
+#TBLChangeRequestGroup{
+    margin: 0px 0px 0px 0px !important;
+    margin-left: 0px !important;
+    width: 75% !important; 
+}
+
+table.shade td, table.shade th 
+{
+    font-size: 12px;
+    border:1px solid #c3c0c0;
+    padding:2px 2px 2px 2px;
+}
+table.shade th {
+    font-size:11px;
+    text-align:left;
+    padding-top:2px;
+    padding-bottom:2px;
+    background-color:#5A5A5A;
+    color:#FFFFFF;
+    font-weight: bold;
+    vertical-align: middle;
+}
+table.shade tr.alt td 
+{
+    color:#000000 !important;
+    background-color:#edeaea !important;
+}
+table.shade tr.child-row td 
+{
+    color:#000000 !important;
+    background-color:#d0e9f3 !important;
+}
+table.shade tr.heading-row td
+{
+    font-size:14px;
+    text-align:left;
+    padding-top:2px;
+    padding-bottom:2px;
+    background-color:#5A5A5A;
+    color:#FFFFFF;
+    font-weight: bold;
+    vertical-align: left;
+}
+
+#divProductGroup{
+    margin: 0px !important;
+}
+
+#TBLProductLines{
+    margin: 0px 0px 0px 0px !important;
+    margin-left: 0px !important;
+    width: 100% !important;
+}
+
+/*ul - custom = three column; list - one column
+----------------------------------------------------------*/
+ul.custom{
+    list-style-type: none !important;
+    padding-left:3px !important;
+    width: 30em;
+    margin-top:0px;
+    margin-bottom:0px;
+}
+ul.custom li{
+    list-style-type: none !important;
+    background-repeat: no-repeat;
+    background-position: top left; 
+    line-height:160% !important;
+    margin-top:0px;
+    margin-bottom:0px;
+    float: left;
+    width: 8em;
+}
+ul.list{
+    list-style-type: none !important;
+    padding-left:3px !important;
+    margin-top:0px;
+    margin-bottom:0px;
+}
+ul.list li{
+    list-style-type: none !important;
+    background-repeat: no-repeat;
+    background-position: top left; 
+    line-height:160% !important;
+    margin-top:0px;
+    margin-bottom:0px;
+}
+
+ul.child-list{
+    list-style-type: none !important;
+    padding-left:3px !important;
+    margin-top:0px;
+    margin-bottom:0px;
+}
+ul.child-list li{
+    list-style-type: none !important;
+    background-repeat: no-repeat;
+    background-position: top left; 
+    line-height:160% !important;
+    margin-left: 25px !important;
+    margin-top:0px;
+    margin-bottom:0px;
+}
+
+ul.list li.PB10{
+    padding-bottom: 10px !important;
+}
+
+ul.custom li.nobullet, ul.list li.nobullet, ul.child-list li.nobullet {
+    list-style-type: none !important;
+}
+
+ul.custom li.square, ul.list li.square, ul.child-list li.square{
+    list-style-type: square !important;
+}
+
+/* CUSTOM  
+----------------------------------------------------------*/
+.hide 
+{
+    display: none !important;
+}
+.show 
+{
+    display: inline !important;
+}
+.show-row
+{
+    display: table-row !important;
+    color:#000000 !important;
+}
+
+.show-col
+{
+    display: table-cell !important;
+}
+.disabled 
+{
+    opacity: 0.7;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+    filter: alpha(opacity=70);
+    -moz-opacity:0.7;
+    -khtml-opacity: 0.7;
+}
+.button
+{
+    font-size: 10px !important;
+}
+.small-input
+{
+    font-size: 10px !important;
+    width: 100% !important;
+}
+.center 
+{
+    text-align: center !important;
+}
+
+.left 
+{
+    text-align: left !important;
+}
+
+.right
+{
+    text-align: right !important;
+}
+.font-small{
+    font-size: 10px !important;
+    font-weight: bold;
+}
+.font-medium{
+    font-size: 12px !important;
+    font-weight: bold;
+}
+.font-title{
+    font-size: 12px !important;
+}
+.help{
+    cursor: help;
+}
+.font-red{
+    color: #CC0000 !important;
+}
+.font-hpblue{
+    color: #0096d6 !important;
+}
+.font-darkgray{
+    color: #5A5A5A !important;
+}
+.font-black{
+    color: #000000 !important;
+}
+.w5
+{
+    width: 5px !important;
+    word-wrap: break-word;
+}
+.w10
+{
+    width: 10px !important;
+    word-wrap: break-word;
+}
+.w20
+{
+    width: 20px !important;
+    word-wrap: break-word;
+}
+.w300
+{
+    width: 300px !important;
+    word-wrap: break-word;
+}
+.w375
+{
+    width: 375px !important;
+    word-wrap: break-word;
+}
+.w260
+{
+    width: 260px !important;
+    word-wrap: break-word;
+}
+em.fa {
+    /*border: 1px solid #FF0000;*/
+    display: inline-block;
+    height: 11px;
+    overflow: hidden;
+    position: relative;
+    width: 15px;
+}
+
+em.all-option {
+     /*border: 1px solid #FF0000;*/
+    display: inline-block;
+    top: 4px;
+    height: 11px;
+    overflow: hidden;
+    position: relative;
+    width: 11px;
+}
+.pointer{
+    cursor:pointer;
+}
+.bg-lightblue {
+    color:#000000 !important;
+    background-color: #d0e9f3 !important;
+}
+.bg-gray {
+    color:#FFFFFF !important;
+    background-color:#5A5A5A;
+}
+.select-group, .select-businesssegment, .select-productlines{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px !important;
+    margin-right: 12px !important;
+}
+p.select-title{
+    white-space: nowrap;
+    font-weight: bold !important;
+    text-decoration: underline !important;
+    margin-bottom: 5px !important;
+    margin-top:0px;
+}
+.select-group ul li {
+    padding-bottom: 3px !important;
+}
+
+a.grp-header{
+    display: inline-block;
+    padding-bottom: 4px !important;
+}
+
+.no-padding{
+    padding: 0px !important;
+    margin: 0px !important;
+}

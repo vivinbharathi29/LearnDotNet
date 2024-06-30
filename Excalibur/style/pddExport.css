@@ -1,0 +1,55 @@
+BODY
+{
+    FONT-SIZE: xx-small
+}
+TH
+{
+    PADDING-RIGHT: 2px;
+    PADDING-LEFT: 2px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: x-small;
+    PADDING-BOTTOM: 2px;
+    COLOR: white;
+    PADDING-TOP: 2px;
+    FONT-FAMILY: Tahoma, Arial;
+    BACKGROUND-COLOR: black;
+    TEXT-ALIGN: left
+}
+TD
+{
+    PADDING-RIGHT: 2px;
+    PADDING-LEFT: 2px;
+    FONT-SIZE: xx-small;
+    PADDING-BOTTOM: 2px;
+    PADDING-TOP: 2px;
+    FONT-FAMILY: Verdana;
+    TEXT-ALIGN: left
+}
+H1
+{
+    FONT-SIZE: medium;
+    FONT-FAMILY: Tahoma
+}
+.Header
+{
+    PADDING-RIGHT: 2px;
+    PADDING-LEFT: 2px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: x-small;
+    PADDING-BOTTOM: 2px;
+    COLOR: white;
+    PADDING-TOP: 2px;
+    FONT-FAMILY: Tahoma, Arial;
+    BACKGROUND-COLOR: black;
+    TEXT-ALIGN: left
+}
+.Cell
+{
+    PADDING-RIGHT: 2px;
+    PADDING-LEFT: 2px;
+    FONT-SIZE: xx-small;
+    PADDING-BOTTOM: 2px;
+    PADDING-TOP: 2px;
+    FONT-FAMILY: Verdana;
+    TEXT-ALIGN: left
+}

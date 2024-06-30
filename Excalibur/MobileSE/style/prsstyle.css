@@ -1,0 +1,27 @@
+BODY
+{
+    FONT-SIZE: small;
+    COLOR: black;
+    FONT-FAMILY: Tahoma, Verdana, Arial
+}
+H1
+{
+    COLOR: navy;
+    FONT-FAMILY: Tahoma, Verdana, Arial
+}
+A
+{
+    FONT-WEIGHT: bolder
+}
+A:visited
+{
+    COLOR: red
+}
+A:active
+{
+    COLOR: red
+}
+H2
+{
+    COLOR: navy
+}

@@ -1,0 +1,14 @@
+﻿/* CSS IE8   
+----------------------------------------------------------*/
+.rotate-text p {
+    vertical-align:bottom;
+    margin:0 !important;
+    padding:0 !important;
+    zoom:1;
+    -ms-writing-mode:tb-rl;
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+    background-color:#0096d6;
+}
+
+
+

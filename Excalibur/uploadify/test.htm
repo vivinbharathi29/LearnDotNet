@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Uploadify Test</title>
+    <link href="/uploadify/uploadify.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="/includes/client/jquery-1.4.4.min.js"></script>
+    <script type="text/javascript" src="/includes/client/jquery-ui-1.8.2.custom.min.js"></script>
+    <script type="text/javascript" src="/uploadify/swfobject.js"></script>
+    <script type="text/javascript" src="/uploadify/jquery.uploadify.v2.1.4.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#file_upload').uploadify({
+                'uploader': '../uploadify/uploadify.swf',
+                'script': '../uploadify/uploadify.ashx',
+                'cancelImg': '../uploadify/cancel.png',
+                'folder': '/uploads',
+                'auto': true,
+                'multi': true,
+                'removeCompleted': false,
+                'onComplete': function (event, ID, fileObj, response, data) {
+                    $('#results_div').append(fileObj.name);
+                },
+                'auto': false,
+                'onSelectOnce': function (event, data) {
+                    $('#file_upload_start').show();
+                }
+
+            });
+        });
+    </script>
+</head>
+<body>
+    <input id="file_upload" name="file_upload" type="file" />
+    <a id="file_upload_start" style="display: none" href="javascript:$('#file_upload').uploadifyUpload()">
+        Upload Files</a>
+    <div id="results_div">
+    </div>
+</body>
+</html>

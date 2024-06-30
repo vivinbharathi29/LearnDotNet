@@ -1,0 +1,169 @@
+BODY
+{
+    FONT-SIZE: x-small;
+    FONT-FAMILY: Verdana;
+    background-color:#FFFFF0;
+}
+.Title
+{
+	font: bold medium Verdana;
+}
+.table
+{
+    BORDER-RIGHT: medium none;
+    BORDER-TOP: medium none;
+    FONT-SIZE: xx-small;
+    BORDER-LEFT: medium none;
+    BORDER-BOTTOM: medium none;
+    FONT-FAMILY: Verdana;
+    border-collapse:collapse;
+}
+
+.th th
+{
+    BORDER-TOP: gray 1px solid;
+    FONT-WEIGHT: bolder;
+    FONT-SIZE: xx-small;
+    LINE-HEIGHT: 15px;
+    BORDER-BOTTOM: gray 1px solid;
+    FONT-FAMILY: Verdana;
+    BACKGROUND-COLOR: beige;
+    TEXT-ALIGN: left
+}
+.td td
+{
+    FONT-SIZE: xx-small;
+    VERTICAL-ALIGN: top;
+    BORDER-BOTTOM: gray 1px solid;
+    FONT-FAMILY: Verdana;
+    BACKGROUND-COLOR: ivory
+}
+.td-DarkSeaGreen1 td
+{
+    FONT-SIZE: xx-small;
+    VERTICAL-ALIGN: top;
+    BORDER-BOTTOM: gray 1px solid;
+    FONT-FAMILY: Verdana;
+    BACKGROUND-COLOR: #C3FDB8
+}
+.td-SlateGray3 td
+{
+    FONT-SIZE: xx-small;
+    VERTICAL-ALIGN: top;
+    BORDER-BOTTOM: gray 1px solid;
+    FONT-FAMILY: Verdana;
+    BACKGROUND-COLOR: #98AFC7
+}
+A:hover
+{
+    FONT-SIZE: xx-small;
+    COLOR: red;
+    FONT-FAMILY: Verdana
+}
+A
+{
+    FONT-SIZE: xx-small;
+    COLOR: blue;
+    FONT-FAMILY: Verdana
+}
+.MenuBar
+{
+    BACKGROUND-COLOR: white
+}
+.MenuBar A:visited
+{
+    COLOR: white;
+    TEXT-DECORATION: none
+}
+.MenuBar A:link
+{
+    COLOR: white;
+    TEXT-DECORATION: none
+}
+.MenuBar A:hover
+{
+    COLOR: yellow;
+    TEXT-DECORATION: none
+}
+.MenuBar TD
+{
+    BACKGROUND-COLOR: #0096d6;
+}
+.MenuBar TD.ButtonSelected
+{
+    COLOR: black;
+    BACKGROUND-COLOR: wheat
+}
+.HighlightRow TD.GreenRow
+{
+    BACKGROUND-COLOR: #99cc99
+}
+.HighlightRow TD.BrownRow
+{
+    BACKGROUND-COLOR: #cccc99
+}
+.FormArea
+{
+    BACKGROUND-COLOR: thistle
+}
+.FormArea TD
+{
+    BACKGROUND-COLOR: lavender
+}
+.HighlightRow TD.WhiteRow
+{
+    BACKGROUND-COLOR: white
+}
+.AlternateRow
+{
+    BACKGROUND-COLOR: white
+}
+.HighlightRow TD.RedRow
+{
+    BACKGROUND-COLOR: mistyrose
+}
+.HighlightRow TD.BlueRow
+{
+    BACKGROUND-COLOR: lightsteelblue
+}
+H3
+{
+    FONT-SIZE: small;
+    FONT-FAMILY: Verdana
+}
+.FormTable
+{
+    BORDER-RIGHT: tan 1px solid;
+    BORDER-TOP: tan 1px solid;
+    BORDER-LEFT: tan 1px solid;
+    BORDER-BOTTOM: tan 1px solid;
+    BACKGROUND-COLOR: cornsilk
+}
+.FormTable TR
+{
+    BACKGROUND-COLOR: cornsilk
+}
+.FormTable TR TD
+{
+    BORDER-RIGHT: tan 1px solid;
+    BORDER-TOP: tan 1px solid;
+    BORDER-LEFT: tan 1px solid;
+    BORDER-BOTTOM: tan 1px solid;
+    BACKGROUND-COLOR: cornsilk
+}
+.FormTable TR TH
+{
+    BORDER-RIGHT: tan 1px solid;
+    BORDER-TOP: tan 1px solid;
+    FONT-WEIGHT: bolder;
+    BORDER-LEFT: tan 1px solid;
+    BORDER-BOTTOM: tan 1px solid;
+    BACKGROUND-COLOR: cornsilk;
+    VERTICAL-ALIGN: top;
+}
+
+.Note
+{
+	font: verdana x-small;
+	color: Green;
+}

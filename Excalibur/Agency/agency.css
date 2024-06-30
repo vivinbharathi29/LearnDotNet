@@ -1,0 +1,84 @@
+.Illegal
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: xx-small;
+    COLOR: red
+}
+.Embargo
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: xx-small;
+    COLOR: red
+}
+.Unknown
+{
+    COLOR: black;
+    BACKGROUND-COLOR: gold
+}
+.Certification_Late
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: xx-small;
+    COLOR: white;
+    BACKGROUND-COLOR: red
+}
+.Certification_Open
+{
+    FONT-SIZE: xx-small;
+    COLOR: black;
+    BACKGROUND-COLOR: springgreen
+}
+.Certification_Complete
+{
+    FONT-SIZE: xx-small;
+    COLOR: black
+}
+.NotNeeded
+{
+    FONT-SIZE: xx-small;
+    COLOR: black
+}
+.NotSupported
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: xx-small;
+    COLOR: red
+}
+.Changed
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: xx-small;
+    COLOR: black;
+    BACKGROUND-COLOR: yellow
+}
+.AgencyCell
+{
+    FONT-SIZE: xx-small;
+    COLOR: black;
+    FONT-FAMILY: Verdana;
+    BACKGROUND-COLOR: ivory
+}
+TH
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: xx-small;
+    COLOR: beige;
+    FONT-FAMILY: Verdana
+}
+.HeaderRow
+{
+}
+.HeaderRow A
+{
+    COLOR: white;
+    TEXT-DECORATION: none
+}
+.HeaderRow A:active
+{
+}
+.HeaderRow A:link
+{
+}
+.HeaderRow A:visited
+{
+}

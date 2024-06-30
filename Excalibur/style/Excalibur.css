@@ -1,0 +1,627 @@
+BODY
+{
+	font-size: x-small;
+	font-family: Verdana;
+}
+P
+{
+	font-size: x-small;
+}
+A:link
+{
+	color: blue;
+}
+A:visited
+{
+	color: blue;
+}
+A:hover
+{
+	color: red;
+}
+TR
+{
+	font-size: xx-small;
+	font-family: Verdana;
+}
+.Heading
+{
+	font-family: Tahoma;
+	font-size: small;
+	font-weight: bold;
+}
+.ErrorHeading
+{
+	font-family: Tahoma;
+	font-size: small;
+	font-weight: bold;
+	color: Red;
+}
+.reqtable TD
+{
+	font-size: xx-small;
+	font-family: Verdana;
+}
+
+/*
+ * Begin Menu Bar
+ */
+.MenuBar
+{
+}
+.MenuBar TR
+{
+	background-color: #0096d6; /* light blue like megamenu */
+}
+.MenuBar TD
+{
+	font-family: Verdana;
+}
+.MenuBar A:link
+{
+	color: white;
+	font-family: Verdana;
+	text-decoration: none;
+}
+.MenuBar A:visited
+{
+	color: white;
+	font-family: Verdana;
+	text-decoration: none;
+}
+.MenuBar A:hover
+{
+	color: yellow;
+	font-family: Verdana;
+	text-decoration: none;
+}
+.MenuBar TD.ButtonSelected
+{
+	color: black;
+	background-color: #F5DEB3; /* wheat */
+}
+/* End Menu Bar */
+
+.GeneralTableCell TD
+{
+	color: black;
+	font-family: Verdana;
+}
+.DisplayBar
+{
+	width: 100%;
+	padding: 2px;
+	border: solid 2px gray;
+	border-radius: 10px;
+	background-color: #DCDCDC; /* Gainsboro */
+	white-space: nowrap;
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+.DisplayBar TD
+{
+	font-size: xx-small;
+	font-family: Verdana;
+}
+.DisplayTitle
+{
+	color: Navy;
+	font-family: Verdana, Tahoma, Arial, Helvetica;
+	font-size: x-small;
+	font-weight: bold;
+	white-space: nowrap;
+}
+.DisplayFilterType
+{
+	font-weight: bold;
+	white-space: nowrap;
+}
+.FormTable
+{
+	background-color: #FFF8DC; /* Cornsilk */
+	border: solid 2px tan;
+	width: 100%;
+}
+.FormTable TR
+{
+}
+.FormTable TR TD
+{
+	border-right: 1px solid;
+	border-top: 1px solid;
+	border-left: 1px solid;
+	border-bottom: 1px solid;
+	font-size: x-small;
+}
+.FormTable TR TH
+{
+	border-right: 1px solid;
+	padding-right: 2px;
+	border-top: 1px solid;
+	padding-left: 2px;
+	font-weight: bolder;
+	font-size: xx-small;
+	padding-bottom: 2px;
+	vertical-align: top;
+	border-left: 1px solid;
+	padding-top: 2px;
+	border-bottom: 1px solid;
+	text-align: left; /*    width:30% */
+}
+.FormTable THEAD TR TD
+{
+	border-right: 1px solid;
+	padding-right: 2px;
+	border-top: 1px solid;
+	padding-left: 2px;
+	font-weight: bolder;
+	font-size: xx-small;
+	padding-bottom: 2px;
+	vertical-align: top;
+	border-left: 1px solid;
+	padding-top: 2px;
+	border-bottom: 1px solid;
+	text-align: left; /*    width:30% */
+}
+.FormTable #REGION
+{
+	font-weight: bolder;
+	font-size: medium;
+	background-color: #66CDAA; /* MediumAquaMarine */
+}
+.FormTable #REGION TD
+{
+	font-size: x-small;
+}
+.TodayAlerts
+{
+	border-top: dimgray 2px solid;
+	border-bottom: dimgray 2px solid;
+}
+.TodayAlerts TH
+{
+	font-size: xx-small;
+	border-bottom: dimgray 2px solid;
+	background-color: #F5F5DC; /* beige */
+}
+.TodayAlerts TD
+{
+	border-bottom: gray 1px solid;
+	background-color: #FFFFF0; /* ivory */
+}
+.PopUpMenu
+{
+	border-right: dimgray 1px solid;
+	border-top: dimgray 1px solid;
+	margin-top: 0px;
+	margin-left: 0px;
+	border-left: dimgray 1px solid;
+	border-bottom: dimgray 1px solid;
+}
+.MenuItemDefault
+{
+	font-weight: bold;
+	font-size: 10pt;
+	font-family: Verdana, Tahoma, Arial;
+}
+.MenuItemDefault:hover
+{
+	background: dimgray;
+	cursor: hand;
+	color: white;
+}
+.TextBox
+{
+	border-right: gray 1px solid;
+	border-top: gray 1px solid;
+	font-size: xx-small;
+	border-left: gray 1px solid;
+	border-bottom: gray 1px solid;
+	font-family: Verdana;
+	height: 16px;
+}
+.Button
+{
+	font-size: xx-small;
+	width: 80px;
+	font-family: Verdana;
+	height: 20px;
+	text-align: center;
+}
+.Button2
+{
+	font-size: xx-small;
+	width: 50px;
+	font-family: Verdana;
+	height: 20px;
+	text-align: center;
+}
+
+.Label
+{
+	font-size: xx-small;
+	font-family: Verdana;
+}
+
+.LabelHeader
+{
+	font-size: xx-small;
+	font-family: Verdana;
+	font-weight: bold;
+}
+
+.CheckBox
+{
+	width: 16px;
+	height: 16px;
+}
+.Hidden
+{
+	display: none;
+}
+.SelectBox
+{
+	border-right: tan 1px solid;
+	border-top: tan 1px solid;
+	font-size: xx-small;
+	border-left: tan 1px solid;
+	border-bottom: tan 1px solid;
+	font-family: Verdana, Tahoma;
+}
+.ErrorText
+{
+	font-size: xx-small;
+	font-family: Verdana, Arial, Tahoma;
+	color: Red;
+	font-weight: bold;
+}
+.Complete
+{
+	font: normal bold xx-small Verdana, Tahoma;
+	color: Green;
+}
+.Incomplete
+{
+	font: normal bold xx-small Verdana, Tahoma;
+	color: Red;
+}
+/*Modal Popup*/
+.modalBackground
+{
+	background-color: Gray;
+	filter: alpha(opacity=70);
+	opacity: 0.7;
+}
+
+.modalPopup
+{
+	background-color: #ffffdd;
+	border-width: 3px;
+	border-style: solid;
+	border-color: Gray;
+	padding: 3px;
+	width: 250px;
+}
+
+.DisplayNone
+{
+	display: none;
+}
+
+.Table
+{
+	padding: 1px 1px 1px 1px;
+	width: 100%;
+	border: solid 1px tan;
+	border-spacing: 1px;
+	border-collapse: collapse;
+	background-color: #FFFFF0;
+}
+.Table TH, .Table thead th, .ExcaliburTable thead th
+{
+	border: solid 1px tan;
+	white-space: nowrap;
+	background-color: #FFF8DC;
+	text-align: center;
+	vertical-align: middle;
+	font-size: xx-small;
+	font-weight: bold;
+}
+.Table TD, .table tbody td, .ExcaliburTable tbody td
+{
+	border: solid 1px tan;
+	font-size: xx-small;
+	font-family: Verdana;
+}
+.TableCell
+{
+	border-top: gray thin solid;
+	font-size: xx-small;
+	vertical-align: top;
+	font-family: Verdana;
+}
+.TableHeader
+{
+	border-top: gray thin solid;
+	font-weight: bold;
+	font-size: xx-small;
+	vertical-align: middle;
+	text-align: left;
+	line-height: 15px;
+	font-family: Verdana;
+}
+.TableHeader1
+{
+	border-top: gray 1px solid;
+	border-bottom: gray 1px solid;
+	border-left: gray 1px solid;
+	border-right: gray 1px solid;
+	font-weight: bold;
+	font-size: xx-small;
+	vertical-align: middle;
+	text-align: center;
+	line-height: 15px;
+	font-family: Verdana;
+	background-color: #DCDCDC;
+}
+.TableCellCentered
+{
+	border-top: gray 1px solid;
+	border-bottom: gray 1px solid;
+	border-left: gray 1px solid;
+	border-right: gray 1px solid;
+	font-size: xx-small;
+	vertical-align: middle;
+	text-align: center;
+	line-height: 15px;
+	font-family: Verdana;
+}
+.TableCellLeft
+{
+	border-top: gray 1px solid;
+	border-bottom: gray 1px solid;
+	border-left: gray 1px solid;
+	border-right: gray 1px solid;
+	font-size: xx-small;
+	vertical-align: middle;
+	text-align: left;
+	line-height: 15px;
+	font-family: Verdana;
+}
+.TableHeader TH
+{
+	border: solid 1px tan;
+	background-color: #FFF8DC;
+	text-align: center;
+	vertical-align: middle;
+	font-size: xx-small;
+	font-weight: bold;
+	font-family: Verdana;
+}
+.FeatureCategory
+{
+	background-color: #B0C4DE; /* lightsteelblue */
+	white-space: normal;
+	vertical-align: top;
+	font-family: Verdana;
+	font-size: xx-small;
+	color: Black;
+}
+.TitleRow
+{
+	background-color: Transparent;
+	border: none, 0px, black;
+}
+.MatrixTable
+{
+	padding: 1px 1px 1px 1px;
+	width: 100%;
+	border: solid 1px tan;
+	border-spacing: 1px;
+	border-collapse: collapse;
+	background-color: #FFFFF0;
+}
+.MatrixTable TH
+{
+	border: solid 1px tan;
+	white-space: nowrap;
+	background-color: #808000;
+	color: White;
+	text-align: center;
+	vertical-align: middle;
+	font-size: xx-small;
+	font-weight: bold;
+    background-clip: padding-box;
+}
+.MatrixTable TD
+{
+	border: solid 1px tan;
+	font-size: xx-small;
+	font-family: Verdana;
+}
+.MatrixFeatureCategory
+{
+	background-color: #6B8E23;
+	white-space: nowrap;
+	vertical-align: top;
+	font-family: Verdana;
+	font-size: xx-small;
+	font-weight: bold;
+	color: Black;
+}
+.MatrixAvRow
+{
+	background-color: #EEE8AA;
+	border-top-style: solid;
+	border-top-color: Black;
+	border-top-width: medium;
+	font-size: xx-small;
+}
+.MatrixSpareKitRow
+{
+	background-color: #6B8E23;
+	white-space: nowrap;
+	vertical-align: top;
+	font-family: Verdana;
+	font-size: xx-small;
+	color: Black;
+}
+.MatrixHighlightedRow
+{
+	background-color: #8888FF;
+}
+.Confidential
+{
+	font-family: verdana;
+	font-size: xx-small;
+	font-weight: bold;
+	color: Red;
+}
+.HeaderLabel
+{
+	font-family: Verdana;
+	font-size: small;
+	font-weight: bold;
+}
+
+/* Begin Tabs Table Style */
+.PageTabs
+{
+	/*width:100%;*/
+	background-color: white;
+	margin-bottom: 10px;
+}
+.PageTabs A
+{
+	font-family: Verdana;
+	font-size: x-small;
+}
+.PageTabs A:visited
+{
+	color: white;
+	text-decoration: none;
+}
+.PageTabs A:link
+{
+	color: white;
+	text-decoration: none;
+}
+.PageTabs A:hover
+{
+	color: yellow;
+	text-decoration: none;
+}
+.PageTabs TD
+{
+	padding: 2px;
+	padding-right: 20px;
+	font-size: xx-small;
+	background-color: #0000cd;
+}
+.PageTabs .Selected
+{
+	color: black;
+	background-color: #F5DEB3;
+}
+/* End Tabs Table Style */
+
+/* Tool Menu */
+#ToolMenu
+{
+	display: block;
+	font: xx-small Verdana;
+	margin-bottom: 10px;
+}
+#ToolMenu .Title
+{
+	font-weight: bold;
+}
+
+#ToolMenu .Link, .Link
+{
+	color: Blue;
+	text-decoration: underline;
+}
+
+.hover
+{
+	cursor: pointer;
+}
+
+.seperator
+{
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.Spacer
+{
+	height: 15px;
+}
+
+/* A scrolable div */
+.GridViewContainer
+{
+	overflow: auto;
+}
+
+/* to freeze column cells and its respecitve header*/.FrozenCell
+{
+	background-color: #DDDDDD;
+	font-family: Verdana;
+	font-size: xx-small;
+	color: Black;
+	position: relative;
+	cursor: default;
+	left: expression(document.getElementById("GridViewContainer").scrollLeft-2);
+}
+
+/* for freezing column header*/.FrozenHeader
+{
+	font-family: Verdana;
+	font-size: xx-small;
+	position: relative;
+	cursor: default;
+	top: expression(document.getElementById("GridViewContainer").scrollTop-2);
+	z-index: 10;
+}
+
+/*for the locked columns header to stay on top*/.FrozenHeader.locked
+{
+	z-index: 99;
+}
+
+#progressBackgroundFilter
+{
+	position: fixed;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+	background-color: #000;
+	filter: alpha(opacity=50);
+	opacity: 0.5;
+	z-index: 1000;
+}
+#processMessage
+{
+	position: fixed;
+	top: 30%;
+	left: 43%;
+	padding: 10px;
+	width: 14%;
+	z-index: 1001;
+	background-color: #0096D6;
+	/*border: solid 1px #000;*/
+	text-align: center;
+	color: #fff;
+	font: bold small Tahoma;
+}
+a.actionLink {
+    text-decoration: underline !important;
+    color: #007dba !important;
+    cursor: pointer !important;
+}

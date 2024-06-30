@@ -1,0 +1,26 @@
+﻿.TriStateCheckbox {
+	background: url(images/3-state-checkbox.gif) 0 0 no-repeat;
+	display: inline;
+	height: 13px;
+	margin: .15em 5px 3px 3px;
+	overflow: hidden;
+	width: 13px;
+}
+
+.TriStateCheckboxChecked {
+	background: url(images/3-state-checkbox.gif) 0 -13px no-repeat;
+	display: inline;
+	height: 13px;
+	margin: .15em 5px 3px 3px;
+	overflow: hidden;
+	width: 13px;
+}
+
+.TriStateCheckboxPartial {
+	background: url(images/3-state-checkbox.gif) 0 -26px no-repeat;
+	display: inline;
+	height: 13px;
+	margin: .15em 5px 3px 3px;
+	overflow: hidden;
+	width: 13px;
+}
